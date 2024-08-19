@@ -1,0 +1,2675 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>JSON: основы использования - guideto </title>
+        <meta name="description" content="Наверняка вы когда-нибудь слышали о JSON. Что же это такое? Что он может и как его использовать?В данном уроке мы расскажем об основах JSON и раскроем следующие пункты:	Что такое JSON?Для чего используется JSON?Как создать строку JSON?Простой пример строки JSON.Сравним JSON и XML.Как работать с JSON в JavaScript и PHP?" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/json-osnovy-ispolzovaniya.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="JSON: основы использования" /><meta property="og:site_name" content="guideto" /><meta property="og:description" content="Наверняка вы когда-нибудь слышали о JSON. Что же это такое? Что он может и как его использовать?В данном уроке мы расскажем об основах JSON и раскроем следующие пункты:	Что такое JSON?Для чего используется JSON?Как создать строку JSON?Простой пример строки JSON.Сравним JSON и XML.Как работать с JSON в JavaScript и PHP?" /><meta property="og:url" content="https://petrukmax.github.io/guideto/json-osnovy-ispolzovaniya.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/json-osnovy-ispolzovaniya.html"},"headline":"JSON: основы использования","datePublished":"2014-04-03T20:28","dateModified":"2024-08-19T17:48","description":"Наверняка вы когда-нибудь слышали о JSON. Что же это такое? Что он может и как его использовать?В данном уроке мы расскажем об основах JSON и раскроем следующие пункты:\tЧто такое JSON?Для чего используется JSON?Как создать строку JSON?Простой пример строки JSON.Сравним JSON и XML.Как работать с JSON в JavaScript и PHP?","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>JSON: основы использования</h1>
+                     <p>
+                           <time datetime="2014-04-03T20:28">
+                                 апрель 3, 2014
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <p>Наверняка вы когда-нибудь слышали о JSON. Что же это такое? Что он может и как его использовать?</p>
+<p>В данном уроке мы расскажем об основах JSON и раскроем следующие пункты:</p>
+<ul>
+	
+<li>Что такое JSON?</li>
+<li>Для чего используется JSON?</li>
+<li>Как создать строку JSON?</li>
+<li>Простой пример строки JSON.</li>
+<li>Сравним JSON и XML.</li>
+<li>Как работать с JSON в JavaScript и PHP?</li>
+</ul>
+
+<h2>Что такое JSON?</h2>
+<p>
+JSON - простой, основанный на использовании текста, способ хранить и передавать структурированные данные. С помощью простого синтаксиса вы можете легко хранить все, что угодно, начиная от одного числа до строк, массивов и объектов, в простом тексте. Также можно связывать между собой массивы и объекты, создавая сложные структуры данных.</p>
+<p>После создания строки JSON, ее легко отправить другому приложению или в другое место сети, так как она представляет собой простой текст.</p>
+<p>JSON имеет следующие преимущества:</p>
+<ul>
+	
+<li>Он компактен.</li>
+<li>Его предложения легко читаются и составляются как человеком, так и компьютером.</li>
+<li>Его легко преобразовать в структуру данных для большинства языков программирования (числа, строки, логические переменные, массивы и так далее)</li>
+<li>Многие языки программирования имеют функции и библиотеки для чтения и создания структур JSON.</li>
+</ul>
+<p>
+Название JSON означает JavaScript Object Notation (представление объектов JavaScript). Как и представляет имя, он основан на способе определения объектов (очень похоже на создание ассоциативных массивов в других языках) и массивов.</p>
+
+<h2>Для чего используется JSON?</h2>
+<p>
+Наиболее частое распространенное использование JSON - пересылка данных от сервера к браузеру. Обычно данные JSON доставляются с помощьюAJAX, который позволяет обмениваться данными браузеру и серверу без необходимости перезагружать страницу.</p>
+<p>Пример:</p>
+<ol>
+	
+<li>Пользователь нажимает миниатюру продукта в онлайн магазине.</li>
+<li>JavaScript, выполняющийся на браузере, генерирует запрос AJAX к скрипту PHP, запущенному на сервере, передавая ID выбранного продукта.</li>
+<li>Скрипт PHP получает название продукта, описание, цену и другую информацию из базы данных. Затем составляет из данных строку JSON и отсылает ее браузеру.</li>
+<li>JavaScript, выполняющийся на браузере, получает строку JSON, декодирует ее и выводит информацию о продукте на странице для пользователя.</li>
+</ol>
+<p>
+Также можно использовать JSON для отправки данных от браузера на сервер, передавая строку JSON в качестве параметра запросов GET или POST. Но данный метод имеет меньшее распространение, так как передача данных через запросы AJAX может быть упрощена. Например, ID продукта может быть включен в адрес URL как часть запроса GET.</p>
+<p>Библиотека jQuery имеет несколько методов, например,  <code>getJSON()</code> и <code>parseJSON()</code>, которые упрощают получение данных с помощью JSON через запросы AJAX.</p>
+
+<h2>Как создать строку JSON?</h2>
+<p>
+Есть несколько основных правил для создания строки JSON:</p>
+<ul>
+	
+<li>Строка JSON содержит либо массив значений, либо объект (ассоциативный массив пар имя/значение).</li>
+<li><em>Массив</em> заключается в квадратные скобки (<code>[</code> и <code>]</code>) и содержит разделенный запятой список значений.</li>
+<li><em>Объект</em> заключается в фигурные скобки (<code>{</code> и <code>}</code>) и содержит разделенный запятой список пар имя/значение.</li>
+<li><em>Пара имя/значение</em> состоит из имени поля, заключенного в двойные кавычки, за которым следует двоеточие (<code>:</code>) и значение поля.</li>
+<li><em>Значение</em> в массиве или объекте может быть:</p>
+<ul>
+	
+<li>Числом (целым или с плавающей точкой)</li>
+<li>Строкой (в двойных кавычках)</li>
+<li>Логическим значением (<code>true</code> или <code>false</code>)</li>
+<li>Другим массивом (заключенным в квадратные скобки)</li>
+<li>Другой объект (заключенный в фигурные скобки)</li>
+<li>Значение <code>null</code></li>
+</ul>
+</li>
+</ul>
+<p>
+Чтобы включить двойные кавычки в строку, нужно использовать обратную косую черту: <code>\"</code>. Так же, как и во многих языках программирования, можно помещать управляющие символы и шестнадцатеричные коды в строку, предваряя их обратной косой чертой. Смотрите детали на сайте JSON.</p>
+
+<h2>Простой пример строки JSON</h2>
+<p>
+Ниже приводится пример оформления заказа в формате JSON:</p>
+<div>
+<div id="highlighter_612960">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>01</code></td>
+<td><code>{</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>02</code></td>
+<td><code>  </code><code>"orderID"</code><code>: 12345,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>03</code></td>
+<td><code>  </code><code>"shopperName"</code><code>: </code><code>"Ваня Иванов"</code><code>,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>04</code></td>
+<td><code>  </code><code>"shopperEmail"</code><code>: </code><code>"ivanov@example.com"</code><code>,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>05</code></td>
+<td><code>  </code><code>"contents"</code><code>: [</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>06</code></td>
+<td><code>    </code><code>{</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>07</code></td>
+<td><code>      </code><code>"productID"</code><code>: 34,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>08</code></td>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Супер товар"</code><code>,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>09</code></td>
+<td><code>      </code><code>"quantity"</code><code>: 1</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>10</code></td>
+<td><code>    </code><code>},</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>11</code></td>
+<td><code>    </code><code>{</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>12</code></td>
+<td><code>      </code><code>"productID"</code><code>: 56,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>13</code></td>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Чудо товар"</code><code>,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>14</code></td>
+<td><code>      </code><code>"quantity"</code><code>: 3</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>15</code></td>
+<td><code>    </code><code>}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>16</code></td>
+<td><code>  </code><code>],</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>17</code></td>
+<td><code>  </code><code>"orderCompleted"</code><code>: </code><code>true</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>18</code></td>
+<td><code>}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+Рассмотрим строку подробно:</p>
+<ul>
+	
+<li>Мы создаем объект с помощью фигурных скобок  (<code>{</code> и <code>}</code>).</li>
+<li>В объекте есть несколько пар имя/значение:
+<dl>
+<dt><code>"orderID": 12345</code></dt>
+<dd>Свойство с именем <code>"orderId"</code> и целочисленным значением  <code>12345</code></dd>
+<dt><code>"shopperName": "Ваня Иванов"</code></dt>
+<dd>свойство с именем <code>"shopperName"</code> и строковым значением <code>"Ваня Иванов"</code></dd>
+<dt><code>"shopperEmail": "johnsmith@example.com"</code></dt>
+<dd>Свойство с именем <code>"shopperEmail"</code> и строковым значением <code>"ivanov@example.com"</code></dd>
+<dt><code>"contents": [ ... ]</code></dt>
+<dd>Свойство с именем <code>"contents"</code>, значение которого является массивом</dd>
+<dt><code>"orderCompleted": true</code></dt>
+<dd>Свойство с именем <code>"orderCompleted"</code> и логическим значением <code>true</code></dd>
+</dl>
+</li>
+<li>В массиве <code>"contents"</code> есть 2 объекта, представляющие отдельные позиции в заказе. Каждый объект содержит 3 свойства: <code>productID</code>, <code>productName</code>, и<code>quantity</code>.</li>
+</ul>
+<p>
+Кстати, так как JSON основан на объявлении объектов JavaScript, то вы можете быстро и просто сделать выше приведенную строку JSON объектом JavaScript:</p>
+<div>
+<div id="highlighter_563463">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>01</code></td>
+<td><code><script type=</code><code>"text/javascript"</code><code>></code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>02</code></td>
+<p><restore-line-break>
+<td><code>var</code> <code>cart = {</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>03</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"orderID"</code><code>: 12345,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>04</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"shopperName"</code><code>: </code><code>"Ваня Иванов"</code><code>,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>05</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"shopperEmail"</code><code>: </code><code>"ivanov@example.com"</code><code>,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>06</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"contents"</code><code>: [</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>07</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>{</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>08</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productID"</code><code>: 34,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>09</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Супер товар"</code><code>,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>10</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"quantity"</code><code>: 1</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>11</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>},</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>12</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>{</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>13</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productID"</code><code>: 56,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>14</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Чудо товар"</code><code>,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>15</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"quantity"</code><code>: 3</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>16</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>}</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>17</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>],</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>18</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"orderCompleted"</code><code>: </code><code>true</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>19</code></td>
+<p><restore-line-break>
+<td><code>};</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>20</code></td>
+<p><restore-line-break>
+<td><code></script></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+&nbsp;</p>
+<h2>Сравнение JSON и XML</h2>
+<p>
+Во многих отношениях вы можете рассматривать JSON как альтернативу XML, по крайней мере, в сфере веб приложений. Концепция AJAX оригинально основывалась на использовании XML для передачи данных между сервером и браузером. Но в последние годы JSON становится все более популярным для переноса данных AJAX.</p>
+<p>Хотя XML является проверенной технологией, которая используется в достаточном количестве приложений, преимуществами JSON являются более компактный  и простой для распознавания формат данных.</p>
+<p>Вот как будет выглядеть выше приведенный пример объекта на XML:</p>
+<div>
+<div id="highlighter_299313">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>01</code></td>
+<td><code><object></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>02</code></td>
+<td><code>  </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>03</code></td>
+<td><code>    </code><code><key>orderID</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>04</code></td>
+<td><code>    </code><code><number>12345</number></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>05</code></td>
+<td><code>  </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>06</code></td>
+<td><code>  </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>07</code></td>
+<td><code>    </code><code><key>shopperName</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>08</code></td>
+<td><code>    </code><code><string>Ваня Иванов</string></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>09</code></td>
+<td><code>  </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>10</code></td>
+<td><code>  </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>11</code></td>
+<td><code>    </code><code><key>shopperEmail</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>12</code></td>
+<td><code>    </code><code><string>ivanov@example.com</string></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>13</code></td>
+<td><code>  </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>14</code></td>
+<td><code>  </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>15</code></td>
+<td><code>    </code><code><key>contents</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>16</code></td>
+<td><code>    </code><code><array></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>17</code></td>
+<td><code>      </code><code><object></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>18</code></td>
+<td><code>        </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>19</code></td>
+<td><code>          </code><code><key>productID</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>20</code></td>
+<td><code>          </code><code><number>34</number></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>21</code></td>
+<td><code>        </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>22</code></td>
+<td><code>        </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>23</code></td>
+<td><code>          </code><code><key>productName</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>24</code></td>
+<td><code>          </code><code><string>Супер товар</string></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>25</code></td>
+<td><code>        </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>26</code></td>
+<td><code>        </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>27</code></td>
+<td><code>          </code><code><key>quantity</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>28</code></td>
+<td><code>          </code><code><number>1</number></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>29</code></td>
+<td><code>        </code><code></property>      </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>30</code></td>
+<td><code>      </code><code></object></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>31</code></td>
+<td><code>      </code><code><object></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>32</code></td>
+<td><code>        </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>33</code></td>
+<td><code>          </code><code><key>productID</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>34</code></td>
+<td><code>          </code><code><number>56</number></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>35</code></td>
+<td><code>        </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>36</code></td>
+<td><code>        </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>37</code></td>
+<td><code>          </code><code><key>productName</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>38</code></td>
+<td><code>          </code><code><string>Чудо товар</string></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>39</code></td>
+<td><code>        </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>40</code></td>
+<td><code>        </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>41</code></td>
+<td><code>          </code><code><key>quantity</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>42</code></td>
+<td><code>          </code><code><number>3</number></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>43</code></td>
+<td><code>        </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>44</code></td>
+<td><code>      </code><code></object></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>45</code></td>
+<td><code>    </code><code></array></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>46</code></td>
+<td><code>  </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>47</code></td>
+<td><code>  </code><code><property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>48</code></td>
+<td><code>    </code><code><key>orderCompleted</key></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>49</code></td>
+<td><code>    </code><code><boolean></code><code>true</code><code></boolean></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>50</code></td>
+<td><code>  </code><code></property></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>51</code></td>
+<td><code></object></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+Версия XML имеет существенно больший размер. В действительности она имеет длину 1128 символов, а вариант JSON - только 323 символа. Версию XML также достаточно трудно воспринимать.</p>
+<p>Конечно, это радикальный пример. И возможно создать более компактную запись XML. Но даже она будет существенно длиннее эквивалента на JSON.</p>
+
+<h2>Работаем со строкой JSON в JavaScript</h2>
+<p>
+JSON имеет простой формат, но создавать строку JSON вручную достаточно утомительно. Кроме того, часто нужно взять строку JSON, конвертировать ее содержание в переменную, которую можно будет использовать в коде.</p>
+<p>Большинство языков программирования имеют инструменты для простого преобразования переменных в строки JSON и наоборот.</p>
+<h3>Создаем строку JSON из переменной</h3>
+<p>
+JavaScript имеет встроенный метод <code>JSON.stringify()</code>, который берет переменную и возвращает строку JSON, представляющую ее содержание. Например, создадим объект JavaScript, который содержит сведения о заказе из нашего примера, а затем создадим из него строку JSON:</p>
+<div>
+<div id="highlighter_286985">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>01</code></td>
+<td><code><script type=</code><code>"text/javascript"</code><code>></code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>02</code></td>
+<p><restore-line-break>
+<td><code> </code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>03</code></td>
+<p><restore-line-break>
+<td><code>var</code> <code>cart = {</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>04</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"orderID"</code><code>: 12345,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>05</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"shopperName"</code><code>: </code><code>"Ваня Иванов"</code><code>,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>06</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"shopperEmail"</code><code>: </code><code>"ivanov@example.com"</code><code>,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>07</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"contents"</code><code>: [</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>08</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>{</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>09</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productID"</code><code>: 34,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>10</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Супер товар"</code><code>,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>11</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"quantity"</code><code>: 1</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>12</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>},</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>13</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>{</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>14</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productID"</code><code>: 56,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>15</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Чудо товар"</code><code>,</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>16</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"quantity"</code><code>: 3</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>17</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>}</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>18</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>],</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>19</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"orderCompleted"</code><code>: </code><code>true</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>20</code></td>
+<p><restore-line-break>
+<td><code>};</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>21</code></td>
+<p><restore-line-break>
+<td><code> </code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>22</code></td>
+<p><restore-line-break>
+<td><code>alert ( JSON.stringify( cart ) );</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>23</code></td>
+<p><restore-line-break>
+<td><code> </code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>24</code></td>
+<p><restore-line-break>
+<td><code></script></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+Данный код выдаст:</p>
+<div>
+<div id="highlighter_923657">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td><code>{</code><code>"orderID"</code><code>:12345,</code><code>"shopperName"</code><code>:</code><code>"Ваня Иванов"</code><code>,</code><code>"shopperEmail"</code><code>:</code><code>"ivanov@example.com"</code><code>,</code><code>"contents"</code><code>:[{</code><code>"productID"</code><code>:34,</code><code>"productName"</code><code>:</code><code>"Супер товар"</code><code>,</code><code>"quantity"</code><code>:1},{</code><code>"productID"</code><code>:56,</code><code>"productName"</code><code>:</code><code>"Чудо товар"</code><code>,</code><code>"quantity"</code><code>:3}],</code><code>"orderCompleted"</code><code>:</code><code>true</code><code>}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+Обратите внимание, что метод <code>JSON.stringify()</code> возвращает строку JSON без пробелов. Ее сложнее читать, но зато она более компактна для передачи через сеть.</p>
+<h3>Создаем переменную из строки JSON</h3>
+<p>
+Существует несколько способов разобрать строку JSON в JavaScript, но самый безопасный и надежный - использовать встроенный метод <code>JSON.parse()</code>. Он получает строку JSON и возвращает объект или массив JavaScript, который содержит данные. Например:</p>
+<div>
+<div id="highlighter_845456">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>01</code></td>
+<td><code><script type=</code><code>"text/javascript"</code><code>></code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>02</code></td>
+<p><restore-line-break>
+<td><code> </code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>03</code></td>
+<p><restore-line-break>
+<td><code>var</code> <code>jsonString = '                          \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>04</code></td>
+<p><restore-line-break>
+<td><code>{                                           \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>05</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"orderID"</code><code>: 12345,                         \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>06</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"shopperName"</code><code>: </code><code>"Ваня Иванов"</code><code>,             \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>07</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"shopperEmail"</code><code>: </code><code>"ivanov@example.com"</code><code>,     \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>08</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"contents"</code><code>: [                             \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>09</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>{                                       \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>10</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productID"</code><code>: 34,                      \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>11</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Супер товар"</code><code>,         \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>12</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"quantity"</code><code>: 1                         \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>13</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>},                                      \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>14</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>{                                       \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>15</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productID"</code><code>: 56,                      \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>16</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Чудо товар"</code><code>,          \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>17</code></td>
+<p><restore-line-break>
+<td><code>      </code><code>"quantity"</code><code>: 3                         \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>18</code></td>
+<p><restore-line-break>
+<td><code>    </code><code>}                                       \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>19</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>],                                        \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>20</code></td>
+<p><restore-line-break>
+<td><code>  </code><code>"orderCompleted"</code><code>: </code><code>true</code>                    <code>\</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>21</code></td>
+<p><restore-line-break>
+<td><code>}                                           \</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>22</code></td>
+<p><restore-line-break>
+<td><code>';</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>23</code></td>
+<p><restore-line-break>
+<td><code> </code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>24</code></td>
+<p><restore-line-break>
+<td><code>var</code> <code>cart = JSON.parse ( jsonString );</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>25</code></td>
+<p><restore-line-break>
+<td><code> </code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>26</code></td>
+<p><restore-line-break>
+<td><code>alert ( cart.shopperEmail );</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>27</code></td>
+<p><restore-line-break>
+<td><code>alert ( cart.contents[1].productName );</code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>28</code></td>
+<p><restore-line-break>
+<td><code> </code></td>
+<p><restore-line-break></tr>
+<p><restore-line-break></tbody>
+<p><restore-line-break></table>
+<p><restore-line-break></div>
+<p><restore-line-break>
+<div><restore-line-break>
+<table><restore-line-break>
+<tbody><restore-line-break>
+<tr><restore-line-break>
+<td><code>29</code></td>
+<p><restore-line-break>
+<td><code></script></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+Мы создали переменную <code>jsonString</code>, которая содержит строку JSON нашего примера с заказом. Затем мы передаем данную строку методу<code>JSON.parse()</code>, который создает объект, содержащий данные JSON и сохраняет его в переменной <code>cart</code>. Остается только осуществить проверку, выведя свойства объекта <code>shopperEmail</code> и <code>productName</code> массива <code>contents</code>.</p>
+<p>В результате мы получим следующий вывод:</p>
+<div>
+<div id="highlighter_50721">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td><code>ivanov@example.com</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>2</code></td>
+<td><code>Чудо товар</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+В реальном приложении ваш JavaScript код будет получать заказ в виде строки JSON в AJAX ответе от скрипта сервера, передавать строку методу<code>JSON.parse()</code>, а затем использовать данные для отображения на странице пользователя.</p>
+<p><code>JSON.stringify()</code> и <code>JSON.parse()</code> имеют другие возможности, такие как  использование возвратных функций для пользовательской конвертации определённых данных. Такие опции очень удобны для конвертации различных данных в правильные объекты JavaScript.</p>
+
+<h2>Работаем со строкой JSON в PHP</h2>
+<p>
+PHP, как и JavaScript, имеет встроенные функции для работы с JSON строками.</p>
+<h3>Создаем строку JSON из переменной PHP</h3>
+<p>
+Функция <code>json_encode()</code> принимает переменную PHP и возвращает строку JSON, представляющую содержание переменной. Вот наш пример с заказом, написанный на PHP:</p>
+<div>
+<div id="highlighter_46221">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>01</code></td>
+<td><code><?php</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>02</code></td>
+<td><code>$cart = array(</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>03</code></td>
+<td><code>  </code><code>"orderID"</code> <code>=> 12345,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>04</code></td>
+<td><code>  </code><code>"shopperName"</code> <code>=> </code><code>"Ваня Иванов"</code><code>,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>05</code></td>
+<td><code>  </code><code>"shopperEmail"</code> <code>=> </code><code>"ivanov@example.com"</code><code>,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>06</code></td>
+<td><code>  </code><code>"contents"</code> <code>=> array(</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>07</code></td>
+<td><code>    </code><code>array(</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>08</code></td>
+<td><code>      </code><code>"productID"</code> <code>=> 34,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>09</code></td>
+<td><code>      </code><code>"productName"</code> <code>=> </code><code>"Супер товар"</code><code>,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>10</code></td>
+<td><code>      </code><code>"quantity"</code> <code>=> 1</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>11</code></td>
+<td><code>    </code><code>),</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>12</code></td>
+<td><code>    </code><code>array(</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>13</code></td>
+<td><code>      </code><code>"productID"</code> <code>=> 56,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>14</code></td>
+<td><code>      </code><code>"productName"</code> <code>=> </code><code>"Чудо товар"</code><code>,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>15</code></td>
+<td><code>      </code><code>"quantity"</code> <code>=> 3</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>16</code></td>
+<td><code>    </code><code>)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>17</code></td>
+<td><code>  </code><code>),</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>18</code></td>
+<td><code>  </code><code>"orderCompleted"</code> <code>=> </code><code>true</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>19</code></td>
+<td><code>);</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>20</code></td>
+<td><code> </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>21</code></td>
+<td><code>echo json_encode( $cart );</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>22</code></td>
+<td><code>?></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+Данный код возвращает абсолютно такую же строку JSON, как и в примере с JavaScript:</p>
+<div>
+<div id="highlighter_571605">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td><code>{</code><code>"orderID"</code><code>:12345,</code><code>"shopperName"</code><code>:</code><code>"Ваня Иванов"</code><code>,</code><code>"shopperEmail"</code><code>:</code><code>"ivanov@example.com"</code><code>,</code><code>"contents"</code><code>:[{</code><code>"productID"</code><code>:34,</code><code>"productName"</code><code>:</code><code>"Супер товар"</code><code>,</code><code>"quantity"</code><code>:1},{</code><code>"productID"</code><code>:56,</code><code>"productName"</code><code>:</code><code>"Чудо товар"</code><code>,</code><code>"quantity"</code><code>:3}],</code><code>"orderCompleted"</code><code>:</code><code>true</code><code>}</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+В реальном приложении ваш скрипт PHP пришлет данную строку JSON как часть AJAX ответа браузеру, где JavaScript код с помощью метода<code>JSON.parse()</code> преобразует ее обратно в переменную для вывода на странице пользователя.</p>
+<p>Вы может передавать различные флаги в качестве второго аргумента функции <code>json_encode()</code>. С их помощью можно изменять принципы кодирования содержания переменных в строку JSON.</p>
+<h3>Создаем переменную из строки JSON</h3>
+<p>
+Для преобразования строки JSON в переменную PHP используется метод <code>json_decode()</code>. Заменим наш пример для JavaScript с методом <code>JSON.parse()</code> на код PHP:</p>
+<div>
+<div id="highlighter_754405">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>01</code></td>
+<td><code><?php</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>02</code></td>
+<td><code>$jsonString = '</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>03</code></td>
+<td><code>{                                         </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>04</code></td>
+<td><code>  </code><code>"orderID"</code><code>: 12345,                       </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>05</code></td>
+<td><code>  </code><code>"shopperName"</code><code>: </code><code>"Ваня Иванов"</code><code>,            </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>06</code></td>
+<td><code>  </code><code>"shopperEmail"</code><code>: </code><code>"ivanov@example.com"</code><code>,</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>07</code></td>
+<td><code>  </code><code>"contents"</code><code>: [                           </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>08</code></td>
+<td><code>    </code><code>{                                     </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>09</code></td>
+<td><code>      </code><code>"productID"</code><code>: 34,                    </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>10</code></td>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Супер товар"</code><code>,       </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>11</code></td>
+<td><code>      </code><code>"quantity"</code><code>: 1                      </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>12</code></td>
+<td><code>    </code><code>},                                    </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>13</code></td>
+<td><code>    </code><code>{                                     </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>14</code></td>
+<td><code>      </code><code>"productID"</code><code>: 56,                    </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>15</code></td>
+<td><code>      </code><code>"productName"</code><code>: </code><code>"Чудо товар"</code><code>,      </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>16</code></td>
+<td><code>      </code><code>"quantity"</code><code>: 3                       </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>17</code></td>
+<td><code>    </code><code>}                                     </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>18</code></td>
+<td><code>  </code><code>],                                      </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>19</code></td>
+<td><code>  </code><code>"orderCompleted"</code><code>: </code><code>true</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>20</code></td>
+<td><code>}                                         </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>21</code></td>
+<td><code>';</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>22</code></td>
+<td><code> </code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>23</code></td>
+<td><code>$cart = json_decode( $jsonString );</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>24</code></td>
+<td><code>echo $cart->shopperEmail . </code><code>"<br>"</code><code>;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>25</code></td>
+<td><code>echo $cart->contents[1]->productName . </code><code>"<br>"</code><code>;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>26</code></td>
+<td><code>?></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+Как и для JavaScript данный код выдаст:</p>
+<div>
+<div id="highlighter_210635">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td><code>ivanov@example.com</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>2</code></td>
+<td><code>Чудо товар</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+По умолчанию функция <code>json_decode()</code> возвращает объекты JSON как объекты PHP. Существуют обобщенные объекты PHP класса <code>stdClass</code>. Поэтому мы используем <code>-></code> для доступа к свойствам объекта в примере выше.</p>
+<p>Если вам нужен объект JSON в виде ассоциированного массива PHP, нужно передать <code>true</code> в качестве второго аргумента функции <code>json_decode()</code>. Например:</p>
+<div>
+<div id="highlighter_94817">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td><code>$cart = json_decode( $jsonString, </code><code>true</code> <code>);</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>2</code></td>
+<td><code>echo $cart[</code><code>"shopperEmail"</code><code>] . </code><code>"<br>"</code><code>;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>3</code></td>
+<td><code>echo $cart[</code><code>"contents"</code><code>][1][</code><code>"productName"</code><code>] . </code><code>"<br>"</code><code>;</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+Данный код выдаст такой же вывод:</p>
+<div>
+<div id="highlighter_391331">
+<div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>1</code></td>
+<td><code>ivanov@example.com</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table>
+<tbody>
+<tr>
+<td><code>2</code></td>
+<td><code>Чудо товар</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<p>
+Также функции <code>json_decode()</code> можно передавать другие аргументы для указания глубины рекурсии и способов обработки больших целых чисел.</p>
+
+<h2>Заключение</h2>
+<p>
+Хотя JSON прост для понимания и использования, он является очень полезным и гибким инструментом для передачи данных между приложениями и компьютерами, особенно при использовании AJAX.  Если вы планируете разрабатывать AJAX приложение, то нет сомнений, что JSON станет важнейшим инструментом в вашей мастерской.</p>
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/yazyki/">Языки</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>
