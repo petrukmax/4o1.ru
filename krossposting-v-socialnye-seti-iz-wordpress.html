@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Кросспостинг в социальные сети из WordPress - guideto </title>
+        <meta name="description" content="Если вы пользуетесь YouTube или Twitter, то вы, скорее всего, уже встречались с кросспостингом, когда, например, Твиттер предлагает публиковать ваши твиты в профиле или на странице в Facebook.  Вы можете размещать анонсы своих сообщений или публиковать их целиком, делать это автоматически или вручную. Так как вас, скорее всего, интересует экономия времени и увеличение продуктивности, то ниже мы поговорим о том, как настроить автоматический кросспостинг из WordPress блога в социальные сети и  сообщества с максимальной отдачей.Для автоматизации процесса я использую плагин NextScripts: Social Networks Auto-Poster (SNAP), бесплатная версия позволяет делать автопостинг в 1 аккаунт на каждом поддерживаемом сайте, то есть вы можете делать кросспостинг в 1 Твиттер аккаунт, 1 Facebook, 1 Вконтакте и тд… Pro версия поддерживает неограниченное количество аккаунтов — то есть, при желании, вы можете кросспостить в 100 блогов и 150 сообществ на LiveJournal, 50 групп на Facebook, 25 аккаунтов на Твиттере, 100 сообществ Вконтакте…" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/krossposting-v-socialnye-seti-iz-wordpress.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="Кросспостинг в социальные сети из WordPress" /><meta property="og:site_name" content="guideto" /><meta property="og:description" content="Если вы пользуетесь YouTube или Twitter, то вы, скорее всего, уже встречались с кросспостингом, когда, например, Твиттер предлагает публиковать ваши твиты в профиле или на странице в Facebook.  Вы можете размещать анонсы своих сообщений или публиковать их целиком, делать это автоматически или вручную. Так как вас, скорее всего, интересует экономия времени и увеличение продуктивности, то ниже мы поговорим о том, как настроить автоматический кросспостинг из WordPress блога в социальные сети и  сообщества с максимальной отдачей.Для автоматизации процесса я использую плагин NextScripts: Social Networks Auto-Poster (SNAP), бесплатная версия позволяет делать автопостинг в 1 аккаунт на каждом поддерживаемом сайте, то есть вы можете делать кросспостинг в 1 Твиттер аккаунт, 1 Facebook, 1 Вконтакте и тд… Pro версия поддерживает неограниченное количество аккаунтов — то есть, при желании, вы можете кросспостить в 100 блогов и 150 сообществ на LiveJournal, 50 групп на Facebook, 25 аккаунтов на Твиттере, 100 сообществ Вконтакте…" /><meta property="og:url" content="https://petrukmax.github.io/guideto/krossposting-v-socialnye-seti-iz-wordpress.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/krossposting-v-socialnye-seti-iz-wordpress.html"},"headline":"Кросспостинг в социальные сети из WordPress","datePublished":"2015-07-25T18:56","dateModified":"2024-08-19T17:48","description":"Если вы пользуетесь YouTube или Twitter, то вы, скорее всего, уже встречались с кросспостингом, когда, например, Твиттер предлагает публиковать ваши твиты в профиле или на странице в Facebook.  Вы можете размещать анонсы своих сообщений или публиковать их целиком, делать это автоматически или вручную. Так как вас, скорее всего, интересует экономия времени и увеличение продуктивности, то ниже мы поговорим о том, как настроить автоматический кросспостинг из WordPress блога в социальные сети и  сообщества с максимальной отдачей.Для автоматизации процесса я использую плагин NextScripts: Social Networks Auto-Poster (SNAP), бесплатная версия позволяет делать автопостинг в 1 аккаунт на каждом поддерживаемом сайте, то есть вы можете делать кросспостинг в 1 Твиттер аккаунт, 1 Facebook, 1 Вконтакте и тд… Pro версия поддерживает неограниченное количество аккаунтов — то есть, при желании, вы можете кросспостить в 100 блогов и 150 сообществ на LiveJournal, 50 групп на Facebook, 25 аккаунтов на Твиттере, 100 сообществ Вконтакте…","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>Кросспостинг в социальные сети из WordPress</h1>
+                     <p>
+                           <time datetime="2015-07-25T18:56">
+                                 июль 25, 2015
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <p>Если вы пользуетесь YouTube или Twitter, то вы, скорее всего, уже встречались с кросспостингом, когда, например, Твиттер предлагает публиковать ваши твиты в профиле или на странице в Facebook.  Вы можете размещать анонсы своих сообщений или публиковать их целиком, делать это автоматически или вручную. Так как вас, скорее всего, интересует экономия времени и увеличение продуктивности, то ниже мы поговорим о том, как настроить <b>автоматический кросспостинг из </b><b>WordPress</b><b> блога</b> в социальные сети и  сообщества <b>с максимальной отдачей</b>.</p>
+<p>Для автоматизации процесса я использую плагин NextScripts: Social Networks Auto-Poster (SNAP), бесплатная версия позволяет делать автопостинг в 1 аккаунт на каждом поддерживаемом сайте, то есть вы можете делать кросспостинг в 1 Твиттер аккаунт, 1 Facebook, 1 Вконтакте и тд… Pro версия поддерживает неограниченное количество аккаунтов — то есть, при желании, вы можете кросспостить в 100 блогов и 150 сообществ на LiveJournal, 50 групп на Facebook, 25 аккаунтов на Твиттере, 100 сообществ Вконтакте…</p>
+
+<p>Вот список поддерживаемых сайтов:</p>
+<ul>
+	
+<li><b>Blogger</b><b>/</b><b>Blogspot</b> – автопостинг в блог с поддержкой HTML</li>
+<li><b>Delicious</b> – сохраняйте закладки на страницы своего сайта</li>
+<li><b>Diigo</b> – сохраняйте закладки на страницы своего сайта</li>
+<li><b>Facebook</b> – поддерживает автопостинг в ваш профайл, страницы, страницы сообществ, группы, возможность прикреплять свой пост как вложение, прикреплять фотографии</li>
+<li><b>FriendFeed</b><b> </b>– автопостинг в аккаунт, возможность прикреплять фотографии</li>
+<li><b>Instapaper</b><b> </b>–<b> </b>автосохранение закладок</li>
+<li><b>Google</b><b>+</b> — (только в Pro версии) – автопостинг в профайл, страницы сообществ, бизнес страницы, возможность прикреплять свой пост как вложение, прикреплять фотографии</li>
+<li><b>LinkedIn</b> – автопостинг в профайл. Pro версия поддерживает публикацию в страницы сообществ и группы, возможность прикреплять свой пост как вложение</li>
+<li><b>LiveJournal</b><b> </b>– кросспостинг в блог или группу на ЖЖ, сайты, использующие движок LiveJournal тоже поддерживаются (например DreamWidth.org)</li>
+<li><b>Pinterest</b> — (только в Pro версии) – возможность сохранять рисунок миниатюры записи как Pin.</li>
+<li><b>Stumbleupon</b> – автосабмит закладок</li>
+<li><b>Tumblr</b> – кросспостинг в блог, возможность прикреплять свой пост как вложение. Поддержка HTML<b></b></li>
+<li><b>Twitter</b> – автопостинг в Твиттер. Возможность прикреплять фотографии к твитам</li>
+<li><b>Plurk</b> – автопостинг в свой аккаунт. Возможность прикреплять фотографии к сообщениям</li>
+<li><b>vBulletin</b><b> </b>– автопостинг в форумы работающие на движке vBulletin. Возможность добавлять новые посты или создавать новые темы</li>
+<li><b>vKontakte</b><b>(</b><b>VK</b><b>.</b><b>com</b><b>)</b> – кросспостинг в ваш профайл или группу. Возможность прикреплять свой пост как вложение, прикреплять фотографии к сообщениям</li>
+<li><b>WordPress</b> – автопостинг в автономные (self-hosted) WordPress блоги и блоги работающие на движке WordPress.com (например Blog.com)</li>
+<li><b>YouTube</b> (только в Pro версии) – автопостинг сообщений в  фид YouTube канала</li>
+</ul>
+<h2><b>Спам</b></h2>
+<p>
+NextScripts: Social Networks Auto-Poster (SNAP) это мощный инструмент раскрутки сайта (сравнение бесплатной и Pro версии можно посмотреть здесь), который позволяет получать десятки и сотни ссылок одним кликом – вы публикуете статью в своем блоге, и она автоматически транслируется в десятки тематических сообществ, но прежде, чем вы броситесь создавать сотни блогов и сотни фейковых аккаунтов, давайте поговорим оспаме.</p>
+<p>Если вы хотите добиться максимального эффекта, то для этого не нужно создавать 100 блогов на LiveJournal (или любом другом сервисе), чтобы публиковать туда свои статьи со ссылкой на свой сайт – их очень быстро забанят, и все ваши труды пойдут прахом. Используйте уже существующие сообщества и тематические группы, чтобы запустить вирусное распространение вашего контента. Если вы публикуете контент высокого качества, то люди будут только благодарны вам за то, что вы поделились с ними вашей статьей.</p>
+<h2><b>Попадание под фильтры поисковых систем</b></h2>
+<p>
+Если вы одновременно публикуете вашу статью (полный текст) на вашем сайте и на сторонних ресурсах, например в блоге на LiveJournal, то поисковые системы могут проиндексировать ее раньше статьи на основном блоге и признать первоисточником статью на LiveJournal. В итоге, ваш основной блог может быть понижен в поисковой выдаче, так как поисковики будут считать, что он копирует контент с ЖЖ блога. Чтобы этого избежать, я советую в настройках Social Networks Auto-Poster (SNAP) для тех сервисов где вы планируете публиковать полный текст статей выставить задержку в несколько дней (2-3). Плюс в конце каждой транслируемой статьи (поле <b>«</b>Message textFormat«) добавлять ссылку на первоисточник:</p>
+<p><a href=» %URL%»>Первоисточник</a></p>
+<p><img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="crossposting delay Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/crossposting-delay2.png" width="600" height="344"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/crossposting-delay2-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/crossposting-delay2-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/crossposting-delay2-md.png 768w"></p>
+<p>Добавление задержки и ссылки на первоисточник (ваш основной блог)</p>
+<p>При такой схеме побочные эффекты на основной блог исключены.</p>
+<h2><b>Максимизация отдачи</b></h2>
+<p>
+Не все сайты одинаково хороши, поэтому не обязательно настраивать кросспостинг на все сайты, которые поддерживает NextScripts: Social Networks Auto-Poster. Если тема ваших постов не подходит для конкретного сайта или вы не можете найти подходящих тематических сообществ, то, скорее всего, такой сайт не подходит вам для кросспостинга. Ниже я привожу инструкции по настройке и максимизации эффекта от кросспостинга в популярные социальные сети и блог-платформы, которые подойдут для большинства сайтов.</p>
+<h2>Инструкции:</h2>
+<h3><b>Кросспостинг в Вконтакте (VK.com)
+</b></h3>
+<p>
+Вконтакте использует протокол OAuth для проверки подлинности и авторизации доступа. Для того, чтобы настроить кросспостинг в Вконтакте, необходимо создать приложение, подключить его к блогу и авторизовать доступ, ниже приведены пошаговые инструкции:</p>
+<h4><b>Создание приложения Вконтакте</b></h4>
+<ol>
+	
+<li>Войдите в свой профайл Вконтакте</li>
+<li>Перейдите в раздел разработчиков http://vk.com/developers.php, нажмите «Создать Новое Приложение» в верхнем правом углу<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="vk.com crossposting 1 630x230 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/vk.com-crossposting-1-630x2302.png" width="630" height="230"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-1-630x2302-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-1-630x2302-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-1-630x2302-md.png 768w"></p>
+<p>нажмите «Создать Новое Приложение» в верхнем правом углу</li>
+<li>Заполните «Имя приложения», выберете тип «Standalone Application» (убедитесь, что вы выбрали тип приложения » Standalone», потому что другие типы не будут работать )<img loading="lazy" title="Убедитесь, что вы выбрали тип приложения " Standalone", потому что другие типы не будут работать. Не используйте в качестве имени приложения "NextScripts", задайте свое уникальное имя приложения." alt="vk.com crossposting 2 630x263 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/vk.com-crossposting-2-630x2632.png" width="630" height="263"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-2-630x2632-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-2-630x2632-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-2-630x2632-md.png 768w"></p>
+<p>Убедитесь, что вы выбрали тип приложения » Standalone», потому что другие типы не будут работать. Не используйте в качестве имени приложения «NextScripts», задайте свое уникальное имя приложения.</li>
+<li>Введите свой номер телефона, получите смс с кодом подтверждения, введите код<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="vk.com crossposting 3 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/vk.com-crossposting-32.png" width="564" height="429"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-32-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-32-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-32-md.png 768w"></p>
+<p>Введите свой номер телефона, получите смс с кодом подтверждения, введите код</li>
+<li>Скопируйте ID приложения<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="vk.com crossposting 4 630x502 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/vk.com-crossposting-4-630x5022.png" width="630" height="502"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-4-630x5022-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-4-630x5022-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-4-630x5022-md.png 768w"></p>
+<p>Скопируйте ID приложения</li>
+</ol>
+<h4><b>Подключение Вконтакте к </b><b>WordPress </b><b>блогу</b></h4>
+<ol>
+	
+<li>Войдите в панель управления WordPress, перейдите «Параметры->Social Networks AutoPoster Options.»</li>
+<li>Нажмите зеленую кнопку “Add new account”, выберите Вконтакте(VK.com) из списка</li>
+<li>На форме настроек заполните поле “Your vKontakte URL” ссылкой на фаш профайл или ссылкой на группу, которую вы модерируете или имеете редакторские права</li>
+<li>Заполните поле “vKontakte(VK) Application ID”</li>
+</ol>
+<h4><b>Авторизация Вконтакте</b></h4>
+<ol>
+	
+<li>Нажмите “Update Settings”, появится ссылка “Authorize Your vKontakte Account”</li>
+<li>Нажмите “Authorize Your vKontakte Account”, нажимайте везде «ОК» и «Allow»<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="vk.com crossposting 5 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/vk.com-crossposting-52.png" width="576" height="435"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-52-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-52-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-52-md.png 768w"></p>
+<p>Нажмите “Authorize Your vKontakte Account”, нажимайте везде «ОК» и «Allow»</li>
+<li>Установщик выдаст длинный URL, скопируйте его из адресной строки и вставьте его в поле “vKontakte(VK) Auth Response”<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="vk.com crossposting 6 630x39 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/vk.com-crossposting-6-630x392.png" width="630" height="39"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-6-630x392-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-6-630x392-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-6-630x392-md.png 768w"></p>
+<p>Установщик выдаст длинный URL, скопируйте его из адресной строки и вставьте его в поле “vKontakte(VK) Auth Response”</p>
+<p><img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="vk.com crossposting 7 630x210 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/vk.com-crossposting-7-630x2102.png" width="630" height="210"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-7-630x2102-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-7-630x2102-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/vk.com-crossposting-7-630x2102-md.png 768w"></p>
+<p>Установщик выдаст длинный URL, скопируйте его из адресной строки и вставьте его в поле “vKontakte(VK) Auth Response”</li>
+<li>(Только для Pro версии) Введите свой логин и пароль, чтобы иметь возможность создавать посты с вложениями</li>
+<li>Настройка кросспостинга в Вконтакте завершена.</li>
+</ol>
+<h4><b>Особенности автопостинга в Вконтакте </b></h4>
+<p>
+Вы можете постить в свой профайл и сообщества, которые вы модерируете или где у вас есть редакторские права.</p>
+<h3><b>Кросспостинг в ЖЖ (</b><b>LiveJournal</b><b>)</b></h3>
+<p>
+NextScripts: Social Networks Auto-Poster может публиковать ваши посты в ваш ЖЖ блог или в сообщества, к которым вы принадлежите.  Ниже приведены пошаговые инструкции:</p>
+<ol>
+	
+<li>Войдите в панель управления WordPress, перейдите «Параметры->Social Networks AutoPoster Options.»</li>
+<li>Нажмите зеленую кнопку “Add new account”, выберете LiveJournal из списка</li>
+<li>Заполните поле логин и пароль</li>
+<li>Если публикуете не в свой журнал, укажите адрес сообщества, в которое вы хотите публиковать свои статьи (вы должны быть его участником)</li>
+</ol>
+<h4><b>Особенности автопостинга в ЖЖ(</b><b>LiveJournal</b><b>)</b></h4>
+<p>
+Внешние ссылки из ЖЖ блогов и сообществ закрыты тегом «nofollow», поэтому публиковать там бесполезные статьи посредственного качества только ради ссылок занятие бесполезное. Ссылки из ЖЖ могут вам помочь с индексированием, но в плане SEO продвижения от них мало толку. Ориентируйтесь на материалы высокого качества, полезные и интересные для вашей целевой аудитории. Добавляйте в статью релевантные ссылки на другие статьи на вашем сайте, чтобы привлечь посетителей с блог-платформ на ваш блог, где вы можете предложить им подписаться на обновления, скачать пробную версию или приобрести ваш продукт/сервис.</p>
+<h4><b>Популярные сообщества</b></h4>
+<p>
+Если вы публикуете только в один ЖЖ блог, то отдача в плане траффика будет невелика. Для того, чтобы получить максимальное количество ссылок/посетителей, найдите популярные релевантные тематические сообщества, которым вы можете предложить ваши статьи. Вот список популярных сообществ, многие из которых имеют десятки тысяч подписчиков, так что отдача в плане трафика может быть очень хорошей.  Если среди популярных сообществ LiveJournal вам ничего не подходит, то воспользуйтесьпоиском по интересам, используйте ключевые слова вашей тематики (фото, фитнес, реклама, живопись…) Обратите внимание на дату последней публикации (Updated 28 минут назад), нас интересуют только активные сообщества, если сообщество не обновлялось более месяца, то ваши шансы на публикацию очень низки.</p>
+<p>Для того, чтобы предложить статью в сообщество, вам надо быть его участником/членом.  Большинство качественных сообществ модерируют записи, поэтому если вы хотите, чтобы вашу статью опубликовали – предлагайте качественные, интересные статьи. Многие сообщества имеют свои правила, и если вы их соблюдаете, ваши шансы на публикацию возрастают в разы.</p>
+<h3><b>Кросспостинг в Фейсбук (</b><b>Facebook</b><b>)</b></h3>
+<p>
+Facebook использует протокол OAuth 2.0 для проверки подлинности и авторизации доступа. Для того, чтобы настроить кросспостинг в Фейсбук, необходимо создать приложение, подключить его к блогу и авторизовать доступ. Ниже приведены пошаговые инструкции:</p>
+<h4><b>Создание приложения </b><b>Facebook</b></h4>
+<ol>
+	
+<li>Войдите в свой профайл в Facebook</li>
+<li>Перейдите в раздел разработчиков https://developers.facebook.com/apps (если вы не зарегистрированы как разработчик — нажмите зеленую кнопку » Register as a Developer»)<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 1 a 630x211 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-1-a-630x2112.png" width="630" height="211"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-a-630x2112-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-a-630x2112-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-a-630x2112-md.png 768w"></p>
+<p>Нажмите зеленую кнопку » Register as a Developer»</p>
+<ol>
+	
+<li>[<em>если вы не зарегистрированы как разработчик</em>] Подтвердите согласие с правилами, нажмите далее<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 1 b 630x304 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-1-b-630x3042.png" width="630" height="304"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-b-630x3042-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-b-630x3042-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-b-630x3042-md.png 768w"></p>
+<p>Подтвердите согласие с правилами</li>
+<li>[<em>если вы не зарегистрированы как разработчик</em>] Подтвердите телефонный номер<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 1 c 630x291 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-1-c-630x2912.png" width="630" height="291"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-c-630x2912-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-c-630x2912-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-c-630x2912-md.png 768w"></p>
+<p>Подтвердите телефонный номер</li>
+<li>[<em>если вы не зарегистрированы как разработчик</em>] Заполните информацию «О себе» или нажмите пропустить<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 1 d 630x589 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-1-d-630x5892.png" width="630" height="589"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-d-630x5892-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-d-630x5892-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-d-630x5892-md.png 768w"></p>
+<p>Заполните информацию «О себе» или нажмите пропустить</li>
+<li>[<em>если вы не зарегистрированы как разработчик</em>] Нажмите «Закончить», Поздравляем – вы разработчик Facebook</li>
+</ol>
+</li>
+<li>Нажмите кнопку «Create New App», заполните «App Name», “App Namespace”, нажмите «Продолжить», введите капчу, нажмите «Далее»<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 1 630x85 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-1-630x852.png" width="630" height="85"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-630x852-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-630x852-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-1-630x852-md.png 768w"></p>
+<p>Нажмите кнопку «Create New App»</p>
+<p><img loading="lazy" title="Заполните "App Name", “App Namespace”. Не используйте в качестве имени приложения "NextScripts", задайте свое уникальное имя приложения." alt="facebook crossposting 2 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-22.png" width="623" height="186"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-22-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-22-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-22-md.png 768w"></p>
+<p>Заполните «App Name», “App Namespace”. Не используйте в качестве имени приложения «NextScripts», задайте свое уникальное имя приложения.</li>
+<li>Скопируйте App ID и App Secret, они понадобятся нам далее<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 3 630x195 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-3-630x1952.png" width="630" height="195"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-3-630x1952-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-3-630x1952-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-3-630x1952-md.png 768w"></p>
+<p>Скопируйте App ID и App Secret</li>
+<li>Выберете “Website with Facebook Login” и введите адрес вашего сайта</li>
+<li>Введите ваш домен в поле «App Domains»<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 4 630x414 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-4-630x4142.png" width="630" height="414"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-4-630x4142-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-4-630x4142-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-4-630x4142-md.png 768w"></p>
+<p>Выберете “Website with Facebook Login” и введите адрес вашего сайта</li>
+</ol>
+<p>
+Важно: Вводите URL и домен, которые вы видите на форме настроек Social Networks AutoPoster для соответствующей сети (в верхнем правом углу).</p>
+<ol>
+	
+<li>С апреля 2013 Facebook по умолчанию запускает новые приложения в «песочном» режиме (sandbox mode), когда посты видны только администраторам, разработчикам и тестерам. Поставьте галочку для “Sandbox Mode” в режим “Disabled” если вы хотите, чтобы посты были видны всем пользователям.<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 5 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-52.png" width="597" height="405"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-52-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-52-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-52-md.png 768w"></p>
+<p>Поставьте галочку для “Sandbox Mode” в режим “Disabled” если вы хотите, чтобы посты были видны всем пользователям.</li>
+</ol>
+<p>
+Только реальные пользователи могут создавать приложения на Facebook, поэтому если у вас аккаунт «Бизнес» или «Рекламодатель», вам нужно войти под своим реальным пользовательским аккаунтом.</p>
+<h4><b>Подключение </b><b>Facebook</b><b> к </b><b>WordPress</b><b> блогу</b></h4>
+<ol>
+	
+<li>Войдите в панель управления WordPress, перейдите «Параметры->Social Networks AutoPoster Options.»</li>
+<li>Нажмите зеленую кнопку “Add new account” выберете Facebook из списка</li>
+<li>На форме настроек заполните поле “ Your Facebook URL ” ссылкой на фаш профайл, страницу, группу или бизнес страницу</li>
+<li>Заполните поле “App ID” и “App Secret”</li>
+</ol>
+<p>
+<b>Авторизация </b><b>Facebook</b><b></b></p>
+<ol>
+	
+<li>Нажмите “Update Settings”, появится ссылка “Authorize Your Facebook Account”</li>
+<li>Нажмите “Authorize Your Facebook Account”, нажимайте везде «ОК» и «Allow». Если установщик выдаст ошибку – убедитесь, что вы правильно заполнили поле “App Domain”<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 7 630x324 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-7-630x3242.png" width="630" height="324"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-7-630x3242-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-7-630x3242-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-7-630x3242-md.png 768w"></p>
+<p>Авторизация Facebook</li>
+<li>Настройка кросспостинга в Фейсбук завершена.<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="facebook crossposting 8 630x544 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/facebook-crossposting-8-630x5442.png" width="630" height="544"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-8-630x5442-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-8-630x5442-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/facebook-crossposting-8-630x5442-md.png 768w"></p>
+<p>Настройка кросспостинга в Фейсбук</li>
+</ol>
+<h3><b>Кросспостинг в Твиттер (</b><b>Twitter</b><b>)</b></h3>
+<p>
+Твиттер использует протокол OAuth для проверки подлинности и авторизации доступа к API. Вам необходимо создать приложение с правами «Read and Write», получить “Consumer key”, “Consumer secret”, “Access token”, и “Access token secret”, ниже приведены пошаговые инструкции:</p>
+<h4>Создание приложения Twitter<b></b></h4>
+<ol>
+	
+<li>Войдите в свой аккаунт в Twitter</li>
+<li>Перейдите в раздел разработчиков  https://dev.twitter.com/apps (залогинтесь еще раз если необходимо), нажмите кнопку “Create a new application”.<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="twitter crossposting 1 630x206 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/twitter-crossposting-1-630x2062.jpg" width="630" height="206"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-1-630x2062-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-1-630x2062-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-1-630x2062-md.jpg 768w"></p>
+<p>Нажмите кнопку “Create a new application”</li>
+<li>Заполните информацию, скопируйте Consumer key и Consumer secret на этой странице<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="twitter crossposting 2 630x403 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/twitter-crossposting-2-630x4032.jpg" width="630" height="403"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-2-630x4032-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-2-630x4032-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-2-630x4032-md.jpg 768w"></p>
+<p>Скопируйте Consumer key и Consumer secret</p>
+<p>&nbsp;</li>
+<li>Перейдите на вкладку «Настройки» (Settings). Прокрутите до «Application type«, выберите « Read and Write», нажмите «Update this Twitter application settings»<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="twitter crossposting 3 630x495 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/twitter-crossposting-3-630x4952.jpg" width="630" height="495"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-3-630x4952-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-3-630x4952-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-3-630x4952-md.jpg 768w"></p>
+<p>Выберите тип доступа — » Read and Write»</p>
+<p>&nbsp;</li>
+<li>Вернитесь на закладку «Детали»( Details). Прокрутите до раздела « “Your access token» и нажмите «Create my access token«. Обновите страницу и скопируйте “Access token” и “Access token secret”. Убедитесь, что у приложения стоит уровень доступа “Read and Write”.<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="twitter crossposting 4 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/twitter-crossposting-42.jpg" width="588" height="600"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-42-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-42-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-42-md.jpg 768w"></p>
+<p>Нажмите «Create my access token»</li>
+</ol>
+<p>
+<b>Подключение </b><b>Twitter</b><b> и </b><b>WordPress</b></p>
+<ol>
+	
+<li>Войдите в панель управления WordPress, перейдите «Параметры->Social Networks AutoPoster Options.»</li>
+<li>Нажмите зеленую кнопку “Add new account”, выберите Twitter из списка</li>
+<li>На форме настроек заполните поле “Your Twitter URL” ссылкой на фаш профайл</li>
+<li>Заполните поле “Consumer key”, “Consumer secret”, “Access token” и “Access token secret”</li>
+<li>Настройка кросспостинга в Твиттер завершена<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="twitter crossposting 5 630x415 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/twitter-crossposting-5-630x4152.jpg" width="630" height="415"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-5-630x4152-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-5-630x4152-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/twitter-crossposting-5-630x4152-md.jpg 768w"></p>
+<p>Заполните поле “Consumer key”, “Consumer secret”, “Access token” и “Access token secret”</li>
+</ol>
+<h3><b>Кросспостинг в </b><b>Google</b><b> +</b></h3>
+<p>
+Так как Google + еще не имеет встроенного API, для того, чтобы делать автопостинг, необходима внешняя библиотека, которая доступна <b>только в </b><b>Pro</b><b> версии </b>Social Networks AutoPoster (SNAP). SNAP может постить в ваш профайл, бизнес страницы и сообщества, ниже приведены пошаговые инструкции:</p>
+<h4><b>Подключение </b><b>Google+</b><b> и </b><b>WordPress</b></h4>
+<ol>
+	
+<li>Войдите в панель управления WordPress, перейдите «Параметры->Social Networks AutoPoster Options.»</li>
+<li>Нажмите зеленую кнопку “Add new account” выберете Google + из списка</li>
+<li>Заполните поле логин и пароль</li>
+</ol>
+<p>
+Если вы собираетесь публиковать анонсы в свой профайл Google + или используете аккаунт Business Page Manager, то настройка кросспостинга, в таком случае, в Google + завершена.</p>
+<ol>
+	
+<li>[Опционально] (Только для бизнес страниц Google+). Заполните ID вашей страницы. Например, если адрес вашей страницыhttps://plus.google.com/u/0/b/117008619877691455570/ — то ID будет 117008619877691455570. Оставьте это поле пустым для публикации в профайл или сообщество.</li>
+<li>[Опционально] (Только для сообществ Google+). Заполните ID вашего сообщества. Например, если адрес вашей страницы вашего сообществаhttps://plus.google.com/communities/100396001601096060160  — то ID будет 100396001601096060160. Оставьте это поле пустым для публикации в профайл или страницу.</li>
+</ol>
+<p>
+Если при публикации тестового сообщения в Google+ у вас высвечивается ошибка “Your username/password incorrect” или “You are not authorized to publish to this page”, вам необходимо временно разблокировать доступ к вашему аккаунту для новых приложений:</p>
+<ol>
+	
+<li>Войдите в свой Google+ аккаунт и перейдите по ссылке  https://www.google.com/accounts/UnlockCaptcha</li>
+<li>Вы увидите страницу спрашивающую “Allow a new application to access your account”, нажмите “Continue”, появится сообщение, что доступ открыт на 10 минут.</li>
+<li>Войдите в панель управления WordPress, перейдите «Параметры->Social Networks AutoPoster Options.» Откройте настройки Google +</li>
+<li>Нажмите зеленую кнопку “Submit Test Post to Google+”</li>
+<li>Настройка кросспостинга в Google+ завершена<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="google plus crossposting 1 630x618 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/google-plus-crossposting-1-630x6182.png" width="630" height="618"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/google-plus-crossposting-1-630x6182-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/google-plus-crossposting-1-630x6182-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/google-plus-crossposting-1-630x6182-md.png 768w"></p>
+<p>Настройки кросспостинга в Google+</li>
+</ol>
+<h3><b>Кросспостинг</b><b> </b><b>в</b><b> </b><b>Блоггер</b><b> (Blogger.com/Blogspot.com)</b></h3>
+<p>
+По умолчанию Social Networks AutoPoster(SNAP) использует «родной» API Blogger, который имеет определенные ограничения, но если вы используете библиотеку Goolge+ API (доступна в Pro версии), то часть ограничений снимаются.</p>
+<p><b>Подключение </b><b>Blogger</b><b>.</b><b>com</b><b> и </b><b>WordPress</b><b></b></p>
+<ol>
+	
+<li>Войдите в панель управления WordPress, перейдите «Параметры->Social Networks AutoPoster Options.»</li>
+<li>Нажмите зеленую кнопку “Add new account” выберите Blogger из списка</li>
+<li>Заполните поля логин и пароль, из соображений безопасности рекомендуется создать отдельный Google аккаунт для автопостинга в Blogger.com/Blogspot.com.</li>
+<li>Введите ID вашего блога. Войдите в панель управления Blogger, например, если URL вашего блога в панели управления http://www.blogger.com/blogger.g?blogID=8959085979163812093#allposts то ID вашего блога будет: 8959085979163812093<img loading="lazy" title="Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" alt="blogger crossposting 2 630x297 Кросспостинг в социальные сети из WordPress – подробные инструкции и примеры" src="https://petrukmax.github.io/guideto/media/posts/153/blogger-crossposting-2-630x2971.png" width="630" height="297"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/153/responsive/blogger-crossposting-2-630x2971-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/blogger-crossposting-2-630x2971-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/153/responsive/blogger-crossposting-2-630x2971-md.png 768w"></p>
+<p>Скопируйте ID вашего блога</li>
+<li>Нажмите “Update Settings”</li>
+<li>Настройка кросспостинга в <b>Блоггер </b>завершена</li>
+</ol>
+<h3>Кросспостинг в WordPress блоги <b></b></h3>
+<p>
+NextScripts: Social Networks Auto-Poster (SNAP) поддерживает кросспостинг в автономные блоги (self-hosted) на WordPress и блоги на WordPress.com и Blog.com. WordPress использует библиотеку XMLRPC для автопостинга.</p>
+<h4><b>Подключение </b><b>WordPress</b><b> блога</b></h4>
+<ol>
+	
+<li>Войдите в панель управления WordPress, перейдите «Параметры->Social Networks AutoPoster Options.»</li>
+<li>Нажмите зеленую кнопку “Add new account”, выберите «WP Based Blog» из списка</li>
+<li>Заполните поля логин и пароль</li>
+<li>Введите URL к библиотеке XMLRPC. Обычно это URL вашего блога + /xmlrpc.php на конце. Например:</li>
+</ol>
+<ul>
+	
+<li>http://ВашБлог.ru/xmlrpc.php  для автономных блогов на WordPress</li>
+<li>http://ВашБлог.wordpress.com/xmlrpc.php для блогов на WordPress.com</li>
+<li>http://ВашБлог.blog.com/xmlrpc.php для блогов на Blog.com</li>
+</ul>
+<ol>
+	
+<li>Не забудьте заменить «ВашБлог» на настоящий адрес вашего блога</li>
+<li>Нажмите “Update Settings”.</li>
+<li>Настройка кросспостинга в <b>блог на </b>WordPress завершена</li>
+</ol>
+<h2>Заключение</h2>
+<p>
+Если вы публикуете качественный контент — кросспостинг позволяет привлечь целевой траффик, автоматически создавать релевантные ссылки, запустить вирусное распространение вашего контента в тематических сообществах. На сегодняшний день, NextScripts: Social Networks Auto-Poster (SNAP) это самый мощный и гибкий плагин для автопостинга из WordPress. С помощью SNAP вы можете полностью автоматизировать процесс кросспостинга, фокусируясь на одной точке инъекции (вашем блоге) и автоматически транслировать ваши статьи в тематические сообщества и группы.Скачайте бесплатную версию сегодня и экономьте кучу времени на обновлении социальных сетей и профайлов, если же вы хотите многократно увеличить вашу аудиторию и масштабировать охват вашей издательской платформы, чтобы больше людей узнали, увидели и прочитали ваши публикации/статьи то Pro версия это именно то, что вам нужно. Версия SNAP 3.0 уже на подходе, успейте купить Pro лицензию на неограниченное количество сайтов с пожизненными апдейтами всего за $49.</p>
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/wordpress/">WordPress</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>
