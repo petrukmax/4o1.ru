@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Настройка PHP 5.2 и PHP 5.3 на одном сервере - guideto </title>
+        <meta name="description" content="Настройка PHP 5.2 (через fastcgi) и PHP 5.3 (как модуль Apache2) на одном сервере это возможно!На одном сервере с одним Apache2 прекрасно заводятся и соседствуют PHP 5.2 (через fastcgi) и PHP 5.3 (как модуль Apache2). Мы далее решим проблему так, что указать какой именно PHP использовать можно будет на уровне настроек виртуального хоста." />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/nastroyka-php-52-i-php-53-na-odnom-servere.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="Настройка PHP 5.2 и PHP 5.3 на одном сервере" /><meta property="og:site_name" content="guideto" /><meta property="og:description" content="Настройка PHP 5.2 (через fastcgi) и PHP 5.3 (как модуль Apache2) на одном сервере это возможно!На одном сервере с одним Apache2 прекрасно заводятся и соседствуют PHP 5.2 (через fastcgi) и PHP 5.3 (как модуль Apache2). Мы далее решим проблему так, что указать какой именно PHP использовать можно будет на уровне настроек виртуального хоста." /><meta property="og:url" content="https://petrukmax.github.io/guideto/nastroyka-php-52-i-php-53-na-odnom-servere.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/nastroyka-php-52-i-php-53-na-odnom-servere.html"},"headline":"Настройка PHP 5.2 и PHP 5.3 на одном сервере","datePublished":"2012-09-11T18:34","dateModified":"2024-08-19T17:46","description":"Настройка PHP 5.2 (через fastcgi) и PHP 5.3 (как модуль Apache2) на одном сервере это возможно!На одном сервере с одним Apache2 прекрасно заводятся и соседствуют PHP 5.2 (через fastcgi) и PHP 5.3 (как модуль Apache2). Мы далее решим проблему так, что указать какой именно PHP использовать можно будет на уровне настроек виртуального хоста.","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>Настройка PHP 5.2 и PHP 5.3 на одном сервере</h1>
+                     <p>
+                           <time datetime="2012-09-11T18:34">
+                                 сентябрь 11, 2012
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <p>Настройка PHP 5.2 (через fastcgi) и PHP 5.3 (как модуль Apache2) на одном сервере это возможно!</p>
+<p>
+
+На одном сервере с одним Apache2 прекрасно заводятся и соседствуют PHP 5.2 (через fastcgi) и PHP 5.3 (как модуль Apache2). Мы далее решим проблему так, что указать какой именно PHP использовать можно будет на уровне настроек виртуального хоста.</p>
+
+<p>
+
+Скачиваем дистрибутив php 5.2:</p>
+<p><code>wget http://www.php.net/get/php-5.2.17.tar.gz/from/ru.php.net/mirror</code></p>
+<p>
+
+Переименовываем полученный файл во что положено:</p>
+<p><code>mv mirror php-5.2.17.tar.gz</code></p>
+<p>
+
+Распаковываем архив:</p>
+<p><code>tar zxvf php-5.2.17.tar.gz</code></p>
+<p>
+
+Заходим в директорию:</p>
+<p><code>cd php-5.2.17</code></p>
+<p>
+
+Устанавливаем зависимости:</p>
+<p><code>sudo aptitude install libxml2-dev libmysqlclient-dev libcurl4-gnutls-dev libpng12-dev libjpeg62-dev</code></p>
+<p>
+
+Конфигурируем, собираем и ставим из исходников наш php 5.2 в директорию <code>/opt/php5.2</code>:</p>
+<p><code>./configure --prefix=/opt/php5.2 --with-config-file-path=/opt/php5.2 --with-mysqli --with-mysql --with-curl --with-gd --with-jpeg-dir --enable-cli --enable-fastcgi --enable-discard-path --enable-force-cgi-redirect</p>
+<p>Если возникают ошибки типа этих:</code></p>
+<p>
+
+error: libjpeg.(a|so) not found.</p>
+<p>
+
+Note that the MySQL client library is not bundled anymore!</p>
+<p>
+
+Cannot find libmysqlclient under /usr</p>
+<p>
+
+Они решаются вот таким способом</p>
+<p>
+
+<code>ln -s /usr/lib/i386-linux-gnu/libjpeg.so /usr/lib/libjpeg.so</code></p>
+<p><code>ln -s /usr/lib/i386-linux-gnu/libpng.so /usr/lib/libpng.so</code></p>
+<p>
+
+точно также и с файлами для mysql ну а для особо ленивых есть вот такая команда:</p>
+<p>
+
+sudo ln -s /usr/lib/i386-linux-gnu/* /usr/lib/</p>
+<p>
+
+Если запускаете конфигурацию в n-ый раз то надо очистить:</p>
+<p>sudo  rm -f config.cache</p>
+<p>
+
+далее после удачного завершения:</p>
+<p>
+
+make</p>
+<p>make test</p>
+<p>sudo make install</p>
+<p>
+
+Данные операции займут много времени! Когда всё установиться, можно убедиться в том, что на вашем сервере теперь появилась нужная версия php такой командой:</p>
+<p>
+
+<code>/opt/php5.2/bin/php -v</code></p>
+<p>
+
+Однако, про этот php пока ничего не знает наш уважаемый веб-сервер Apache2. Мы их познакомим через fastcgi.</p>
+<p>
+
+Ставим:</p>
+<p><code>sudo aptitude install libapache2-mod-fastcgi</code></p>
+<p>
+
+Включаем нужные модули Apache2:</p>
+<p><code>sudo a2enmod cgi fastcgi actions</code></p>
+<p>
+
+Перезапускаем Apache, чтобы модули подцепились:</p>
+<p><code>sudo service apache2 restart</code></p>
+<p>
+
+Теперь создадим файл (он будет просто обёрткой, вызывающей наш исполнимый бинарник <code>/opt/php5.2/bin/php-cgi</code>, но с нужными настройками, которые вы можете изменить или дополнить):</p>
+<p><code>sudo nano /usr/lib/cgi-bin/php52-cgi</code></p>
+<p>
+
+И туда поместим буквально следующее:</p>
+<p><code>#!/bin/sh</p>
+<p>PHPRC="/opt/php5.2/"</p>
+<p>export PHPRC</p>
+<p>PHP_FCGI_CHILDREN=4</p>
+<p>export PHP_FCGI_CHILDREN</p>
+<p>PHP_FCGI_MAX_REQUESTS=5000</p>
+<p>export PHP_FCGI_MAX_REQUESTS</p>
+<p>exec /opt/php5.2/bin/php-cgi</code></p>
+<p>
+
+Сделаем файл исполнимым:</p>
+<p><code>sudo chmod +x /usr/lib/cgi-bin/php52-cgi</code></p>
+<p>
+
+Теперь создадим необходимую часть конфига для виртуальных хостов, которым потребуется php 5.2:</p>
+<p><code>sudo nano /etc/apache2/php52.conf</code></p>
+<p>
+
+Поместим в файл следующее:</p>
+<p><code><FilesMatch "\.php"></p>
+<p>SetHandler application/x-httpd-php5</p>
+<p></FilesMatch></p>
+<p>ScriptAlias /php52-cgi /usr/lib/cgi-bin/php52-cgi</p>
+<p>Action application/x-httpd-php5 /php52-cgi</p>
+<p>AddHandler application/x-httpd-php5 .php</code></p>
+<p>
+
+Теперь давайте пойдём в конфиг того виртуального хоста, который должен работать с php 5.2 и добавим в него следующую строку (например, после DocumentRoot...):</p>
+<p><code>...</p>
+<p>Include php52.conf</p>
+<p>...</code></p>
+<p>
+
+Перезапустим Apache, чтобы подцепились новые настройки виртуального хоста:</p>
+<p><code>sudo service apache2 restart</code></p>
+<p>
+
+Готово! Идите на нужный хост и проверяйте: он теперь обслуживается php 5.2.</p>
+<p>
+
+Узнать версию PHP используемую на вашем хостинге можно следующим способом. Создайте документ, вставьте этот код на страницу, установите формат ввода <em>PHP code</em> и сохраните документ.</p>
+<p>
+
+<code><?php phpinfo(); ?></code></p>
+<p>
+
+Если необходимо менять стандартные настройки в файде php.ini то его надо создать в папке /opt/php5.2/</p>
+<p>
+
+Ещё несколько комманд для тестирования php:</p>
+<p>
+
+/opt/php5.2/bin/php -v</p>
+<p>/opt/php5.2/bin/php -m</p>
+<p>/opt/php5.2/bin/php --ini</p>
+<p>php -v</p>
+<p>php-cgi -m</p>
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/apache/">Apache</a>
+                                          </li>
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/it/">IT</a>
+                                          </li>
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/unix/">Unix</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+                     <div class="related">
+                        <h2 class="related__title">
+                           Related posts:
+                        </h2>
+                        <ul class="related__items">
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/nastroyka-asterisknow-posle-ustanovki-eng.html">
+                                       Настройка AsteriskNow после установки (Eng)
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/nastroyka-seti-v-centos.html">
+                                       Настройка сети в CentOS
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/nastroyka-ubuntu-setevym-shlyuzom-dlya-razdachi-interneta-v-lokalnuyu-set.html">
+                                       Настройка Ubuntu сетевым шлюзом для раздачи интернета в локальную сеть
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                        </ul>
+                     </div>
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>
