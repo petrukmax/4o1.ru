@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Ускорение работы WordPress с сайта puzat.ru - guideto </title>
+        <meta name="description" content="Многие сталкиваются с проблемой медленной работы сайтов на CMS WordPress, особенно когда используется стандартная сборка с n-ым десятком плагинов. Самая большая проблема в том, что чем больше потребляет серверных мощностей ваш сайт, тем скорее вас попросят перейти на более дорогой тарифный план. Я сам постоянно сталкивался с этой проблемой, когда делал сателлиты на WordPress, а СДЛ посещаемость которых переходила за 1000 посетителей в сутки даже на самых дорогих тарифных планах хостингов ужасно тормозили. Я пробовал кеширование, отказывался от плагинов, но это не давало нужного эффекта, со временем у меня накопился ряд методик как снизить нагрузку на хостинг и ускорить сайт, я решил их обьединить в виде одного поста и поделиться с вами. Хочется надеятся, что этот пост станет библией по ускорению WordPress и все будут знать где есть самое полное пошаговое руководство по ускорению WordPress." />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/uskorenie-raboty-wordpress-s-sayta-puzatru.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="Ускорение работы WordPress с сайта puzat.ru" /><meta property="og:site_name" content="guideto" /><meta property="og:description" content="Многие сталкиваются с проблемой медленной работы сайтов на CMS WordPress, особенно когда используется стандартная сборка с n-ым десятком плагинов. Самая большая проблема в том, что чем больше потребляет серверных мощностей ваш сайт, тем скорее вас попросят перейти на более дорогой тарифный план. Я сам постоянно сталкивался с этой проблемой, когда делал сателлиты на WordPress, а СДЛ посещаемость которых переходила за 1000 посетителей в сутки даже на самых дорогих тарифных планах хостингов ужасно тормозили. Я пробовал кеширование, отказывался от плагинов, но это не давало нужного эффекта, со временем у меня накопился ряд методик как снизить нагрузку на хостинг и ускорить сайт, я решил их обьединить в виде одного поста и поделиться с вами. Хочется надеятся, что этот пост станет библией по ускорению WordPress и все будут знать где есть самое полное пошаговое руководство по ускорению WordPress." /><meta property="og:url" content="https://petrukmax.github.io/guideto/uskorenie-raboty-wordpress-s-sayta-puzatru.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/uskorenie-raboty-wordpress-s-sayta-puzatru.html"},"headline":"Ускорение работы WordPress с сайта puzat.ru","datePublished":"2013-03-06T12:07","dateModified":"2024-08-19T17:47","description":"Многие сталкиваются с проблемой медленной работы сайтов на CMS WordPress, особенно когда используется стандартная сборка с n-ым десятком плагинов. Самая большая проблема в том, что чем больше потребляет серверных мощностей ваш сайт, тем скорее вас попросят перейти на более дорогой тарифный план. Я сам постоянно сталкивался с этой проблемой, когда делал сателлиты на WordPress, а СДЛ посещаемость которых переходила за 1000 посетителей в сутки даже на самых дорогих тарифных планах хостингов ужасно тормозили. Я пробовал кеширование, отказывался от плагинов, но это не давало нужного эффекта, со временем у меня накопился ряд методик как снизить нагрузку на хостинг и ускорить сайт, я решил их обьединить в виде одного поста и поделиться с вами. Хочется надеятся, что этот пост станет библией по ускорению WordPress и все будут знать где есть самое полное пошаговое руководство по ускорению WordPress.","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>Ускорение работы WordPress с сайта puzat.ru</h1>
+                     <p>
+                           <time datetime="2013-03-06T12:07">
+                                 март 6, 2013
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <p>Многие сталкиваются с проблемой медленной работы сайтов на CMS WordPress, особенно когда используется стандартная сборка с n-ым десятком плагинов. Самая большая проблема в том, что чем больше потребляет серверных мощностей ваш сайт, тем скорее вас попросят перейти на более дорогой тарифный план. Я сам постоянно сталкивался с этой проблемой, когда делал сателлиты на WordPress, а СДЛ посещаемость которых переходила за 1000 посетителей в сутки даже на самых дорогих тарифных планах хостингов ужасно тормозили. Я пробовал кеширование, отказывался от плагинов, но это не давало нужного эффекта, со временем у меня накопился ряд методик как снизить нагрузку на хостинг и ускорить сайт, я решил их обьединить в виде одного поста и поделиться с вами. Хочется надеятся, что этот пост станет библией по ускорению WordPress и все будут знать где есть самое полное пошаговое руководство по ускорению WordPress.</p>
+
+<p>
+
+Прежде чем заниматься ускорением WordPress нужно всё таки задуматься о своём хостинге, возможно незначительное повышение тарифа или переезд на другой хостинг решат ваши проблемы. Иногда с переездом нужно просто смириться, невозможно держать гигантский проект на самых дешёвых тарифных планах хостинга. От себя могу порекомендовать SpaceWeb.</p>
+<h2>Шаг 1: Подготовка</h2>
+<p>
+
+Первым делом необходимо обновить WordPress до последней версии, которую вы можете скачать .</p>
+<h2>Шаг 2: wp-config.php</h2>
+<p>
+
+<strong>Файл wp-config.php</strong> — является файлом конфигурации WordPress и находится в корневой папке сайта.</p>
+<p>
+
+Я хочу вам рассказать про несколько методов с помощью которых мы сможем уменьшить нагрузку на хостинг:</p>
+<ol>
+<li>В оригинальной сборке есть минус — то, что используются различные языковые файлы для административной части и главной страницы сайта. Если мы будем использовать один файл, то это нам позволит значительно снизить нагрузку, для этого нужно заменить строку:</p>
+<pre lang="PHP">define ('WPLANG', 'ru_RU');</pre>
+<p>
+
+на</p>
+<pre lang="PHP">if (strpos($_SERVER['REQUEST_URI'], 'wp-admin')) define ('WPLANG', 'ru_RU'); else define ('WPLANG', 'ru_RU_lite');</pre>
+<p>
+
+Так же не забудьте добавить обьедененный файлов переводов ru_RU_lite в директорию http://вашсайт.ru/wp-content/languages/.</p>
+<p>
+
+Спасибо за способ Лекактусу.</li>
+<li>Так же рекомендую сразу выставить необходимое количество ревизий при написании поста.</p>
+<p><strong>Ревизии</strong> — это черновики, которые автоматически сохраняются во время написания поста, тем самым позволяя ему вернуться на некоторое время назад при написании. Ревизий может быть несколько, а так же можно указать через какое время они должны обновляться. Я использую одну ревизию, которая перезаписывается каждые 60 секунд, на некоторых своих сайтах на WordPress я их вовсе отключаю, так как пользуюсь внешним редактором. Отключение ревизий даёт прирост в скорости работы редактора и админки WordPress.</p>
+<p>Для того, чтобы была одна ревизия и она сохранялась каждые 60 секунд, нужно добавить следующую строчку в wp-config.php перед последним закрывающимся ?>:&nbsp;</p>
+<pre lang="PHP">define( 'AUTOSAVE_INTERVAL', 60 );<restore-line-break><restore-line-break>define('WP_POST_REVISIONS', 1);</pre>
+<p>
+
+а если мы хотим отключить ревизии, то нужно воспользоваться плагином Disable Revisions.</li>
+</ol>
+<h2>Шаг 3: Robots.txt</h2>
+<p>
+
+<strong>Файл Robots.txt</strong> – это текстовый файл, находящийся в корневой директории сайта, в котором записываются специальные инструкции для поисковых роботов. Эти инструкции могут запрещать к индексации некоторые разделы или страницы на сайте, указывать на правильное «зеркалирование» домена, рекомендовать поисковому роботу соблюдать определенный временной интервал между скачиванием документов с сервера и т.д. ©Robotstxt.org.ru</p>
+<p>
+
+Посещение поисковыми роботами вашего сайта приводит к значительной нагрузке на ваш сайт. Так как нас интересуют только поисковые роботы Яндекса, Google и Рамблера, в некоторых случаях ещё и Yahoo, то остальных роботов (в том числе различные парсеры и грабберы, которые воруют ваш контент), можно закрыть от индексации. Для этого необходимо вставитьследующие строчки в файл Robots.txt, если у вас его нет, то необходимо его сначала создать в корневой директории сайта. Эффект наступит не моментально, но в течении месяца практически все роботы из списка сведут свои заходы к минимуму или вовсе перестанут посещать ваш сайт.</p>
+<p>
+
+Если вы хотите так же заблокировать доступ для Yahoo, что помимо снижения нагрузки на хостинг скроет и ваши беки по версии Yahoo, то необходимо добавить ещё следующие строчки в Robots.txt:</p>
+<pre lang="PHP">User-agent: Slurp<restore-line-break><restore-line-break>Disallow: /</pre>
+</p>
+<h2>Шаг 4: .Htaccess</h2>
+<p>
+
+<strong>Файл .Htaccess</strong> — это файл дополнительной конфигурации веб-сервера. С его помощью мы сможем дать дополнительные команды для сервера, которые стоит обрабатывать до загрузки сайта.</p>
+<ol>
+<li>Сейчас очень распространено копирование информации, в основном это делается с помощью автоматических программных решений. Эти программы копируют не только тексты, но и изображения с ваших сайтов. Так как ссылки на изображения с сайтов скопировавших информацию ведут на изображения на вашем сайте, то следовательно они посылают постоянные запросы на ваш хостинг, тем самым его дополнительно нагружая. Это называется хотлинкингом. С этим бороться можно и я расскажу вам как.</p>
+<p>Я хочу вам предложить два метода борьбы, первый — это заменить изображения на сайтах, которые используют ваш сервер. Изображение которое будет отображаться на сайтах вместо вашего можно заменить например на рекламный баннер.&nbsp;</p>
+<pre lang="PHP">RewriteEngine On<restore-line-break><restore-line-break>RewriteCond %{HTTP_REFERER} !^http://(.+\.)?yandex\.ru/.*$ [NC]<restore-line-break><restore-line-break>RewriteCond %{HTTP_REFERER} !^http://(.+\.)?undsoft\.com/.*$ [NC]<restore-line-break><restore-line-break>RewriteCond %{HTTP_REFERER} !^http://(.+\.)?yandex\.net/.*$ [NC]<restore-line-break><restore-line-break>RewriteCond %{HTTP_REFERER} !^http://(.+\.)?feedburner\.com/.*$ [NC]<restore-line-break><restore-line-break>RewriteCond %{HTTP_REFERER} !^http://(.+\.)?mail\.ru/.*$ [NC]<restore-line-break><restore-line-break>RewriteCond %{HTTP_REFERER} !^http://(.+\.)?poisk\.ru/.*$ [NC]<restore-line-break><restore-line-break>RewriteCond %{HTTP_REFERER} !^http://(.+\.)?yourdomain\.ru/.*$ [NC]<restore-line-break><restore-line-break>RewriteCond %{HTTP_REFERER} !^$ [NC]<restore-line-break><restore-line-break>RewriteRule .*\.(jpeg|jpg|gif|bmp|png)$ stophotlinking.gif [L]</pre>
+<p>
+
+*В данном коде нужно заменить yourdomain на название вашего домена, то же самое касается и доменной зоны. Изображение которое будет показываться на чужих сайтах должно находиться в корневой директории вашего сайта и иметь название stophotlinking и формат gif.</p>
+<p>
+
+Данный метод совершенно никак не помешает поисковикам собирать с вашего сайта изображения, так как они занесены в коде в список разрешённых. Вы наверно заметили, что в списке нет Google. Этот метод не помешает Google собирать изображения с вашего сайта, так как он использует уже кешированные версии в результатах поиска.</p>
+<p>Это конечно незначительно снизит нагрузку на ваш хостинг, так как обращение к вашему сайту всё равно будет, но уже вместо всех изображений будет передаваться одно, указанное вами. Если вы хотите выдавать ошибку на других сайтах вместо ваших изображений, что позволяет нам свести нагрузку от этих внешних обращений к нулю, то нужно заменить строку в выше приведённом коде:</p>
+<pre lang="PHP">RewriteRule .*\.(jpe?g|gif|bmp|png)$ stophotlinking.gif [L]</pre>
+<p>
+
+на</p>
+<pre lang="PHP">RewriteRule .*\.(jpe?g|gif|bmp|png)$ - [F]</pre>
+<p>
+
+Если выше приведённый пример не заработает, попробуйте альтернативный метод:</p>
+<pre lang="html4strict">RewriteEngine On<restore-line-break><restore-line-break> #Replace ?mysite\.com/ with your blog url<restore-line-break><restore-line-break> RewriteCond %{HTTP_REFERER} !^http://(.+\.)?mysite\.com/ [NC]<restore-line-break><restore-line-break> RewriteCond %{HTTP_REFERER} !^$<restore-line-break><restore-line-break> #Replace /images/nohotlink.jpg with your "don't hotlink" image url<restore-line-break><restore-line-break> RewriteRule .*\.(jpe?g|gif|bmp|png)$ /images/nohotlink.jpg [L]</pre>
+</li>
+<li>С помощью .Htaccess мы можем сделать кеширование файлов jpg,gif,png,css,js и других в браузере пользователя на сутки с помощью ниже приведённого кода, если же в содержимом произойдут изменения, то кеш обновится:</p>
+<pre lang="php">FileETag MTime Size<restore-line-break><restore-line-break><ifmodule mod_expires.c><restore-line-break><restore-line-break><filesmatch ".(jpg|gif|png|css|js)$"><restore-line-break><restore-line-break>ExpiresActive on<restore-line-break><restore-line-break>ExpiresDefault "access plus 1 year"<restore-line-break><restore-line-break></filesmatch><restore-line-break><restore-line-break></ifmodule></pre>
+<p>
+
+*В браузере обязательно должно быть включено кеширование.</li>
+<li>Так же рекомендую делать автоматическое сжатие файлов в перед передачей пользвателю, чтобы сайт грузился быстрее, для этого нужно вставить следующий код в .htaccess:</p>
+<pre lang="php"><ifModule mod_gzip.c><restore-line-break><restore-line-break> mod_gzip_on Yes<restore-line-break><restore-line-break> mod_gzip_dechunk Yes<restore-line-break><restore-line-break> mod_gzip_item_include file \.(html?|txt|css|js|php)$<restore-line-break><restore-line-break> mod_gzip_item_include handler ^cgi-script$<restore-line-break><restore-line-break> mod_gzip_item_include mime ^text/.*<restore-line-break><restore-line-break> mod_gzip_item_include mime ^application/x-javascript.*<restore-line-break><restore-line-break> mod_gzip_item_exclude mime ^image/.*<restore-line-break><restore-line-break> mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*<restore-line-break><restore-line-break></ifModule></pre>
+<p>
+
+*На одном сайте сайте не может работать gzip и zlib компрессия, поэтому выберите что-то одно.</li>
+<li>Практически каждый сайт на CMS WordPress сталкивается с проблемой спама в комментариях, чтобы отсечь весь автоматический спам ещё на подходе, можно фильтровать спаммеров по Referrer.</p>
+<p><strong>Referer</strong> — это один заголовков запроса клиента, то есть если вы перейдёте с одной страницы на другую, то вторая страница сможет узнать по referer адрес первой страницы. Так как программы с помощью которых делается спам делают переход напрямую сразу на страницу комментирования, то мы их сможем отсечь. Это не значит что можно отказываться от плагинов для предотвращения спамма, но это поможет вам снизить количество спамма и нагрузку на ваш сайт. Для реализации необходимо вставить ниже приведённый код в .htaccess:&nbsp;</p>
+<pre lang="PHP">RewriteEngine On<restore-line-break><restore-line-break>RewriteCond %{REQUEST_METHOD} POST<restore-line-break><restore-line-break>RewriteCond %{REQUEST_URI} .wp-comments-post\.php*<restore-line-break><restore-line-break>RewriteCond %{HTTP_REFERER} !.*yourdomain.ru.* [OR]<restore-line-break><restore-line-break>RewriteCond %{HTTP_USER_AGENT} ^$<restore-line-break><restore-line-break>RewriteRule (.*) ^http://%{REMOTE_ADDR}/$ [R=301,L]</pre>
+<p>
+
+*Не забудьте заменить yourdomain .ru на адрес вашего сайта</li>
+<li>Многие используют плагин для переадресации стандартного RSS на Feedburner, хотя это можно сделать сделав небольшую вставку в .htaccess, тем самым мы уменьшаем нагрузку на сайт:</p>
+<pre lang="PHP"> RewriteEngine on<restore-line-break><restore-line-break> RewriteCond %{HTTP_USER_AGENT} !FeedBurner    [NC]<restore-line-break><restore-line-break> RewriteCond %{HTTP_USER_AGENT} !FeedValidator [NC]<restore-line-break><restore-line-break> RewriteRule ^feed/?([_0-9a-z-]+)?/?$ http://feeds2.feedburner.com/puzat [R=302,NC,L]</pre>
+<p>
+
+Если не заработает редирект, то попробуйте поместить данный код в самое начало файла .htaccess.</p>
+<p>*Не забудьте заменить «http://feeds2.feedburner.com/puzat» на адрес своего фидбёрнера.</li>
+</ol>
+<h2>Шаг 5: Пинги</h2>
+<p>
+
+Когда вы публикуете новый материал на сайте, то WordPress отправляет пинги на множество сервисов, чтобы их известить об этом, мной был составлен большой список пинг сервисов, после тестов по их нагрузке на сервер и эффекту индексации было принято решение, что стоит оставить только необходимые пинги для поисковиков Яндекс и Google, а именно:</p>
+<ul>
+<li>http://ping.blogs.yandex.ru/RPC2</li>
+<li>http://blogsearch.google.com/ping/RPC2</li>
+<li>http://blogsearch.google.ru/ping/RPC2</li>
+</ul>
+<p>
+
+Этого вполне достаточно чтобы ваш пост был проиндексирован максимально быстро, в дополнение для ускорения индексации можно поставить ссылки в социальных закладках.</p>
+<h2>Шаг 6: WordPress плагины</h2>
+</p>
+<ol>
+<li>Первым делом рекомендую вам пересмотреть список ваших плагинов и удалить те, которыми вы не пользуетесь.</li>
+<li>Так же постарайтесь максимально уменьшить количество используемых плагинов за счёт отключения необязательных и их удаления.</li>
+<li>Практически каждый плагин подгружает свои CSS и JS, их с помощью онлайн-сервисов:онлайн-сервис по сжатию CSS, онлайн сервис по сжатию JS кода.</li>
+<li>Убедитесь что необходимые вам плагины загружаются только на необходимых вам страницах, часто встречается, что плагины подгружаются на всех страницах, это можно проверить посмотрев исходный код страницы и поискав название плагина или его сокращения. Для того, чтобы плагин обратывался только на необходимых вам страницах нужно будет написать условие внутри кода плагина.</li>
+</ol>
+<h2>Шаг 7: Оптимизация кода темы(шаблона) сайта</h2>
+<p>
+
+Для тех, кто не знает где находится ваш шаблон на сайте, вы можете зайти в исходный код страницы нажав на странице своего сайта правой кнопкой мыши и выбрав «Исходный код страницы», там необходимо найти строку:</p>
+<pre lang="html4strict"><link media="screen" type="text/css" href="http://yourdomain.ru/wp-content/themes/yourthemes/style.css" rel="stylesheet"></pre>
+<p>
+
+вместо «yourdomain .ru» будет название вашего сайта, а вместо «yourthemes» будет директория с вашей темой. После чего мы заходим в эту папку и можем видеть все файлы темы. Так же тему можно редакторировать и через админку WordPress для этого необходимо зайти в админку->Внешний вид->Редактор.</p>
+<ol>
+<ol>
+<li>Первым делом нужно удалить лишние обращения к базе данных, например в файле шапке (header.php) часто используется стандартная вставка:</p>
+<pre lang="PHP"><html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>><restore-line-break><restore-line-break><head profile="http://gmpg.org/xfn/11"><restore-line-break><restore-line-break><meta http-equiv="Content-Type" content="<restore-line-break><restore-line-break><?php bloginfo('html_type'); ?>;<restore-line-break><restore-line-break>charset=<?php bloginfo('charset'); ?>" /></pre>
+</li>
+</ol>
+</ol>
+<p>
+
+Все эти обращения к базе данных через php запросы, можно заменить на:</p>
+<pre lang="html4strict"><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><restore-line-break><restore-line-break><head profile="http://gmpg.org/xfn/11"><restore-line-break><restore-line-break><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /></pre>
+<p>
+
+*но нужно учитывать, что если у вас другая кодировка, то в charset=ВАШАКОДИРОВКА</p>
+<p>Тоже самое касается ссылки на стили:</p>
+<pre lang="html4strict"><link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /></pre>
+<p>
+
+заменить на:</p>
+<pre lang="html4strict"><link media="screen" type="text/css" href="http://yourdomain.ru/wp-content/themes/yourthemes/style.css" rel="stylesheet"></pre>
+<p>
+
+*Незабудьте заменить yourdomain.ru на ваш сайт, а так же поменяйте название темы.</p>
+<p>
+
+Код пингбеков:</p>
+<pre lang="html4strict"><link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /></pre>
+<p>
+
+заменить на:</p>
+<pre lang="html4strict"><link href="http://site.ru/xmlrpc.php" rel="pingback"/></pre>
+<p>
+
+*Незабудьте заменить site.ru на ваш сайт.</p>
+<p>
+
+Код фида:</p>
+<pre lang="html4strict"><link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" /></pre>
+<p>
+
+заменить на:</p>
+<pre lang="html4strict"><link href="http://site.ru/feed" title="ВАШ САЙТ RSS Feed" type="application/rss+xml" rel="alternate"/></pre>
+<p>
+
+*Незабудьте заменить site.ru на ваш сайт, а так же надпись «ВАШ САЙТ» на название вашего сайта.</p>
+<ol>
+<li>Так же можно удалить излишние мета-теги сайта из wp_head, вставив следующий код в файл функций (functions.php) вашей темы.</p>
+<pre lang="PHP">remove_action( 'wp_head', 'feed_links_extra', 3 );<restore-line-break><restore-line-break>remove_action( 'wp_head', 'feed_links', 2 );<restore-line-break><restore-line-break>remove_action( 'wp_head', 'rsd_link' );<restore-line-break><restore-line-break>remove_action( 'wp_head', 'wlwmanifest_link' );<restore-line-break><restore-line-break>remove_action( 'wp_head', 'index_rel_link' );<restore-line-break><restore-line-break>remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );<restore-line-break><restore-line-break>remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );<restore-line-break><restore-line-break>remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 );<restore-line-break><restore-line-break>remove_action( 'wp_head', 'wp_generator' );</pre>
+<p>
+
+*более подробная информация, что мы удаляем.</li>
+<li>Перейдём к правке подвала (footer.php), в нём так же часто оставляют запросы к базам данных, например вида:</p>
+<pre lang="php"><?php get_bloginfo('name') ?></pre>
+<p>
+
+Который можно заменить просто на статическое название сайта, например название моего блога: «Блог Пузата про заработок в интернете».</li>
+<li>Обращения к базам данных в шаблонах встречаются не только в header.php и footer.php, но и в других файлах темы, но там уже нужно смотреть индивидуально, пробуйте менять, но не забывайте делать бекапы файлов.</li>
+<li>Уберите все комментарии из вашего шаблона, если они не требуются. За вывод комментариев в постах/страницах отвечает следующий код:</p>
+<pre lang="php"><?php comments_template(); ?></pre>
+<p>
+
+Просто удалите его и из ваших постов/страниц исчезнет даже упоминание о комментариях.</li>
+<li>Так же почистите код от закомментированных вставок, если они вам не требуются. Я имею ввиду <!—код —> и /*код*/ .</li>
+<li>Старайтесь свести к минимуму, а лучше вообще отказаться от использования внешних скриптов, то же самое касается изображений и других файлов используемых с других сайтов, так как это может значительно замедлить работу сайта. Можно попробовать перенести код этого скрипта к себе на сайт или же попробовать сделать данную реализацию самому. Что же касается картинок и других файлов лучше их скопировать и сохранить у себя на сайте.</li>
+<li>Вы так же можете оптимизировать скрипты и стили с помощью ранее предложенных онлайн сервисов.</li>
+<li>Пропишите в header.php чтобы ваш сайт проходил дополнительную компрессию со стороны сервера, но перед этим проверьте поддерживает ли ваш сервер(хостинг) данную функцию, для этого нужно создать файл proverka.php в корневой директории сайта и вставить в него следующий код:</p>
+<pre lang="php"><?php phpinfo(); ?></pre>
+<p>
+
+После чего открываем этот файл в браузере http://site.ru/proverka.php и ищем zlib, если стоит enabled, то есть включен, то мы можем добавлять код:</p>
+<pre lang="php"><?php ini_set('zlib.output_compression', 'On'); ini_set('zlib.output_compression_level', '1'); ?></pre>
+<p>
+
+Если ваш хостинг не поддерживает Zlib, то вы можете попросить суппорт хостинга включить его, сейчас практически каждый хостинг его включает изначально, нам же остаётся его лишь прописать в header.php прямо перед !DOCTYPE… , то есть в самом начале кода.</p>
+<p>*На одном сайте не может работать gzip и zlib компрессия, поэтому выберите что-то одно.</p>
+<p>
+
+Спасибо за метод WPbot</li>
+<li>Старайтесь размещать все ваши скрипты прямо перед </body> , чтобы они грузились только после того, как весь основной код будет загружен, это в особенности касается скриптов, которые выполняются с внешних ресурсов.</li>
+<li>Если вы используете Jquery библиотеки, а тем более если вы их подгружаете с внешних сайтов, то рекомендую посмотреть наличие необходимой вам Jquery библиотеки вhttp://code.google.com/apis/ajaxlibs/, если вы нашли там то что вам нужно, то лучше использовать оттуда, так как с Google файлы грузятся моментально, получится паралельное закачивание файлов, то есть пока грузится ваш сайт, библиотеки загрузятся с Google, а так же если браузер скачал себе данную библиотеку, то он не будет её скачивать второй раз.</li>
+<li>Если вам позволяют знания, то можно отключить от плагинов обращения к их CSS и JS и вынести их в сам шаблон, тем самым вы уменьшите количество запросов, всё будет грузиться из одного места, что конечно же ускорит работу вашего сайта. Не забывайте про правило, что стили мы вставляем в header.php, а скрипты в footer.php перед </body>.</li>
+<li>Сразу после </head> вставьте</p>
+<pre lang="php"><?php flush(); ?></pre>
+<p>
+
+который будет очищать буфер вывода и позволит нам загрузить CSS связанные с файлами в заголовке, без ожидания остальных файлов.</li>
+</ol>
+<h2>Шаг 8: Изображения</h2>
+</p>
+<ol>
+<li>Часто бывает, что на сайт добавляются изображения не сжатые, поэтому следите за тем, чтобы перед добавлением на сайт изображения сжимались и доводились до приемлемого соотношения размер/качество. Можно попробовать плагин — WP-Smushit, который при добавлении изображений на сайт будет их автоматически сжимать.</li>
+<li>Так же часто забывают в коде указывать высоту и размер для изображений, не забывайте про это.</li>
+<li>По возможности постарайтесь распаралеллить процесс загрузки сайта и загрузки картинок, за счёт вынесения их на сторонний сервер, например Amazon S3, это сделать не просто и несёт ряд неудобств для обычного пользователя, но если вы являетесь прошаренным и хотите получить максимальную отдачу от своего сайта в скорости, то можете разобраться с его настройками, ссылка на руководство на английском языке. Вот наглядный график <img loading="lazy" title="Использование Amazon S3 для снижения нагрузки на сайт" src="https://petrukmax.github.io/guideto/media/posts/73/wordpress_speed_62.jpg" alt="Использование Amazon S3 для снижения нагрузки на сайт" width="495" height="230"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/73/responsive/wordpress_speed_62-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/posts/73/responsive/wordpress_speed_62-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/posts/73/responsive/wordpress_speed_62-md.jpg 768w">как получилось снизить нагрузку с помощью данного метода. Вы так же можете попробовать WP-offload с помощью этого плагина кешируются статические документы такие как картинки и др.</li>
+<li>Можно использовать десктопную программу с помощью которой сжимать необходимые изображения очень легко, их всего лишь надо перенести в окно программы — программа Shrink-O-Matic.</li>
+</ol>
+<h2>Шаг 9: Кеширование</h2>
+</p>
+<ol>
+<li>Необходимо установить плагин кеширования сайта, из тех которые я использовал на мой взгляд самые лучшие WP Super Cache(бесплатный) и скрипт Cache Maxsite(платный). Мне лично больше понравился Maxsite Cache, но если вы не готовы платить 30$ за плагин, то можно обойтись и WP Super Cache. Основной минус WP Super Cache в том, что он не кеширует виджеты, но с этой проблемой нам поможет справиться следующий плагин WP Widget Cache.</li>
+<li>Так же к выше перечисленным плагинам можно добавить плагин WP-CSS, который сжимает CSS в GZIP, а так же плагин Autotimize, который рекомендуют использовать вместе с WP Super Cache.</li>
+</ol>
+<h2>Шаг 10: База данных</h2>
+</p>
+<ol>
+<li>Помимо файлов сайта у нас есть база данных, которую тоже нужно время от времени чистить и оптимизировать, чтобы это сделать в ручную нам потребуется больше времени, чем установить плагин Optimize DB. Активируйте его только на время оптимизации базы данных, после чего деактивируйте, не оставляйте его постоянно включённым, чтобы он не создавал дополнительную нагрузку на сайт.</li>
+<li>Если вы не используете ревизии, то их таблицу можно удалить из базы данных, найдите таблицу с названием «wp_post_revision» и удалите.</li>
+</ol>
+<h2>Шаг 11: Мелочи</h2>
+</p>
+<ol>
+<li>Большие посты разбивайте на несколько страниц с помощью <!—nextpage—>.</li>
+<li>Не нужно выводить полные посты на страницах, используйте excerpt.</li>
+<li>Не выводите на главной странице больше 5 постов.</li>
+<li>Не выводите больше 50 комментариев на одну страницу, включите навигацию по комментариям. Для этого нужно зайти в админку WordPress->Обсуждения->и поставьте галочку напротив «Разбивать комментарии на странице по 50 штук».</li>
+<li>Более ранние версии WordPress потребляют меньше ресурсов, но я же рекомендую использовать последнюю версию WordPress для СДЛ и сателлитов, а для ГС можно использовать более ранние версии например WordPress 2.3.3. Не забывайте про риск уязвимостей и недоработок, так как это всё таки старые версии.</li>
+<li>Для того чтобы замерить количество запросов к базам данных wordpress нужно добавить в код следующую строчку:</p>
+<pre lang="php"><?php echo get_num_queries(); ?> запросов за <?php timer_stop(1); ?> секунд.</pre>
+</li>
+<li>Не поленитесь, сделайте код валидным, онлайн сервис проверки кода на валидность с рекомендациями по исправлению.</li>
+<li>Реализуйте поиск по сайту с помощью стороннего сервиса, например Google, так же вы на этом сможете заработать, зарегистрируйтесь для этого в Google и перейдите в системуGoogle Adsense.</li>
+<li>Используйте сторонние сервисы для хранения видео и просто вставляйте их код в пост, например Youtube. Это всё в тему параллельности процессов загрузки страницы.</li>
+</ol>
+<h2>Шаг 12: Сервер</h2>
+<p>
+
+В подробности серверной настройки я не вдавался, но если кому потребуется, то на мой взгляд, один из лучших материалов настройка сервера Апач на максимальную производительность. Владельцам своих серверов рекомендую воспользоваться eAccelerator и PHP-Speedy, про его работу с WP Super Cache можно почитать здесь, все материалы на английском языке.</p>
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/wordpress/">WordPress</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+                     <div class="related">
+                        <h2 class="related__title">
+                           Related posts:
+                        </h2>
+                        <ul class="related__items">
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/kak-razmeshchat-kartinki-bloga-na-dropbox-and124-dropbox-sync-wordpress-plugin.html">
+                                       Как  размещать   картинки  блога на Dropbox &amp;#124; Dropbox Sync  WordPress  Plugin
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/luchshie-plaginy-wordpress.html">
+                                       Лучшие плагины WordPress
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/wordpress-plagin-cache-images-dlya-avtomaticheskogo-sohraneniya-kartinok-razmeshchennyh-na-drugih-saytah.html">
+                                       WordPress плагин  Cache Images для автоматического сохранения картинок размещенных на других сайтах.
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                        </ul>
+                     </div>
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>
