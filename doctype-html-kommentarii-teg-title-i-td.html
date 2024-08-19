@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Doctype, Html комментарии, тег Title, и т.д. - guideto </title>
+        <meta name="description" content="Здравствуйте уважаемые читатели блога KtoNaNovenkogo.ru. Я хочу продолжить рассказывать об основах работы с Html с самого начала, последовательно и ничего не опуская. Сегодня мы поговорим о специальномтеге (декларации) DOCTYPE, узнаем как правильно оформлять комментарии в Html коде, как прописывать заголовок веб документа Title и постараемся разобраться в отличиях блочных и строчных тэгов элементов)." />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/doctype-html-kommentarii-teg-title-i-td.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="Doctype, Html комментарии, тег Title, и т.д." /><meta property="og:site_name" content="guideto" /><meta property="og:description" content="Здравствуйте уважаемые читатели блога KtoNaNovenkogo.ru. Я хочу продолжить рассказывать об основах работы с Html с самого начала, последовательно и ничего не опуская. Сегодня мы поговорим о специальномтеге (декларации) DOCTYPE, узнаем как правильно оформлять комментарии в Html коде, как прописывать заголовок веб документа Title и постараемся разобраться в отличиях блочных и строчных тэгов элементов)." /><meta property="og:url" content="https://petrukmax.github.io/guideto/doctype-html-kommentarii-teg-title-i-td.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/doctype-html-kommentarii-teg-title-i-td.html"},"headline":"Doctype, Html комментарии, тег Title, и т.д.","datePublished":"2013-02-11T13:54","dateModified":"2024-08-19T17:47","description":"Здравствуйте уважаемые читатели блога KtoNaNovenkogo.ru. Я хочу продолжить рассказывать об основах работы с Html с самого начала, последовательно и ничего не опуская. Сегодня мы поговорим о специальномтеге (декларации) DOCTYPE, узнаем как правильно оформлять комментарии в Html коде, как прописывать заголовок веб документа Title и постараемся разобраться в отличиях блочных и строчных тэгов элементов).","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>Doctype, Html комментарии, тег Title, и т.д.</h1>
+                     <p>
+                           <time datetime="2013-02-11T13:54">
+                                 февраль 11, 2013
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <p>Здравствуйте уважаемые читатели блога <a title="KtoNaNovenkogo.ru - все для начинающих вебмастеров| Нюансы создания и продвижения сайтов, блогов, форумов, интернет-магазинов, заработка на сайте" href="http://ktonanovenkogo.ru/">KtoNaNovenkogo.ru</a>. Я хочу продолжить рассказывать об основах работы с Html с самого начала, последовательно и ничего не опуская. Сегодня мы поговорим о специальном<strong>теге (декларации) DOCTYPE</strong>, узнаем как правильно оформлять <em>комментарии в Html</em> коде, как прописывать заголовок веб документа <a href="http://ktonanovenkogo.ru/seo/search/meta-tegi-title-titl-tajtl-description-keywords.html" target="_blank">Title</a> и постараемся разобраться в отличиях блочных и строчных тэгов элементов).
+
+<div><img loading="lazy" title="Правильный DOCTYPE и оформление комментариев в Html коде" src="https://petrukmax.github.io/guideto/media/posts/40/doctype.jpg" alt="doctype html, комментарии" width="500" height="308"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/doctype-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/doctype-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/doctype-md.jpg 768w"></div>
+<p>
+
+&nbsp;</p>
+<p>
+
+В предыдущей статье из рубрики <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/category/html/html-new" target="_blank">Html для чайников</a> (в которой в основном рассказывалось про то, <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/html/html-new/chto-takoe-yazyk-html-validator-w3c-tegi-spisok-html-tegov-validator-w3c-struktura-dokumenta-html-body-head.html" target="_blank">что такое язык Html, тэги и валидатор W3C</a>) мы закончили на том, что любой <a href="http://ktonanovenkogo.ru/seo/chto-takoe-internet-www-sajt-siteveb-web-2-0-globalnaya-set-vsemirnoj-pautiny-world-wide-web.html" target="_blank">Web</a> документ должен иметь определенную структуру. Внутри тегов «Html» языка гипертекстовой разметки обязательно должны находиться «голова» Web документа, заключенная в тэги Head, а так же «тело» документа, заключенное в Body.</p>
+<p>
+
+<a name="doctype"></a></p>
+<h3>Правильный тег DOCTYPE (Html, Xhtml и Html 5)</h3>
+</p>
+<div></div>
+</p>
+<div></div>
+<p>
+
+Первым элементом языка гипертекстовой разметки, который вы встретите в любом правильном Web документе (странице сайта), будет специальный тэг <strong>DOCTYPE</strong>, который будет содержать в самом начале запись <code>!doctype html public</code>. Точнее говоря, DOCTYPE — это не совсем обычный тег, а так называемая декларация, ибо он начинается с угловой скобки и проставленного сразу же за ней восклицательного знака<code><!</code>. В этой статье, кроме декларации под названием DOCTYPE, мы еще рассмотрим декларацию, которая называется Html комментарий.</p>
+<p>
+
+Сам по себе элемент DOCTYPE служит для объявления типа данного документа и помогает браузеру понять, на какую версию Html или XHTML (по классификации валидатора W3C) ему следует опираться при разборе кода загружаемой веб страницы.</p>
+<p>
+
+Если тип документа не будет указан в DOCTYPE в соответствии с общепринятыми правилами, то браузер, скорее всего, все равно правильно отобразит ваш Web документ, но не факт, что то же самое сделают и популярные <a href="http://ktonanovenkogo.ru/vokrug-da-okolo/programs/brauzery-chto-eto-takoe-samyj-luchshij-bystryj-chto-takoe-kesh-brauzera-kak-ego-ochistit.html" target="_blank">браузеры</a> тысяч ваших читателей. Поэтому DOCTYPE должен присутствовать в Web документе (странице) обязательно и составлен он должен быть правильно.</p>
+<p>
+
+Но давайте на этом остановимся чуть поподробнее. Сейчас мы с вами наблюдаем некий дуализм или же два типа документов в сети — как делали раньше до выделения <a href="http://ktonanovenkogo.ru/html/uroki-css/css-tablicy-kaskadnyx-stilej-chto-eto-takoe-style-link-yazyk-css-html.html" target="_blank">CSS</a> из лона языка Html и как делают сейчас по принятым современным стандартам.</p>
+<p>
+
+Естественно, что после принятия новых стандартов в сети интернет оставалось все равно огромное множество документов, созданных по старым принципам чистого Html и браузеры должны были с ними как то работать. Корпорация Майкрософт в свое время предложила использовать Doctype из нового языка разметки XML. В языке Html она получила название <strong>декларации doctype</strong>.</p>
+<p>
+
+Выглядеть она может по разному (читайте об этом ниже), но проще всего использовать такой вариант (чуть ниже по тексту объясню почему):</p>
+<div>
+<div id="highlighter_78184">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE HTML></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Таким образом браузер будет понимать, по каким именно стандартам ему разбирать код документа. Если декларация doctype имеет место быть, то браузер переходит в режим работы по стандартам (<strong>standarts mode</strong>). Если же декларации doctype браузер не найдет в самом начале документа (или она будет не соответствовать правильному варианту написания), то тогда браузер включит хитрый режим уловок (<strong>quirks mode</strong>).</p>
+<p>
+
+Документ не имеющий в своем начале декларации doctype будет отображаться таким образом, как будто бы это браузер очень старый (старинный). Если в этот же документ добавить декларацию, то браузер будет осуществлять разбор кода с учетом всех имеющихся на текущий день стандартов.</p>
+<p>
+
+Правда, понятие старого браузера очень уж расплывчатое. Все тот же лидер по скорости работы и скорости западания в сердца пользователей Google Chrome (<a href="http://ktonanovenkogo.ru/vokrug-da-okolo/programs/google-chrome-gugl-xrom-skachat-ustanovit-nastroit-samyj-bystryj-nadezhnyj-brauzer.html#google-chrome" target="_blank">как его установить и настроить</a>) появился то только в 2008 году. У IE (<a href="http://ktonanovenkogo.ru/vokrug-da-okolo/programs/internet-explorer-ie-msie-skachat-obnovit-brauzer-internet-eksplorer-9.html" target="_blank">скачать последнюю версию Эксплорера</a>) же естественно история гораздо более долгая, именно поэтому все браузеры в режиме quirks mode (уловок, т.е. когда декларация не была прописана) будут отображать вебстраницу точно так же, как это бы делал старинный IE версии 5.5 (она считается базовой).</p>
+<p>
+
+Более подробно узнать о том, почему обязательно нужно прописывать Doctype в начале любого веб документа вы сможете из этой статьи про CSS свойства <a href="http://ktonanovenkogo.ru/html/uroki-css/height-width-overflow-css-pravila-dly-oblasti-kontenta-blochnoj-verstke.html#height-width-overflow-2" target="_blank">height, width и overflow</a></p>
+<p>
+
+Хотя, если вы создаете свой проект на базе какого-либо <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/seo/dvizhok-dlya-sajta-cms-besplatnye-cms-sistemy-upravleniya-kontentom-sajta.html" target="_blank">движка для сайта (CMS)</a>, то за правильность формирования <strong>Html тега DOCTYPE </strong>будет отвечать используемый вами движок, но знать назначение DOCTYPE и варианты его написания все равно лишним, на мой взгляд, не будет. Тэг (декларация) DOCTYPE может выглядеть, например, так:</p>
+<div>
+<div id="highlighter_100200">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE HTML PUBLIC </code><code>"-//W3C//DTD HTML 4.01//EN"</code> <code>"http://www.w3.org/TR/html4/strict.dtd"</code><code>></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Если вы читали мою предыдущую статью, то, наверное, поняли, что DOCTYPE в этом случае указывает браузеру на то, что код данного Web документа нужно будет разбирать, опираясь на стандарты языка HTML 4.01. Для поиска нужного вам варианта DOCTYPE вы можете обратиться к описанному в предыдущей статье <a title="Откроется в новом окне" href="http://www.w3.org/" rel="nofollow" target="_blank">валидатору W3C</a>, но чтобы там найти что нибудь, нужно точно знать, где это лежит, иначе...</p>
+<p>
+
+Сайт валидатора W3C не обладает дружественным интерфейсом и интуитивно понятной навигацией. Там вы запросто можете найти <strong>DOCTYPE с относительной ссылкой</strong> на страницу с описанием нужного вам стандарта Html или XHTML и, вставив такой вариант DOCTYPE к себе на сайт, ничего хорошего не получите:</p>
+<div>
+<div id="highlighter_873048">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE HTML PUBLIC </code><code>"-//W3C//DTD HTML 4.01//EN"</code> <code>"TR/html4/strict.dtd"</code><code>></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+При таком варианте DOCTYPE браузер будет искать документ с описанием стандарта Html или XHTML на вашем собственном сайте, добавив к относительной ссылке «TR/html4/strict.dtd» доменное имя вашего ресурса: «http://ktonanovenkogo.ru/TR/html4/strict.dtd». В общем, такой DOCTYPE работать не будет и в будущем следует обращать особое внимание на наличие «http://www.w3.org/» в коде вашего DOCTYPE, чтобы не наступить на подобные грабли.</p>
+<p>
+
+В общем-то существует всего лишь несколько вариантов <strong>DOCTYPE для Html</strong> и еще несколько для XHTML. Все варианты DOCTYPE вы сможете посмотреть на соответствующей <a href="http://www.w3.org/QA/2002/04/valid-dtd-list" rel="nofollow" target="_blank">странице валидатора W3C</a>.</p>
+<p>
+
+<img loading="lazy" title="Правильный DOCTYPE для (X)HTML" src="https://petrukmax.github.io/guideto/media/posts/40/doctype%20.png" alt="doctype для (X)HTML"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/doctype%20-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/doctype%20-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/doctype%20-md.png 768w"></p>
+<p>
+
+Давайте начнем со стандарта языка гипертекстовой разметки 4.01 (Html 5 пока что еще только разрабатывается). Для это случая существует три варианта DOCTYPE: строгий, переходный и с поддержкой фреймов:</p>
+<ol>
+<li>
+<div>
+<div id="highlighter_114994">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE HTML PUBLIC </code><code>"-//W3C//DTD HTML 4.01//EN"</code> <code>"http://www.w3.org/TR/html4/strict.dtd"</code><code>></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li>
+<div>
+<div id="highlighter_274993">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE HTML PUBLIC </code><code>"-//W3C//DTD HTML 4.01 Transitional//EN"</code><code>"http://www.w3.org/TR/html4/loose.dtd"</code><code>></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li>
+<div>
+<div id="highlighter_327308">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE HTML PUBLIC </code><code>"-//W3C//DTD HTML 4.01 Frameset//EN"</code><code>http://www.w3.org/TR/html4/frameset.dtd"></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ol>
+<p>
+
+Чаще всего используют второй вариант DOCTYPE для Html (Transitional), т.к. он допускает больше вольностей в написании кода Web документа, ну, а вариант с фреймами вам вряд ли пригодится, в силу неактуальности их использования на сегодняшний день.</p>
+<p>
+
+Собственно, имеются такие же три варианта <strong>DOCTYPE для XHTML</strong> — строгий, переходный и с поддержкой фреймов:</p>
+<ol>
+<li>
+<div>
+<div id="highlighter_180073">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE html PUBLIC </code><code>"-//W3C//DTD XHTML 1.0 Strict//EN"</code><code>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</code><code>></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li>
+<div>
+<div id="highlighter_421881">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE html PUBLIC </code><code>"-//W3C//DTD XHTML 1.0 Transitional//EN"</code><code>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</code><code>></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li>
+<div>
+<div id="highlighter_885625">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE html PUBLIC </code><code>"-//W3C//DTD XHTML 1.0 Frameset//EN"</code><code>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"</code><code>></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ol>
+<p>
+
+Но давайте посмотрим откуда берутся эти варианты правильного написания декларации Doctype. Помните мы в первой статье по Html рассматривали таблицу допустимых <a href="http://ktonanovenkogo.ru/html/html-new/chto-takoe-yazyk-html-validator-w3c-tegi-spisok-html-tegov-validator-w3c-struktura-dokumenta-html-body-head.html#yazyk-html-1" target="_blank">Html тэгов</a>:</p>
+<p>
+
+<img loading="lazy" title="Html тэги и Doctype " src="https://petrukmax.github.io/guideto/media/posts/40/tegi-html.png" alt="doctype html public"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/tegi-html-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/tegi-html-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/tegi-html-md.png 768w"></p>
+<p>
+
+И отдельную таблицу возможных <a href="http://ktonanovenkogo.ru/html/html-new/html-tegi-h1-h6-hr-p-abzac-br-perenos-stroki-atributy-html-tegov-align.html#html-tegi-3" target="_blank">Html атрибутов</a>:</p>
+<p>
+
+<img loading="lazy" title="Список всех возможных атрибутов и Doctype " src="https://petrukmax.github.io/guideto/media/posts/40/Html-tegi-atribtuty-wc3.png" alt="Doctype в Html 5"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/Html-tegi-atribtuty-wc3-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/Html-tegi-atribtuty-wc3-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/Html-tegi-atribtuty-wc3-md.png 768w"></p>
+<p>
+
+Как вы можете видеть, в обеих этих таблицах присутствует столбец «Depr», в котором буквой «D» помечены устаревшие и не рекомендуемые к применению теги и атрибуты языка гипертекстовой разметки Html. Это мы с вами уже рассмотрели. Но обратите внимание, что напротив каждой буквы «D» в соседнем справа столбце «DTD» стоит либо буква «L» (Loose DTD), либо буква «F» (Frameset DTD).</p>
+<p>
+
+Т.о. все Html теги и атрибуты, которые не помечены буквами «D» (не рекомендуемые) входят в <strong>строгую декорацию Doctype</strong> (только рекомендованные Html элементы и ничего более). Если же вы все таки будете допускать использование не рекомендованных тегов и атрибутов языка Html (они помечены литерой «D»), то нужно будет объявлять для таких документов декларацию <strong>Doctype переходную</strong>.</p>
+<p>
+
+Некоторые элементы и атрибуты помеченные в столбце «DTD» буквой «F» (<a href="http://ktonanovenkogo.ru/html/html-new/iframe-frame-frejmy-v-html-chto-eto-takoe-frameset.html" target="_blank">FRAME, FRAMESET</a>) будут входить в декларацию <strong>Doctype для фреймовых структур</strong>. Фреймовая декларация Doctype базируется на основе переходной, к которой добавляются теги и атрибуты для создания <a href="http://ktonanovenkogo.ru/html/html-new/iframe-frame-frejmy-v-html-chto-eto-takoe-frameset.html#iframe-2" target="_blank">фреймов</a>.</p>
+<p>
+
+А теперь давайте попробуем разобраться, а из каких частей состоит декларация Doctype?</p>
+<div>
+<div id="highlighter_25231">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE</code></div>
+</p>
+<div><code> </code><code>HTML</code></div>
+</p>
+<div><code> </code><code>PUBLIC</code></div>
+</p>
+<div><code>"-//W3C//DTD HTML 4.01//EN"</code></div>
+</p>
+<div><code>"http://www.w3.org/TR/html4/strict.dtd"</code><code>></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Сначала идет название декларации — «Doctype». Тут, я думаю все понятно. Дальше идет «Html» — корневой элемент данного языка разметки (все теги в Html пишутся внутри корневого тега «Html» — это вы, надеюсь, помните). Затем идет указание — публичная данная декларация Doctype или же системная. Все декларации Doctype являются публичными, что обозначается словом «PUBLIC».</p>
+<p>
+
+А дальше идут два идентификатора документа. Первый из них называется публичным идентификатором декларации Doctype («-//W3C//DTD HTML 4.01//EN»). Минус означает то, что данная декларация не зарегистрирована в стандарте ИСО. Затем следует название консорциума, название декларации и язык, на котором она написана. Во втором идентификаторе указывается путь до файла строгой декларации.</p>
+<p>
+
+Ну, а теперь давайте раскрою вам <strong>всю правду про Doctype</strong>. Браузерам важно только формально правильное написание декларации Doctype, но они ни в коем разе не полезут на сайт консорциума, чтобы скачать файл декларации. Даже если вы выберите вариант строгой декларации и при этом будете использовать не рекомендуемые в современной версии Html теги и атрибуты, то любой браузер все равно вас правильно поймет — это факт проверенный и подтвержденный.</p>
+<p>
+
+Поэтому, чтобы не мудрствовать лукаво, <strong>в Html 5 декларация Doctype</strong> будет выглядеть уже вот так:</p>
+<div>
+<div id="highlighter_376024">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!DOCTYPE HTML></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+И все. Оставили только «Html». И несмотря на то, что Html 5 еще не полностью внедрен, данный вариант декларации <strong>Doctype поддерживается всеми браузерами</strong> и вы можете смело им пользоваться. О как, а вы говорите...</p>
+<p>
+
+<a name="doctype-1"></a></p>
+<h3>Html комментарии в Web документе и тег Title</h3>
+</p>
+<div></div>
+</p>
+<div></div>
+<p>
+
+В служебной области Web документа (между тэгами Head) обязательно должен быть прописан заголовок этого самого документа (веб страницы), заключенный в <strong>Html теги Title</strong> (см. на приведенном рисунке).</p>
+<p>
+
+<img loading="lazy" title="Cтруктура HTML документа" src="https://petrukmax.github.io/guideto/media/posts/40/htmlbase.png" alt="doctype html public"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/htmlbase-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/htmlbase-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/htmlbase-md.png 768w"></p>
+<p>
+
+Переоценить значимость заключенной в тэги Title информации очень трудно (я не преувеличиваю). Когда вы будет подбирать <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/seo/search/semanticheskoe-yadro-podbor-klyuchevyx-slov-yandeks-vordstat-wordstat-yandex-ru.html" target="_blank">ключевые слова в Яндексе</a> (используя для этого <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/seo/search/statistika-poiskovyx-zaprosov-yandeks-google-rambler-kak-statistikoj-yandeksa.html" target="_blank">статистику поисковых запросов Яндекса</a>), то после составления семантического ядра вам обязательно нужно будет упомянуть выбранные ключевые слова в заголовке Title.</p>
+<p>
+
+Про то, насколько важны слова, заключенные в теге Title для будущего успешного продвижения проекта, вы можете узнать из статьи <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/seo/kak-raskrutit-sajt.html" target="_blank">Как раскрутить сайт самому</a>, а про то, как прописать нужные вам слова в Title для Joomla и WordPress, вы узнаете из статьи <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/seo/search/samostoyatelnoe-prodvizhenie-sajta-kak-prodvigat-samomu-vnutrennej-optimizaciej.html" target="_blank">Самостоятельное продвижение, оптимизация и раскрутка сайта</a>.</p>
+<p>
+
+Содержимое метатега Title будет отображаться вверху окна браузера пользователя и в поисковой выдаче Google и Яндекса, поэтому помимо содержания в нем ключевых слов, Title должен стимулировать пользователей перейти именно на ваш сайт из поисковой выдачи. Для каждой страницы вашего сайта заголовок Title должен быть уникальным, иначе будет ухудшение в ранжировании вашего проекта (<a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/seo/search/relevantnost-ranzhirovanie-chto-eto-takoe.html" target="_blank">Релевантность и ранжирование</a>).</p>
+<p>
+
+Теперь давайте прежде, чем переходить к рассмотрению конкретных тегов, остановимся на таком понятии, как <strong>комментарии в Html</strong> коде. Комментарии часто проставляются в Html коде для того, чтобы потом было проще найти нужные участки кода или же для того, чтобы другим было проще понять задумку автора. Само собой разумеется, что текст Html комментариев ни в коем случае не должен отображаться на веб странице, поэтому комментарии специальным образом оформляются в коде.</p>
+<p>
+
+Особенно актуальны Html комментарии были во времена господства табличной верстки (<a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/html/html-new/html-dlya-nachinayushhix-sozdanie-i-rabota-s-tablicami-tegi-table-td-tr-sredstvami-html-i-css.html" target="_blank">теги html таблиц</a>), ибо тогда, по сравнению с современной блочной версткой (<a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/html/div-verstka-html/verstaem-dvux-kolonochnyj-maket-sajta-div-kontejnery-maketa-v-html-opredelyaem-razmery-pozicionirovanie-css.html" target="_blank">Div верстка в Html</a>), очень просто было запутаться, что и в какой ячейке таблицы выводится:</p>
+<div>
+<div id="highlighter_255614">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code>
+<table border=0  width=10%></code></div>
+</p>
+<div><code><!--Html комментарий, подсказывающий, что здесь начинается какая-то таблица--></code></div>
+</p>
+<div><code> </code><code>
+<tr></code></div>
+</p>
+<div><code> </code><code>
+<td></code></div>
+</p>
+<div><code> </code><code><img loading="lazy" src=image.png alt=</code<code>"картинка"</code><code>><br></code></div>
+</p>
+<div><code><!--Html комментарий, подсказывающий, что здесь начинается колонка--></code></div>
+</p>
+<div><code> </code><code><FONT COLOR=white>Меню сайта:</FONT></code></div>
+</p>
+<div><code><!--Комментарий, говорящий о том, что здесь колонка заканчивается--></code></div>
+</p>
+<div><code> </code><code></td>
+<p></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Наверное, из приведенного выше примера вы уже поняли, что все Html комментарии начинаются точно так же, как и любые другие элементы языка гипертекстовой разметки — с угловой скобки, но сразу же после открывающей угловой скобки, при <strong>формировании комментария в Html коде</strong>, нужно будет поставить восклицательный знак (при описании DOCTYPE я упоминал, что комментарии в Html тоже являются декларациями, которые обязательно начинаются с <code><!</code>) и два дефиса, а перед закрывающей угловой скобкой комментария нужно будет поставить еще пару дефисов:</p>
+<div>
+<div id="highlighter_875581">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!-- Текст комментария в Html коде --></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Весь текст комментария, который будет находиться между этими двойными дефисами, будет рассматриваться браузерами как служебная информация и никак обрабатываться не будет. Корректность написания Html комментария можно наглядно оценить при использовании какого-либо редактора с подсветкой кода, например, того же <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/vokrug-da-okolo/programs/notepad-plus-plus-tekstovyj-redaktor-podsvetkoj-sintaksisa-skachat-ustanovit-nastroit.html" target="_blank">notepad++</a>:</p>
+<div><img loading="lazy" title="Комментарии в Html коде" src="https://petrukmax.github.io/guideto/media/posts/40/kommentarii-html.png" alt="комментарии html"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/kommentarii-html-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/kommentarii-html-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/kommentarii-html-md.png 768w"></div>
+<p>
+
+Но внутри комментария можно размещать не только текст, но и все что угодно. Например, довольно часто в комментарии заключается часть Html кода (называется — закомментировать) и этот участок кода браузерами обрабатываться не будет. Комментарий можно будет открыть на одной строке Html кода, а закрыть хоть через сотню строк, и заключенный таким образом в элементы оформления комментария кусок кода для браузера просто перестанет существовать.</p>
+<div><img loading="lazy" title="Html код заключенный в комментарий" src="https://petrukmax.github.io/guideto/media/posts/40/kommentarii-v-html.png" alt="комментарий в html"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/kommentarii-v-html-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/kommentarii-v-html-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/kommentarii-v-html-md.png 768w"></div>
+<p>
+
+Все довольно просто и, думаю, что с комментариями в коде Web документа у вас проблем не возникнет. Хотя есть одна тонкость в работе с многострочными комментариями в Html. <strong>Внутрь одного Html комментария</strong> нельзя помещать другой комментарий, иначе часть закомментированной информации может быть отображена браузером на веб странице. Давайте для примера рассмотрим такую конструкцию включенных друг в друга комментариев:</p>
+<div>
+<div id="highlighter_24842">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><!--Начало  Html комментария <!-- Вложенный комментарий -->  продолжение внешнего коммента--></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Итак, браузер при разборе кода веб страницы обнаружит открывающий синтаксис декларации комментария <code><!--</code> и начнет поиск закрывающего синтаксиса коммента <code>--></code> и найдет его после слов «Вложенный комментарий», а вот все остальное (в нашем случае это <code>продолжение внешнего коммента--></code>будет обработано браузером и выведено на веб странице. В принципе, если вы пользуетесь при написании Html кода редактором с подсветкой, то вы сразу же заметите неладное по изменению цвета вашего комментария:</p>
+<div><img loading="lazy" title="Недопустимость нахождения комментария внутри другого Html комментария" src="https://petrukmax.github.io/guideto/media/posts/40/doctype.png" alt="doctype"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/doctype-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/doctype-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/doctype-md.png 768w"></div>
+<p>
+
+<a name="doctype-2"></a></p>
+<h3>Понятие блочных и строчных Html тегов</h3>
+</p>
+<div></div>
+</p>
+<div></div>
+<p>
+
+Все теги, которые возможно использовать внутри элементов Body (то, что отображается на веб странице и список которых вы можете найти в <a title="Откроется в новом окне" href="http://www.w3.org/TR/1999/REC-html401-19991224/index/elements.html" rel="nofollow" target="_blank">валидаторе W3C</a>), можно разделить на две группы: <strong>строчные и блочные теги</strong>. Блочные элементы используются для построения структуры Web документа, а строчные используются для оформления кусков текста (строк). Причем, всегда нужно соблюдать одно незыблемое правило — не заключать внутрь строчных элементов Html кода блочные теги.</p>
+<p>
+
+Самыми яркими и показательными представителями строчных и блочных тэгов являются соответственно Div (блочный элемент — отсюда и пошло название блочной верстки) и Span (строчный элемент). Эти теги языка гипертекстовой разметки являются парными, т.е. у них есть открывающий и закрывающий тэг. Вообще, теги Div и Span не имеют абсолютно никакого предназначения и смысла в чистом Html без использования таблиц каскадных стилей CSS. Они являются контейнерами, позволяющими изменять свойства заключенных в нем элементов через CSS.</p>
+<p>
+
+Если вы пропишите в коде Web страницы подряд несколько элементов Div, то на веб странице каждый из них, скорее всего, попытается занять все доступное ему пространство по ширине и поэтому расположены такие элементы Div (контейнеры) будут друг под другом. Контейнеры Div при нормальных условиях рядом друг с другом стоять не будут, если принудительно не заставить их делать это. Например, такой вот Html код будет отображаться в трех блоках расположенных друг под другом:</p>
+<div>
+<div id="highlighter_193486">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code>
+<div>DOCTYPE для Html и Xhtml</div>
+<p></code></div>
+</p>
+<div><code>  </code><code>
+<div>Title и комментарии в Web документе</div>
+<p></code></div>
+</p>
+<div><code>  </code><code>
+<div>Содержимое третьего блочного тэга</div>
+<p></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div><img loading="lazy" title="Блочные Html теги" src="https://petrukmax.github.io/guideto/media/posts/40/html-doctype.png" alt="html doctype"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/html-doctype-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/html-doctype-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/html-doctype-md.png 768w"></div>
+<p>
+
+В браузере Firefox наряду с очень полезным плагином <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/vokrug-da-okolo/programs/poleznye-rasshireniya-dlya-brauzerov-firefox-i-opera-chast-1-firebug-dlya-firefox.html" target="_blank">Firebug</a> я еще использую плагин <a title="Откроется в новом окне" href="http://ktonanovenkogo.ru/vokrug-da-okolo/programs/rasshireniya-firefox-opera-web-developer-dlya-firefox.html" target="_blank">Web developer</a>, который очень помогает при <a href="http://ktonanovenkogo.ru/html/div-verstka-html/verstka-sajta-html-css-import-media.html" target="_blank">верстке</a>. Среди всего прочего Web developer может показывать блочные элементы, обводя их рамочной. Именно плагин Web developer создал синие рамочки вокруг контейнеров Div.</p>
+<p>
+
+В теги же Span можно заключать куски текста (строки) Html кода для придания им определенных свойств через CSS и такие элементы могут размещать в одной строке рядом друг с другом. Например, такой вот код в браузере будет иметь следующий вид:</p>
+<div>
+<div id="highlighter_284302">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><span>DOCTYPE в Html</span></code></div>
+</p>
+<div><code>  </code><code><span>Комментарии в Html</span></code></div>
+</p>
+<div><code>  </code><code><span>Содержимое третьего строчного тега</span></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+<img loading="lazy" title="Строчные Html теги" src="https://petrukmax.github.io/guideto/media/posts/40/title-html.png" alt="Title html"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/40/responsive/title-html-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/title-html-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/40/responsive/title-html-md.png 768w"></p>
+<p>
+
+Содержимое тегов Span здесь тоже было подсвечено с помощью плагина Web developer. Т.к. элементы Span являются строчными, то не следует внутрь них заключать блочные теги, например, все те же Div контейнеры.</p>
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/apache/">Apache</a>
+                                          </li>
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/html/">HTML</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>
