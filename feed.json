@@ -1,0 +1,13 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "guideto",
+    "description": "",
+    "home_page_url": "https://petrukmax.github.io/guideto",
+    "feed_url": "https://petrukmax.github.io/guideto/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "GUIDETO"
+    },
+    "items": [
+    ]
+}
