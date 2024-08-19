@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Практические решения по использованию файла .htaccess - guideto </title>
+        <meta name="description" content="Для чего служит .htaccess?Набирая адрес в строке браузера, вы получаете на свой компьютер файлы, которые отображает браузер. Управление тем, какие файлы и как вам показывать (пересылать) осуществляет веб-сервер. Наиболее популярных серверов два: IIS и Apache.Как и любая программа, веб-сервер имеет определенные настройки. Но, у вас, как пользователя Апача может (и скорее всего не будет, если говорить о виртуальном хостинге) прав менять конфигурацию Апача через его главные файлы, действие которых распространяется на всех пользователей этого сервера. Но, вы можете менять некоторые конфигурационные файлы, который распространяют свое действие только на ваш сайт. Один из таких файлов - .htaccess" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/prakticheskie-resheniya-po-ispolzovaniyu-fayla-htaccess.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="Практические решения по использованию файла .htaccess" /><meta property="og:site_name" content="guideto" /><meta property="og:description" content="Для чего служит .htaccess?Набирая адрес в строке браузера, вы получаете на свой компьютер файлы, которые отображает браузер. Управление тем, какие файлы и как вам показывать (пересылать) осуществляет веб-сервер. Наиболее популярных серверов два: IIS и Apache.Как и любая программа, веб-сервер имеет определенные настройки. Но, у вас, как пользователя Апача может (и скорее всего не будет, если говорить о виртуальном хостинге) прав менять конфигурацию Апача через его главные файлы, действие которых распространяется на всех пользователей этого сервера. Но, вы можете менять некоторые конфигурационные файлы, который распространяют свое действие только на ваш сайт. Один из таких файлов - .htaccess" /><meta property="og:url" content="https://petrukmax.github.io/guideto/prakticheskie-resheniya-po-ispolzovaniyu-fayla-htaccess.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/prakticheskie-resheniya-po-ispolzovaniyu-fayla-htaccess.html"},"headline":"Практические решения по использованию файла .htaccess","datePublished":"2013-11-20T08:47","dateModified":"2024-08-19T17:47","description":"Для чего служит .htaccess?Набирая адрес в строке браузера, вы получаете на свой компьютер файлы, которые отображает браузер. Управление тем, какие файлы и как вам показывать (пересылать) осуществляет веб-сервер. Наиболее популярных серверов два: IIS и Apache.Как и любая программа, веб-сервер имеет определенные настройки. Но, у вас, как пользователя Апача может (и скорее всего не будет, если говорить о виртуальном хостинге) прав менять конфигурацию Апача через его главные файлы, действие которых распространяется на всех пользователей этого сервера. Но, вы можете менять некоторые конфигурационные файлы, который распространяют свое действие только на ваш сайт. Один из таких файлов - .htaccess","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>Практические решения по использованию файла .htaccess</h1>
+                     <p>
+                           <time datetime="2013-11-20T08:47">
+                                 ноябрь 20, 2013
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td>
+<p align="left">Для чего служит .htaccess?</p>
+</td>
+</tr>
+<tr>
+<td>
+<div align="justify">
+<p align="left">Набирая адрес в строке браузера, вы получаете на свой компьютер файлы, которые отображает браузер. Управление тем, какие файлы и как вам показывать (пересылать) осуществляет веб-сервер. Наиболее популярных серверов два: IIS и Apache.</p>
+<p>Как и любая программа, веб-сервер имеет определенные настройки. Но, у вас, как пользователя Апача может (и скорее всего не будет, если говорить о виртуальном хостинге) прав менять конфигурацию Апача через его главные файлы, действие которых распространяется на всех пользователей этого сервера. Но, вы можете менять некоторые конфигурационные файлы, который распространяют свое действие только на ваш сайт. Один из таких файлов - .htaccess</p>
+</p>
+<p align="left">
+
+<p>Это файл гибкой настройки веб-сервера Апач. "Гибкий" обозначает, что как только вы поменяли что-то в этом файле, изменения тут же вступают в силу. С помощью него можно переопределить многие директивы из файла httpd.conf (этот файл является главным конфигурационным файлом сервера Апач и его действия распространяются полностью на всех пользователей данной копии Апача). В случаях, когда у вас нет доступа в файлу настройки Апача (тот же виртуальный хостинг), вам поможет именно этот файл.</p>
+<p>Этот файл не доступен веб-пользователю из браузера. Если файл .htaccess расположен в корневой директории сервера, то его действия распространяется на весь сервер, кроме тех папок, где находится другой файл .htaccess (и кроме всех папок "ниже" этой папки со вторым .htaccess).</p>
+</p>
+<p align="left">
+<p>Пример:</p>
+<p>Структура ваших директорий на сервере такая:</p>
+</p>
+<pre>|-user<restore-line-break><restore-line-break>| |<restore-line-break><restore-line-break>|  -user1<restore-line-break><restore-line-break>|        |<restore-line-break><restore-line-break>|         -user2<restore-line-break><restore-line-break>|<restore-line-break><restore-line-break>|-data<restore-line-break><restore-line-break>| |<restore-line-break><restore-line-break>|  -data1<restore-line-break><restore-line-break>|      |<restore-line-break><restore-line-break>|       -data2<restore-line-break><restore-line-break>|</pre>
+</p>
+<p align="left">Директории user1 и user2 будут вложенными по отношению к директории user. Если мы поместим в директорию www файл .htaccess, то его действие будет автоматически распространяться и на директории user1 и user2.</p>
+<p>В директорию data помещаем другой файл .htaccess, по-сравнению, с тем, что находится в директории user. И для директорий data1 и data2 будет действовать файл .htacсess, находящийся в data.</p>
+<p>Теперь, в директорию user2 мы помещаем еще один файл .htaccess, который отличен от того, что находится в директории 2мя уровнями выше (это директория user). В итоге, настройки для директории user2 будут определяться <b>только</b> тем файлом .htaccess, который находится в этой директории.</p>
+<p>Так как чаще всего Апач настроен так, что всегда ищет этот файл в директории, то .htaccess поможет вам быстро и без останова сервера произвести его перенастройку.</p>
+</p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</p>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q2"></a>Синтаксис .htaccess</p>
+</td>
+</tr>
+<tr>
+<td>
+<div align="justify">
+<p align="left">Вот обязательной синтаксис, несоблюдение которого приводит к ошибкам сервера:</p>
+<p>- пути к файлам (директориям) указываются от корня сервера. Пример: /opt/home/www.astanafoto.com/htdocs/config/.htpasswords</p>
+<p>- домены с указанием протокола</p>
+<p>Пример: Redirect / http://www.site.ru</p>
+<p>
+
+Файл имеет название именно "точка" htaccess</p>
+<p>Должен быть записан в UNIX-формате. Для оболочки FAR, достигается F4 (редактирование файла), Shift+F2 (выбрать "сохранить как UNIX-текст").</p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</p>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">Как запретить веб-посетителям читать файлы в директории?</p>
+</td>
+</tr>
+<tr>
+<td>
+<div align="justify">
+<p align="left"><a name="q3"></a><b>Запрет на все файлы:</b></p>
+<p><code>deny from all</code></p>
+<p>Где <b>all</b> обозначает "все".</p>
+</p>
+<hr align="left" width="100" />
+<p align="left"><a name="q4"></a><b>Разрешить доступ с определенного ip:</b></p>
+<p><code>order allow deny</p>
+<p>deny from all</p>
+<p>allow from <ваш ip></code></p>
+<p>
+
+В данном случае, <b><ваш ip></b> обозначает конкретный адрес.</p>
+<p>Например:</p>
+<p><code>order allow deny</p>
+<p>deny from all</p>
+<p>allow from 192.126.12.199</code></p>
+<hr align="left" width="100" />
+<p align="left"><a name="q5"></a><b>Запретить доступ с определенного ip:</b></p>
+<p><code>order allow deny</p>
+<p>deny from all</p>
+<p>deny from <ваш ip></code></p>
+<p>
+
+Использование <b><ваш ip></b> аналогично для примера выше.</p>
+<hr align="left" width="100" />
+<p align="left"><a name="q6"></a><b>Запрет на группу файлов по маске:</b></p>
+<p><code><Files "\.(inc|sql|...другие расширения...)$"></p>
+<p>order allow,deny</p>
+<p>deny from all</p>
+<p></Files></code></p>
+<p>
+
+Определяет доступ к файлу по его расширению.</p>
+<p>Например запрет на доступ к файлам с расширениям "inc" для веб-посетителей:</p>
+<p><Files "\.(inc)$"></p>
+<p>order allow,deny</p>
+<p>deny from all</p>
+<p></Files></p>
+<p>
+
+В данном примере сам веб-сервер Апач может обращаться к файлам с таким расширениям.</p>
+<hr align="left" width="100" />
+<p align="left"><a name="q7"></a><b>Запрет на конкретный файл:</b></p>
+<p>Можно поставить запрет на конкретный файл по его названию и расширению.</p>
+<p><code><Files config.inc.php></p>
+<p>order allow,deny</p>
+<p>deny from all</p>
+<p></Files></code></p>
+<p>
+
+В данном примере стоит запрет на обращения к файлу config.inc.php.</p>
+<hr align="left" width="100" />
+<p align="left"><a name="q8"></a><b>Пароль на директорию:</b></p>
+<p><code>AuthName "Private zone"</p>
+<p>AuthType Basic</p>
+<p>AuthUserFile /pub/home/твой_логин/.htpasswd</p>
+<p>require valid-user</p>
+<p></Files></code></p>
+<p>
+
+Значение AuthName будет выводиться для посетителя и может использоваться для пояснения запроса авторизации. Значение AuthUserFile указывает на место, где хранится файл с паролями для доступа к данной директории. Этот файл создается специальной утилитой htpasswd.exe.</p>
+<p>
+
+Например в директории, которую защищаем паролем создаем такой .htaccess:</p>
+<p><code>AuthName "For Registered Users Only"</p>
+<p>AuthType Basic</p>
+<p>AuthUserFile /pub/site.ru/.htpasswd</p>
+<p>require valid-user</p>
+<p></Files></code></p>
+<p>
+
+В этом примере, посетитель при запросе директории, будет читать фразу "For Registered Users Only", файл с паролями для доступа должен лежать в директории /pub/site.ru/ и называться .htapasswd . Директория указывается от корня сервера, если вы неправильно зададите директорию, то Апач не сможет прочитать файл .htpasswd и никто не получит доступа к данной директории.</p>
+<hr align="left" width="100" />
+<p align="left"><a name="q9"></a><b>Пароль только на 1 файл:</b></p>
+<p>Аналогично паролированию директории полностью, можно ставить пароль только на 1 файл.</p>
+<p>Пример установки пароля на файл private.zip:</p>
+<p><code><Files private.zip></p>
+<p>AuthName "Users zone"</p>
+<p>AuthType Basic</p>
+<p>AuthUserFile /pub/home/твой_логин/.htpasswd</p>
+<p></Files></code></p>
+</p>
+<hr align="left" width="100" />
+<p align="left"><a name="q10"></a><b>Пароль на группу файлов:</b></p>
+<p>Аналогично, используя <Files "\.(inc|sql|...другие расширения...)$">, можно ставить пароли по маске файлов.</p>
+<p>Пример установки пароля на доступ ко всем файла с расширением "sql":</p>
+<p><Files "\.(sql)$"></p>
+<p>AuthName "Users zone"</p>
+<p>AuthType Basic</p>
+<p>AuthUserFile /pub/home/твой_логин/.htpasswd</p>
+<p></Files></p>
+</p>
+</div>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q11"></a>Проверка прав доступа</p>
+</td>
+</tr>
+<tr>
+<td>
+<div align="justify">
+<p align="left"><b>Задача:</b> есть каталог a1 и в нем два вложенных каталога a2, a3, введено 2 уровня пользователей. 1 группа имеет доступ только к a1 и a2, 2-я ко всем трем каталогам. Необходимо проводить аутентификацию только 1 раз - при доступе к a1, но при этом соблюдать права на доступ к а2 и а3.</p>
+<p>Ник и пароль запрашиваются только при входе на а1 - если у юзвера есть доступ на а2 пароль уже не запрашивается. Если на а3 доступа нет, вылетит табличка "введите пароль".</p>
+<p>
+
+www.site.ru/a1</p>
+<p>www.site.ru/a1/а2</p>
+<p>www.site.ru/a1/a3</p>
+<p>a1 - общий и вместе с тем закрытый. а2 и а3 только для отдельных личностей.</p>
+<hr align="left" width="100" />
+<p align="left">файл .htaccess для каталога а1:</p>
+<p><code>AuthName "Input password"</p>
+<p>AuthType Basic</p>
+<p>AuthUserFile "/pub/home/login/htdocs/clousearea/.htpasswd"</p>
+<p><Files *.*></p>
+<p>require valid-user</p>
+<p></Files></code></p>
+<p>
+
+файл .htaccess для каталога а2:</p>
+<p><code>AuthName "Input password"</p>
+<p>AuthType Basic</p>
+<p>AuthUserFile "/pub/home/login/htdocs/clousearea/.htpasswd"</p>
+<p><Files *.*></p>
+<p>require user юзвер1 юзвер2 юзвер3</p>
+<p></Files *.*></code></p>
+<p>
+
+файл .htaccess для каталога а3:</p>
+<p><code>AuthName "Input password"</p>
+<p>AuthType Basic</p>
+<p>AuthUserFile "/pub/home/абв/htdocs/clousearea/.htpasswd"</p>
+<p><Files *.*></p>
+<p>require user юзвер1 юзвер4 юзвер5</p>
+<p></Files *.*></code></p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</p>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">Как сделать перенаправление (редирект) посетителя?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q12"></a><b>Редирект на другой url:</b></p>
+<p>Что бы сделать перенаправления посетителя на сайт http://site.ru в .htaccess <code>Redirect / http://www.site.ru</code></p>
+</p>
+<hr align="left" width="100" />
+<p align="left"><a name="q13"></a><b>Показ разных страниц, в зависимости от IP адреса посетителя:</b></p>
+<p><code>SetEnvIf REMOTE_ADDR <нужный ip адрес> REDIR="redir"</p>
+<p>RewriteCond %{REDIR} redir</p>
+<p>RewriteRule ^/$ /another_page.html</code></p>
+<p>
+
+Например, перенаправление посетителей с ip адресом 192.12.131.1 на страницу about_my_sity.html:</p>
+<p><code>SetEnvIf REMOTE_ADDR 192.12.131.1 REDIR="redir"</p>
+<p>RewriteCond %{REDIR} redir</p>
+<p>RewriteRule ^/$ /about_my_sity.html</code></p>
+<hr align="left" width="100" />
+<p align="left"><a name="q14"></a><b>Перенаправление посетителя при запросе определенных страниц:</b></p>
+<p>Это уже для всех сетевых вирусов и сканеров. Теперь любой запрос с адресом /_vti_bin будет автоматически перенаправляться на Microsoft:</p>
+<p>
+
+<code>redirect /_vti_bin http://www.microsoft.com</p>
+<p>redirect /scripts http://www.microsoft.com</p>
+<p>redirect /MSADC http://www.microsoft.com</p>
+<p>redirect /c http://www.microsoft.com</p>
+<p>redirect /d http://www.microsoft.com</p>
+<p>redirect /_mem_bin http://www.microsoft.com</p>
+<p>redirect /msadc http://www.microsoft.com</p>
+<p>RedirectMatch (.*)\cmd.exe$ http://www.microsoft.com$1</code></p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q15"></a><b>Как сделать стартовой другую страницу?</b></p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">Что бы поменять страницу, которая будет показываться при обращении к директории, пишем:</p>
+<p><code>DirectoryIndex <нужная страница></code></p>
+<p>
+
+Можно указывать несколько страниц.</p>
+<p>
+
+<code>DirectoryIndex index.shtml index.php index.php3 index.html index.htm</code></p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q16"></a>Как заставить Апач обрабатывать SSI директивы?</p>
+</td>
+</tr>
+<tr>
+<td>
+<div align="justify">
+<p align="left">SSI позволяют "собирать" страницу из кусочков. В одном кусочке у вас код меню, в другом код верхней части страницы, в третьем - нижней. А посетитель видет обычную страницу, которая состоит из того кода, который входит в ваши кусочки.</p>
+<p>Необходимы <b>обязательные</b> установки в httpd.conf:</p>
+<p>В блоке, начинающемся с <Directory/> и заканчивающийся </Directory> в строку Options Indexes добавьте Includes.</p>
+<p>
+
+После, в файле .htaccess пишем:</p>
+<p>
+
+<code>AddHandler server-parsed .shtml .shtm .html .htm</code></p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</p>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q17"></a>Как заставить Апач выполнять в html документах php код?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">Иногда бывает полезно "обмануть" посетителя, выдавая ему свои php-скрипты или иные файлы, как html файлы. Реально используется для индексации поисковой системой Rambler php-скриптов. Некоторые делаю мелкие фишки, вроде того, что дают фалам расширения совпадающие с какими-либо "знаковыми" именами. Например, на сайте www.osg.ru используются файлы с расширением osg: index.osg, script.osg и т.п.</p>
+<p>
+
+<code>RemoveHandler .html .htm</p>
+<p>AddType application/x-httpd-php .php .htm .html .phtml</code></p>
+<p>
+
+При большой посещаемости сервера может вызвать тормоза. Спрашивайте у админа.</p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q18"></a>Как самому обрабатывать ошибки Апача?</p>
+</td>
+</tr>
+<tr>
+<td>
+<div align="justify">
+<p align="left">Наиболее интересные и полезные ошибки Апача это: 403-404, 500.</p>
+<p>403 - пользователь не прошел аутентификацию, запрет на доступ (Forbided).</p>
+<p>404 - запрашиваемый документ (файл, директория) не найден.</p>
+<p>500 - внутренняя ошибка сервера (к примеру, ошибка в синтаксисе файла .htaccess).</p>
+<p>Для того, что бы пользователю при этих ошибках были показаны ваши собственные сообщения об ошибках, в .htaccess пишем:</p>
+<p>
+
+<code>ErrorDocument 403 /errors/403.html</p>
+<p>ErrorDocument 404 /errors/404.html</p>
+<p>ErrorDocument 500 /errors/500.html</code></p>
+<p>
+
+При этом при возникновении 404 ошибки пользователю загрузится файл errors/403.html.</p>
+<hr align="left" width="100" />
+<p align="left">Удобно делать собственный обработчик на некоторые ошибки. В .htaccess пишем:</p>
+<p><code>ErrorDocument 403 /errors/error.php?403</p>
+<p>ErrorDocument 404 /errors/error.php?404</p>
+<p>ErrorDocument 500 /errors/error.php?500</code></p>
+<p>
+
+В error.php через $HTTP_SERVER_VARS['REQUEST_URI'] определяем какой документ вызвал ошибку и дальше обрабатываем. Если в .htaccess на ErrorDocument стоит указание файла с полным путем (http://site.ru/error.php), то $HTTP_SERVER_VARS['REQUEST_URI'] будет содержать этот файл, а не вызвавший ошибку.</p>
+<p>В Internet Explorer 5.0 неправильно обрабатывается файл, вызывающийся при ошибке, если его размер меньше 1 килобайта. Будет вызвана стандартная страница IE 404.</p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</p>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q19"></a>Как поставить запрет на отображение содержимого директории при отсутствии индексного файла?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">Предположим, что у вас вся графика, используемая на сайте находится в директории img. Посетитель может набрать в адресной строке браузера эту директорию и увидеть список всех ваших графических файлов. Конечно, это не нанесет вам урона, но можно и не дать такого просмотра посетителю. В .htaccess пишем:</p>
+<p>
+
+Options -Indexes</p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q20"></a>Можно ли указать кодировку на все файлы, в которой по умолчанию получает документы браузер?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">На заре интернета и зарождения браузеров, часто была ситуация, что браузер не мог автоматически определить, в какой из русских кодировок написан документ и в браузер выдавалась какая-то каша. Для избежания этого указываем, что все отдаваемые страницы будут иметь кодировку windows-1251:</p>
+<p>
+
+<code>AddDefaultCharset windows-1251</code></p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q21"></a>Можно ли указать кодировку на загружаемые файлы?</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">При загрузке посетителем файла на сервер, возможна перекодировка его - указываем, что все получаемые файлы будут иметь кодировку windows-1251:</p>
+<p>
+
+<code>CharsetSourceEnc windows-1251</code></p>
+<hr align="left" width="100" />
+<p align="left"><span style="line-height: 19px;"> </span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left"><a name="q22"></a>Создал файл .htaccess, но сервер выдает 500 ошибку - Internal Erorr</p>
+</td>
+</tr>
+<tr>
+<td>
+<p align="left">Ошибка синтаксиса или файл записан не в том формате.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/apache/">Apache</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+                     <div class="related">
+                        <h2 class="related__title">
+                           Related posts:
+                        </h2>
+                        <ul class="related__items">
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/poleznye-fishki-htaccess.html">
+                                       Полезные фишки .htaccess
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                        </ul>
+                     </div>
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>

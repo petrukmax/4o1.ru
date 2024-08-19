@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Как взломать шаблон WordPress на примере ThemePix - guideto </title>
+        <meta name="description" content="Часто молодые Web-мастера сталкиваются с одной интересной проблемой. Скажем есть требования к шаблону. Ну, к примеру: 3 колонки, меню, слайдер, несколько сайдбаров и прочее. Да, еще тема должна быть выполнена в черных тонах, с зелеными линиями.Отправляемся в Google и начинаем искать подходящую тему для WordPress. Через минуты поисков таки находится вариант, который полностью, либо частично удовлетворяет требованиям. С радостью установив шаблон вы видете ссылки на блоги внизу. Спокойно идете в текстовый редактор, открываете footer.php и тут…" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/kak-vzlomat-shablon-wordpress-na-primere-themepix.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="Как взломать шаблон WordPress на примере ThemePix" /><meta property="og:site_name" content="guideto" /><meta property="og:description" content="Часто молодые Web-мастера сталкиваются с одной интересной проблемой. Скажем есть требования к шаблону. Ну, к примеру: 3 колонки, меню, слайдер, несколько сайдбаров и прочее. Да, еще тема должна быть выполнена в черных тонах, с зелеными линиями.Отправляемся в Google и начинаем искать подходящую тему для WordPress. Через минуты поисков таки находится вариант, который полностью, либо частично удовлетворяет требованиям. С радостью установив шаблон вы видете ссылки на блоги внизу. Спокойно идете в текстовый редактор, открываете footer.php и тут…" /><meta property="og:url" content="https://petrukmax.github.io/guideto/kak-vzlomat-shablon-wordpress-na-primere-themepix.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/kak-vzlomat-shablon-wordpress-na-primere-themepix.html"},"headline":"Как взломать шаблон WordPress на примере ThemePix","datePublished":"2013-09-17T20:44","dateModified":"2024-08-19T17:47","description":"Часто молодые Web-мастера сталкиваются с одной интересной проблемой. Скажем есть требования к шаблону. Ну, к примеру: 3 колонки, меню, слайдер, несколько сайдбаров и прочее. Да, еще тема должна быть выполнена в черных тонах, с зелеными линиями.Отправляемся в Google и начинаем искать подходящую тему для WordPress. Через минуты поисков таки находится вариант, который полностью, либо частично удовлетворяет требованиям. С радостью установив шаблон вы видете ссылки на блоги внизу. Спокойно идете в текстовый редактор, открываете footer.php и тут…","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>Как взломать шаблон WordPress на примере ThemePix</h1>
+                     <p>
+                           <time datetime="2013-09-17T20:44">
+                                 сентябрь 17, 2013
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <p>Часто молодые Web-мастера сталкиваются с одной интересной проблемой. Скажем есть требования к шаблону. Ну, к примеру: 3 колонки, меню, слайдер, несколько сайдбаров и прочее. Да, еще тема должна быть выполнена в черных тонах, с зелеными линиями.</p>
+<p>
+
+Отправляемся в Google и начинаем искать подходящую <strong>тему для WordPress</strong>. Через минуты поисков таки находится вариант, который полностью, либо частично удовлетворяет требованиям. С радостью установив шаблон вы видете ссылки на блоги внизу. Спокойно идете в текстовый редактор, открываете <strong>footer.php</strong> и тут…</p>
+
+<p>
+
+… и тут мы понимаем, что парни, которые сделали такой чудесный шаблон, вполне справедливо решили подзаработать на пивко и кинули пару линков. А за вариант без линков попросили немного денег на продление хостинга, либо на новый свитер.</p>
+<p>
+
+Мы люди русские, и понимаем, что все, что можно скачать — наше и точка! Хоть я сам взломал шаблон данного сайта, мне все же немного неловко, но моя жидоватость отдавать <em>даже не посмотрел</em> долларов меня успокаивает. Итак, приступим!</p>
+<p>
+
+Способ первый:</p>
+<p>
+
+Обычно темы лочат посредством запрета на изменение ссылок в футере, либо в любом другом месте. В данном случае это футер. Описание практически всегда рядом:</p>
+<p>
+
+<em>// All links in the footer should remain intact, until you buy links free theme. </em></p>
+<p><em>        // Warning! Your site will stop working if these links are edited or deleted  </em></p>
+<p><em>        </em></p>
+<p><em>        // You can buy this theme without footer links at http://themepix.com/buy/?theme=triangle</em></p>
+<p>
+
+Теперь направляемся в файл <strong>functions.php </strong>в каталоге нашей темы, и ищем там все что может показаться странным. Вот что нашел я:</p>
+<p>
+
+<em>a href=»#» onclick=»closeBox(‘message-1′); return false;» title=»Close This»>X</a></em></p>
+<p><em>This is free version of <?php echo $themename; ?> theme, which contain a set of text links / ads in footer or somewhere else in theme. You cannot remove links or ads, if you do it theme will stop working. <br>You can <a target=»_blank» href=»http://themepix.com/buy/?theme=<?php echo $themename; ?>»>Buy </em></p>
+<p>
+
+и бла-бла-бла…  теперь чуть-чуть выше поднимаем и посмотрим что писалось на строк 10 раньше:</p>
+<p>
+
+<em>function wp_initialize_the_theme_finish() { $uri = strtolower($_SERVER["REQUEST_URI"]); if(is_admin() || substr_count($uri, «wp-admin») > 0 || substr_count($uri, «wp-login») > 0 ) { /* */ } else { $l = ‘
+<div id=»info»></em><strong><a href=»http://bmw3.biz/»>Шаблон взломал Евгений Смарт</a></strong><em></div>
+<p>’; $f = dirname(__file__) . «/footer.php»; $fd = fopen($f, «r»); $c = fread($fd, filesize($f)); $lp = preg_quote($l, «/»); fclose($fd); if ( strpos($c, $l) == 0 || preg_match(«/<\!—(.*» . $lp . «.*)—>/si», $c) || preg_match(«/<\?php([^\?]+[^>]+» . $lp . «.*)\?>/si», $c) ) { wp_initialize_the_theme_message(); die; } } } wp_initialize_the_theme_finish();</em></p>
+<p>
+
+Жирным я отметил ссылку, которую я вставил вместо своей. ВНИМАНИЕ!!! Такую же ссылку в таком же виде ставим в ФУТЕР на место ссылки автора темы. Скрипт при проверке соответствия не видет подвоха и не блочит сайт. Это способ для лентяев, можно искать и разбираться с блокировалкой но пока не приходится. Пишите в комментарии если что-то не получается — попробуем разобраться вместе =)</p>
+<p>
+
+&nbsp;</p>
+<p>
+
+Второй способ:</p>
+<p>
+
+Ещё проще можно сделать если в фале f у вас есть такая функция:</p>
+<p>
+
+function check_theme_footer() { $uri = strtolower($_SERVER["REQUEST_URI"]); if(is_admin() || substr_count($uri, "wp-admin") > 0 || substr_count($uri, "wp-login") > 0 ) { /* */ } else { $l = '<br>'; $f = dirname(__file__) . "/footer.php"; $fd = fopen($f, "r"); $c = fread($fd, filesize($f)); fclose($fd); if (strpos($c, $l) == 0) { theme_usage_message(); die; } } } check_theme_footer();</p>
+<p>
+
+В данном коде необходимо заменить footer.php на footer2.php предварительно создав данный файл как копию footer.php.</p>
+<p>После этого файл footer.php можно править!</p>
+<blockquote><strong>ВНИМАНИЕ! </strong>Информация в данном блоге предназначена для ознакомления начинающим WEB-дизайнерам и «пострадавшим». Все делается во благо обеих сторон, для получения опыта и не допущения уязвимостей в случае «пострадавших». Все вопросы, предложения и недовольства просим скидывать в комментарии к статьям! Спасибо =)</blockquote>
+
+
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/wordpress/">WordPress</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+                     <div class="related">
+                        <h2 class="related__title">
+                           Related posts:
+                        </h2>
+                        <ul class="related__items">
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/nastraivaem-lentu-rss-wordpress-s-kartinkami.html">
+                                       Настраиваем ленту RSS WordPress с картинками.
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/wordpress-kak-pisat-zapisi-v-budushchem.html">
+                                       Wordpress как писать записи в будущем
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/zashchita-wordpress-ot-bazovyh-ugroz-virusov-i-atak.html">
+                                       Защита WordPress от базовых угроз, вирусов и атак
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                        </ul>
+                     </div>
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>

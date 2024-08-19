@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Полезные фишки .htaccess - guideto </title>
+        <meta name="description" content=".htaccess — это такой текстовый файлик который должен лежать в корневой директории и который позволяет управлять поведением вашего сервера. Создать такой файлик очень просто .Для этого нужно создать текстовый файл, назвать его .htaccess и сохранить в корне сайта." />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/poleznye-fishki-htaccess.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="Полезные фишки .htaccess" /><meta property="og:site_name" content="guideto" /><meta property="og:description" content=".htaccess — это такой текстовый файлик который должен лежать в корневой директории и который позволяет управлять поведением вашего сервера. Создать такой файлик очень просто .Для этого нужно создать текстовый файл, назвать его .htaccess и сохранить в корне сайта." /><meta property="og:url" content="https://petrukmax.github.io/guideto/poleznye-fishki-htaccess.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/poleznye-fishki-htaccess.html"},"headline":"Полезные фишки .htaccess","datePublished":"2013-09-08T12:25","dateModified":"2024-08-19T17:47","description":".htaccess — это такой текстовый файлик который должен лежать в корневой директории и который позволяет управлять поведением вашего сервера. Создать такой файлик очень просто .Для этого нужно создать текстовый файл, назвать его .htaccess и сохранить в корне сайта.","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>Полезные фишки .htaccess</h1>
+                     <p>
+                           <time datetime="2013-09-08T12:25">
+                                 сентябрь 8, 2013
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <p><img loading="lazy" title="руководство использования .htaccess" alt="руководство использования .htaccess" src="https://petrukmax.github.io/guideto/media/posts/113/61be5_1096880_63786041-300x1891.jpg" width="300" height="189"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/113/responsive/61be5_1096880_63786041-300x1891-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/posts/113/responsive/61be5_1096880_63786041-300x1891-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/posts/113/responsive/61be5_1096880_63786041-300x1891-md.jpg 768w"></p>
+<p>
+
+.htaccess — это такой текстовый файлик который должен лежать в корневой директории и который позволяет управлять поведением вашего сервера. Создать такой файлик очень просто .</p>
+<p>
+
+Для этого нужно создать текстовый файл, назвать его .htaccess и сохранить в корне сайта.</p>
+
+<p>
+
+А теперь даю вам нужные примеры кода с объяснением для чего он нужен.</p>
+<h3>1. Определение страниц ошибок (error) в .htaccess</h3>
+<p>
+
+<code>ErrorDocument 403 /403.php ErrorDocument 404 /404.php ErrorDocument 500 /500.php</code></p>
+<h3>2. Удаление дублей страниц — редирект адресов-дублей</h3>
+<p>
+
+Часто бывает, что сайт у нас доступен по адресам http://www.site.ru/ http://site.ru/ http://www.site.ru/index.html http://site.ru/index.html Но это неправильно, так как считается как дублированный контент. Этим правилом, мы это исправим</p>
+<p>
+
+<code>Options +FollowSymLinks</p>
+<p>RewriteEngine on</p>
+<p>RewriteCond %{HTTP_HOST} ^site.ru</p>
+<p>RewriteRule (.*) http://www.site.ru/$1 [R=301,L]</p>
+<p>RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/</p>
+<p>RewriteRule ^index\.html$ http://www.site.ru/ [R=301,L]</code></p>
+<p>
+
+Таким образом, мы получим редирект всех страниц-дублей на http://www.site.ru/</p>
+<h3>3. Переадресация страниц</h3>
+<p>
+
+Этим правилом мы создаем 301 редирект с одной страницы на другую</p>
+<p>
+
+<code>redirect 301 /old-page.php http://www.site.ru/new-page.php</code></p>
+<h3>4. Защита изображений от скачивания или как предотвратить хотлинкинг</h3>
+<p>
+
+Часто контент с сайта нагло тырят, причем часто тупую вместе с картинками, в итоге на чужих сайтах будут отображаться картинки, который будут подгружаться с ваших серверов, а это не гуд, так как создает повышенную нагрузку.</p>
+<p>
+
+<code>RewriteEngine on</p>
+<p>RewriteCond %{HTTP_REFERER} .</p>
+<p>RewriteCond %{HTTP_REFERER} !^http://([^.]+\.)?site\. [NC]</p>
+<p>RewriteCond %{HTTP_REFERER} !google\. [NC]</p>
+<p>RewriteCond %{HTTP_REFERER} !search\?q=cache [NC]</p>
+<p>RewriteCond %{HTTP_REFERER} !msn\. [NC]</p>
+<p>RewriteCond %{HTTP_REFERER} !yahoo\. [NC]</p>
+<p>RewriteCond %{REQUEST_URI} !^/hotlinker\.gif$</p>
+<p>RewriteRule \.(gif|jpg|png)$ /hotlinker.gif [NC,L]</code></p>
+<p>
+
+где hotlinker.gif — это изображение, которое будет показано на сайтах-ворах, вместо украденных картинок. Можете туда вставить лого вашего сайта к примеру.</p>
+<h3>5. Как позволить использовать php код в статических сайтах и файлах</h3>
+<p>
+
+Для этого добавляем</p>
+<p>
+
+<code>AddHandler application/x-httpd-php .html</code></p>
+<p>
+
+Вместо .html — можно ставить и другие расширения</p>
+<h3>6. Переадресация на другой сайт</h3>
+<p>
+
+Данное правило перенаправляет всех посетителей, кроме определенных ip на другой сайт</p>
+<p>
+
+<code>ErrorDocument 403 http://www.yoursitename.ru</p>
+<p>Order deny,allow</p>
+<p>Deny from all</p>
+<p>Allow from 12.345.678.90</p>
+<p>Allow from 12.345.678.92</code></p>
+<h3>7. Как перенаправить посетителей на страницу поддержки во время отладки сайта</h3>
+<p>
+
+Представьте ситуацию, что вы что-то исправляете на вашем сайте или вообще только его запустили и хотите протестировать. Для этого вам скорее всего понадобится так званная страничка поддержки на которую вы будете перенаправлять посетителей, при этом нужно указать свой ip адрес при заходе с которого, вы сможете зайти на сайт.</p>
+<p><code></p>
+<p>RewriteEngine on</p>
+<p>RewriteCond %{REQUEST_URI} !/informpage.html$</p>
+<p>RewriteCond %{REMOTE_HOST} !^12\.345\.678\.90</p>
+<p>RewriteRule $ http://yoursitename.ru/informpage.html [R=302,L]</code></p>
+<p>
+
+Просмотр сайта будет доступен с ip-адреса — 12.345.678.90</p>
+<h3>8.Запрет на просмотр директорий.</h3>
+<p>
+
+Допустим у вас на сайте есть много папок, например, plugins — и вы не хотите, чтобы кто-то когда набрал адрес этой папки видел её содержимое, для этого создаем правило</p>
+<p>
+
+<code>Options All -Indexes</code></p>
+<h3>9. Блокировка доступа к файлу</h3>
+</p>
+<div id="highlighter_567322">
+<div>
+<div><code><Files .htaccess> order allow,deny deny from all </Files></code></div>
+</div>
+</div>
+<p>
+
+&nbsp;</p>
+<p>
+
+В первой строке необходимо указать файл</p>
+<h3>10. Блокировка юзеров по ip</h3>
+</p>
+<div id="highlighter_247772">
+<div>
+<div><code><Limit GET></code></div>
+</p>
+<div><code>Order Deny,Allow</code></div>
+</p>
+<div><code>Deny from 12.345.678.90</code></div>
+</p>
+<div><code>Deny from 90.876.543.</code></div>
+</p>
+<div><code>Deny from .tvoe.tv</code></div>
+</p>
+<div><code>Allow from all</code></div>
+</p>
+<div><code></Limit></code></div>
+</div>
+</div>
+<p>
+
+При этом будут заблокированы юзер с ip 12.345.678.90 все посетители с ip, попадающими в диапазон от 90.876.543.0 до 90.876.543.255 и все посетители от провайдера tvoe.tv</p>
+<h3>11. Как убрать из урла ненужное слово</h3>
+<p>
+
+По умолчанию на wordpress стоит адрес вида http://www.site.com/blog/category/wordpress Но в урле нам category ничего не дает, следущим правилом мы его уберем</p>
+<p>
+
+<code>RewriteRule ^category/(.+)$ httр://www.yourblog.com/$1 [R=301,L]</code></p>
+<h3>12. Перенаправляем RSS ленту WordPress на FeedBurner с помощью .htaccess</h3>
+</p>
+<div id="highlighter_323321">
+<div>
+<div><code><IfModule mod_rewrite.c></code></div>
+</p>
+<div><code>RewriteEngine on</code></div>
+</p>
+<div><code>RewriteCond %{HTTP_USER_AGENT} !FeedBurner    [NC]</code></div>
+</p>
+<div><code>RewriteCond %{HTTP_USER_AGENT} !FeedValidator [NC]</code></div>
+</p>
+<div><code>RewriteRule ^feed/?([_0-9a-z-]+)?/?$ httр:</code><code>//feeds2.feedburner.com/wordpress[R=302,NC,L]</code></div>
+</p>
+<div><code></IfModule></code></div>
+</div>
+</div>
+<h3>13. Закрываем администраторский раздел от чужих глаз (IP адресов)</h3>
+<p>
+
+Этим правилом можно закрыть доступ к админке сайта для всех, кроме определенный ip адресов. Помните, что этих строк может быть несколько или, если Вы используете блок адресов, они могут быть записаны в соответствии с правилами IP адресации, к примеру так: 77.77.77.0/255.255.255.0</p>
+<div id="highlighter_538902">
+<div>
+<div><code>AuthUserFile /dev/null</code></div>
+</p>
+<div><code>AuthGroupFile /dev/null</code></div>
+</p>
+<div><code>AuthName </code><code>"Example Access Control"</code></div>
+</p>
+<div><code>AuthType Basic</code></div>
+</p>
+<div><code><LIMIT GET></code></div>
+</p>
+<div><code>order deny,allow</code></div>
+</p>
+<div><code>deny from all</code></div>
+</p>
+<div><code>allow from xx.xx.xx.xx</code></div>
+</p>
+<div><code></LIMIT></code></div>
+</div>
+</div>
+<h3>14. Сжимаем статические данные</h3>
+<p>
+
+это правило позволит сжимать некоторые статические файлы, такие как html, css, js</p>
+<p>
+
+<code>AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript</p>
+<p>BrowserMatch ^Mozilla/4 gzip-only-text/html</p>
+<p>BrowserMatch ^Mozilla/4.0[678] no-gzip</p>
+<p>BrowserMatch bMSIE !no-gzip !gzip-only-text/html</code></p>
+<h3>15. Вариант кеширования файлов</h3>
+</p>
+<div id="highlighter_254530">
+<div>
+<div><code>#кэширование html и htm на сутки</code></div>
+</p>
+<div></div>
+</p>
+<div><code><FilesMatch </code><code>".(html|htm)$"</code><code>></code></div>
+</p>
+<div><code>Header set Cache-Control </code><code>"max-age=43200"</code></div>
+</p>
+<div><code></FilesMatch></code></div>
+</p>
+<div></div>
+</p>
+<div><code>#кэширование css, javascript и txt-файлов на неделю</code></div>
+</p>
+<div><code><FilesMatch </code><code>".(js|css|txt)$"</code><code>></code></div>
+</p>
+<div><code>Header set Cache-Control </code><code>"max-age=604800"</code></div>
+</p>
+<div><code></FilesMatch></code></div>
+</p>
+<div></div>
+</p>
+<div><code>#кэширование flash и картинок на месяц</code></div>
+</p>
+<div><code><FilesMatch </code><code>".(flv|swf|ico|gif|jpg|jpeg|png)$"</code><code>></code></div>
+</p>
+<div><code>Header set Cache-Control </code><code>"max-age=2592000"</code></div>
+</p>
+<div><code></FilesMatch></code></div>
+</p>
+<div></div>
+</p>
+<div><code>#запрет на кэширование скриптов</code></div>
+</p>
+<div><code><FilesMatch </code><code>"\.(pl|php|cgi|spl|scgi|fcgi)$"</code><code>></code></div>
+</p>
+<div><code>Header unset Cache-Control</code></div>
+</p>
+<div><code></FilesMatch></code></div>
+</div>
+</div>
+<p>
+
+Параметр max-age приведен в секундах.</p>
+<h3>16. Принудительное сохранение файла вместо открытия</h3>
+<p>
+
+<code>AddType application/octet-stream .doc .mov .avi .pdf .xls .mp4</code></p>
+<h3>17. Устанавливаем кодировку</h3>
+<p>
+
+<code>AddDefaultCharset UTF-8</code></p>
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/it/">IT</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+                     <div class="related">
+                        <h2 class="related__title">
+                           Related posts:
+                        </h2>
+                        <ul class="related__items">
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/prakticheskie-resheniya-po-ispolzovaniyu-fayla-htaccess.html">
+                                       Практические решения по использованию файла .htaccess
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                        </ul>
+                     </div>
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Как настроить RSS в WordPress - guideto </title>
+        <meta name="description" content="Как настроить RSS в WordPress – одном из способов уведомления посетителей и читателей вашего блога о новых статьях, а также опишу, как пропустить оригинальную (исходную) RSS ленту CMS WordPressчерез популярный сервис Google FeedBurner, предоставляющий множество дополнительных возможностей – улучшение внешнего вида ленты, настройка совместимости с RSS читалками и другим ПО для обработки RSS потоков, e-mail подписка на обновления сайта и многое другое.&nbsp;&nbsp;" />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/kak-nastroit-rss-v-wordpress.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="Как настроить RSS в WordPress" /><meta property="og:site_name" content="guideto" /><meta property="og:description" content="Как настроить RSS в WordPress – одном из способов уведомления посетителей и читателей вашего блога о новых статьях, а также опишу, как пропустить оригинальную (исходную) RSS ленту CMS WordPressчерез популярный сервис Google FeedBurner, предоставляющий множество дополнительных возможностей – улучшение внешнего вида ленты, настройка совместимости с RSS читалками и другим ПО для обработки RSS потоков, e-mail подписка на обновления сайта и многое другое.&nbsp;&nbsp;" /><meta property="og:url" content="https://petrukmax.github.io/guideto/kak-nastroit-rss-v-wordpress.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/kak-nastroit-rss-v-wordpress.html"},"headline":"Как настроить RSS в WordPress","datePublished":"2013-09-08T11:26","dateModified":"2024-08-19T17:47","description":"Как настроить RSS в WordPress – одном из способов уведомления посетителей и читателей вашего блога о новых статьях, а также опишу, как пропустить оригинальную (исходную) RSS ленту CMS WordPressчерез популярный сервис Google FeedBurner, предоставляющий множество дополнительных возможностей – улучшение внешнего вида ленты, настройка совместимости с RSS читалками и другим ПО для обработки RSS потоков, e-mail подписка на обновления сайта и многое другое.&nbsp;&nbsp;","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>Как настроить RSS в WordPress</h1>
+                     <p>
+                           <time datetime="2013-09-08T11:26">
+                                 сентябрь 8, 2013
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <p>Как настроить <strong>RSS в WordPress</strong> – одном из способов уведомления посетителей и читателей вашего блога о новых статьях, а также опишу, как пропустить оригинальную (исходную) RSS ленту CMS WordPressчерез популярный сервис <b>Google FeedBurner</b>, предоставляющий множество дополнительных возможностей – улучшение внешнего вида ленты, настройка совместимости с RSS читалками и другим ПО для обработки RSS потоков, e-mail подписка на обновления сайта и многое другое.</p>
+<p>
+
+&nbsp;</p>
+<p>
+
+&nbsp;</p>
+
+<h3>Настройка RSS в Админке WordPress</h3>
+</p>
+<div></div>
+<p>
+
+Начнем с того, что укажем параметры ленты в админке движка, где щелкаем пункт меню “Настройки”, подпункт “Чтение” и указываем требуемое значение в поле “В RSS-лентах отображать последние”. По умолчанию выводится 10 записей (постов). Также здесь можно указать, выводить “Полный текст (запись целиком со всем оформлением и картинками)”, либо только “Анонс (выдержка из текста записи, без форматирования, картинок и ссылок. Обычно это одно-два предложения)”. По умолчанию стоит “Полный текст”, советую так и оставить, поскольку анонс в данном случае – это действительно пара первых предложений статьи, а не часть текста статьи до тега more. Я расскажу о других способах вывода в <strong>RSS ленту</strong> только части статьи (что обычно делают для защиты контента от воровства). Еще есть такой параметр как “Кодировка для страниц и лент rss”, а также описание: “Кодировка Вашего сайта (рекомендуется UTF-8, но если Вы</p>
+<p>любите приключения, можете попробовать другие кодировки)”. Советую оставить значение кодировки по умолчанию: UTF-8, приключения нам, пожалуй, ни к чему <img loading="lazy" alt=":-)" src="https://petrukmax.github.io/guideto/media/posts/111/icon_smile4.gif" > Не забываем нажать кнопку “Сохранить изменения”.</p>
+<hr />
+<p>
+
+&nbsp;</p>
+<p>
+
+&nbsp;</p>
+<h3>Пропускаем RSS Поток через FeedBurner</h3>
+<p>
+
+Сначала нужно зарегистрироваться в сервисе FeedBurner компании Google. Если у Вас еще нет аккаунта Google, его необходимо создать. Затем заходим на сайт сервиса, меняем язык (по ссылке “Languages”) на русский. Далее вводим в поле ввода</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>“Зажигай” фид прямо сейчас. Введи адрес своего блога или фида:</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+адрес исходной RSS ленты вашего сайта, в случае блога на WordPress это будет URL вида</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>http://vash_sait.ru/feed</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+и нажимаем “Next”.</p>
+<p>
+
+Откроется страница “Добро пожаловать! Давай зажжем твой фид.” Вводим название фида и адрес фида. Для своего блога я, к примеру, ввел “okITgo.ru” и “okITgo” соответственно. Снова жмем “Next”.</p>
+<p>
+
+Откроется новая страница “Поздравляем! Ваш фид FeedBurner обрел жизнь. Не хотите его немного приодеть?” Здесь будет приведена ссылка на RSS ленту FeedBurner для вашего сайта (у меня это http://feeds.feedburner.com/okITgo), а также список подключенных популярных услуг (у меня сразу добавились услугиBrowserFriendly и StandardStats). Далее можно перейти ко второму этапу – рассмотреть возможность подключения TotalStats PRO, либо пропустить этот шаг и перейти к управлению фидом, перейдя по ссылке “Пропустить и перейти сразу к управлению фидом”.</p>
+<p>
+
+Я решил пройти этап 2 и щелкнул “Next”, открылась страница следующего содержания:</p>
+<p align="center"><img loading="lazy" title="Статистика Трафика" alt="Статистика Трафика" src="https://petrukmax.github.io/guideto/media/posts/111/traffic-stat2.gif" ></p>
+<p>
+
+Установив тут галочку “Я хочу больше…” (для проверки популярности отдельных записей), нажал “Next” (Вы как хотите – можете пропустить второй этап, а позже включить данный сервис и установить нужные галочки).</p>
+<p>
+
+Далее открылась очередная веб страница “Ваш фид готов к выпуску в свет. Что теперь?”, в верхней части которой есть несколько вкладок:</p>
+<ul>
+<li>Анализируй</li>
+<li>Оптимизируй</li>
+<li>Публикуй</li>
+<li>Зарабатывай</li>
+<li>Решай проблемы</li>
+</ul>
+<p>
+
+Приступаем к настройке RSS ленты FeedBurner.</p>
+<hr />
+<p>
+
+&nbsp;</p>
+<p>
+
+&nbsp;</p>
+<h3>Настройка RSS Ленты FeedBurner</h3>
+<p>
+
+&nbsp;</p>
+<h4>Получение Счетчика</h4>
+<p>
+
+Кликаем по вкладке “Публикуй”, затем пункт “FeedCount” слева. Нажимаем кнопку “Активировать” (внизу), чтобы активировать данную услугу. В результате появится код счетчика FeedBurner. Вы можете настроить цветовую гамму счетчика, сделать его анимированным и т.п. Когда настроите нужный стиль счетчика, нажмите “Сохранить”, затем скопируйте код счетчика и вставьте его в нужное место на вашем сайте, не забыв при этом, как и для всех счетчиков, заключить этот код в теги noindex, а к ссылке прицепить атрибут nofollow.</p>
+<p>
+
+&nbsp;</p>
+<h4>Настройка Подписки по e-mail</h4>
+<p>
+
+По-прежнему оставаясь на вкладке “Публикуй”, щелкаем пункт “Подписки по электронной почте” (в меню слева). Затем нажимаем кнопку “Активировать”, чтобы данная услуга начала работать. После этого у пункта меню “Подписки по электронной почте” появятся четыре подпункта:</p>
+<ul>
+<li>Subscription Management (Управление подпиской)</li>
+<li>Communication Preferences (Предпочтения общения)</li>
+<li>Email Branding (Email брендинг)</li>
+<li>Delivery Options (Опции доставки)</li>
+</ul>
+<p>
+
+Опишу, что тут можно настроить.</p>
+<p>
+
+&nbsp;</p>
+<h5>Управление подпиской</h5>
+<p>
+
+Здесь можно выбрать язык, который бы Вы хотели использовать в окне, появляющемся, когда потенциальный email подписчик осуществляет подписку. Выбираем “русский язык”. Далее здесь приведен код формы подписки, с которой читатели могут подписаться на рассылку для получения ежедневной почты с уведомлениями о ваших новых постах. Помимо формы, подписку также можно осуществлять по ссылке, код которой также приведен. И наконец, есть возможность получать уведомления на почтовый адрес, указанный в поле “От”, когда кто-либо отписывается от рассылки. Еще приведено количество подписчиков. Если внесли изменения (поставили галочку), нажимаем “Сохранить”.</p>
+<p>
+
+&nbsp;</p>
+<h5>Предпочтения общения</h5>
+<p>
+
+Здесь указываем</p>
+<ul>
+<li><i>Адрес электронной почты “От”</i>, который будет появляться в поле “От” при доставке писем. По умолчанию там стоит адрес электронной почты, указанный в вашей учетной записи аккаунта FeedBurner. Если Вы хотите использовать другой адрес “from” электронной почты, введите его в это поле. Я, например, ввел сюда адрес “admin@okITgo.ru”.</li>
+<li><i>Тема письма-подтверждения</i>, которое будет отправляться людям после оформления подписки на их адрес электронной почты. Я, например, ввел сюда текст “Активация e-mail подписки на okITgo.ru”.</li>
+<li><i>Тело письма-подтверждения</i> – собственно содержание письма. Тут главное не забыть включить ссылку <b>${confirmlink}</b>, по которой подписчики подтверждают правильность своего адреса электронной почты. Для примера, я ввел такое содержание письма-подтверждения:</li>
+</ul>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><p>Здравствуйте!&nbsp;</p>
+<p>
+
+Вы недавно запросили email подписку на новости блога okITgo.ru – Информационные технологии, интернет, веб программирование, IT, Hi-Tech, …</p>
+<p>Чтобы активизировать вашу подписку и начать получать обновления немедленно, пожалуйста, кликните следующую ссылку:</p>
+<p>
+
+${confirmlink}</p>
+<p>
+
+(Если при переходе по ссылке страница с подтверждением активации не откроется, скопируйте эту ссылку, вставьте в адресную строку вашего браузера и нажмите <Перейти> или клавишу <Enter>)</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+Не забываем нажать кнопку “Сохранить”.</p>
+<h5>Email брендинг</h5>
+<p>
+
+Здесь можно настроить внешний вид HTML письма:</p>
+<ul>
+<li>Тема/Название письма</li>
+<li>URL логотипа</li>
+<li>шрифт заголовка</li>
+<li>Размер (шрифта) заголовка</li>
+<li>Шрифт тела</li>
+<li>Размер (шрифта) тела</li>
+<li>Цвет (шрифта) тела</li>
+<li>Цвет заголовков записей/ссылок в теле письма</li>
+</ul>
+<p>
+
+Внизу приведен “Предпросмотр HTML письма”, настраиваем, как Вам больше нравится, и жмем кнопку “Сохранить”.</p>
+<p>
+
+<b>Замечание.</b> Еще тут есть некая галочка “Изменить Тему, когда письмо имеет 2 или более разделов”, назначение которой мне не совсем понятно, кто знает – напишите. Я ее ставить не стал.</p>
+<p>
+
+&nbsp;</p>
+<h5>Опции доставки</h5>
+<p>
+
+В этих опциях указываем свой часовой пояс и время доставки электронных писем с обновлениями в соответствии с выбранным часовым поясом. Я, например, указал свой часовой пояс и время доставки с 11 до 13 (сам я естественно тоже подписался на свою же рассылку – в целях проверки ее работы, а с почтового ящика у меня стоит sms-уведомление на сотовый телефон, так что время по умолчанию с 5 до 7 утра привело бы к тому, что смс-ки стали бы приходить ночью и будить меня, что мне вовсе не по душе <img loading="lazy" alt=":-)" src="https://petrukmax.github.io/guideto/media/posts/111/icon_smile4.gif" > ).</p>
+<h5>Awareness API – Разрешение Внешнего Доступа к Данным о Моем Трафике</h5>
+<p>
+
+На той же вкладке “Публикуй” тыкаем пункт меню <b>Awareness API</b>, где можно предоставить возможность сторонним разработчикам создавать приложения, которые могут отображать, анализировать и рекламировать данные трафика вашего фида вне FeedBurner (например, Яндекс.Блоги). Если хотите, можете нажать кнопку “Активировать”, я нажимать пока не стал, т.к. подписчиков пока что мало и такая реклама мне не нужна.</p>
+<p>
+
+&nbsp;</p>
+<h4>Настройка Внешнего Вида Ленты FeedBurner</h4>
+</p>
+<h5>BrowserFriendly – Упростите подписку</h5>
+<p>
+
+Теперь заходим на вкладку “Оптимизируй”, кликаем пункт меню “BrowserFriendly”, данный сервис уже активирован по умолчанию при создании фида, осталось его настроить. В опциях внешнего вида указываем тему (выбираем язык Russian), также можно убрать галочки с клиентов, которые не должны отображаться на странице ленты (я оставил всех), подписка по электронной почте будет отображаться по умолчанию (если вы ее настроили). В опциях контента можно настроить “Контент фида” (что собственно отображать):</p>
+<ul>
+<li>Показывать список названий и содержание статей</li>
+<li>Показывать только список названий статей</li>
+<li>Не показывать список статей</li>
+</ul>
+<p>
+
+Также можно указать “Персональное сообщение”, я у себя включил соответствующую галку и в поле ввода написал нечто вроде:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>Здравствуйте, уважаемые читатели блога okITgo.ru. Тематика блога посвящена Информационным Технологиям (IT), Веб Программированию, Hi-Tech Инновациям, также Вы найдете статьи по Сетям, Интернет Обзоры и многое другое…</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+После внесения изменений нажимаем кнопку “Сохранить”.</p>
+<h5>SmartFeed – Обеспечьте максимальную совместимость</h5>
+<p>
+
+Оставаясь на той же вкладке “Оптимизируй”, тыкаем пункт “SmartFeed”, где нажимаем кнопку “Активизировать”. Включение данного сервиса приведет к трансформаци на лету вашего фида в формат (RSS или Atom), совместимый с пользовательским приложением для чтения фидов. Таким образом, Вы сделаете свою ленту совместимой с любым приложением для чтения фидов.</p>
+<h5>Feed Image Burner – Добавляем Картинку</h5>
+<p>
+
+&nbsp;</p>
+<blockquote>Добавьте немного цветности вашему фиду. Поместите специальное изображение в вашем фиде, чтобы оно выделялось из общего фона при отображении в большинстве популярных программ для чтения RSS новостей. Данная услуга добавляет блок тегов <image> в ваш фид, который указывает на расположение в сети изображения, которое вы выберете ниже. Большинство программ для чтения RSS отображают данное изображение индивидуально или в группе с публикациями в фиде. Если вы хотите использовать собственное изображение, мы рекомендуем, чтобы оно было не больше, чем 144 пикселя в высоту или ширину.&nbsp;</blockquote>
+<p>
+
+Согласно рекомендации, добавим “немного цветности” фиду. В раскрывающемся списке <b>Image Source</b> либо оставляем изображение по умолчанию, либо выбираем “Specify custom image URL” и в появившемся поле <b>Specify custom image URL</b>прописываем путь к изображению. Можно указать любое изображение в пределах размеров 144×144 пикселов – например, визитку или логотип блога. В поле <b>Image Title</b> указываем заголовок изображения (я у себя ввел описание блога), в поле <b>Link</b>прописываем адрес вашего сайта. Затем нажимаем кнопку “Активировать”, а после обновления страницы – кнопку “Сохранить”.</p>
+<h5>Summary Burner – Обрезание Статей средствами FeedBurner как метод Борьбы с Воровством Контента</h5>
+<p>
+
+В той же вкладке “Оптимизируй” тыкаем пункт меню <b>Summary Burner</b>, нажмаем кнопку “Активизировать” для запуска сервиса, имеющего такое описание:</p>
+<blockquote>Иногда надо подразнить. Предоставить короткий обзор контента без гиперссылок и направить подписчиков на сайт за остальной частью истории. Можно также приложить дополнительное сообщение “Дразнилку” к каждой публикации.&nbsp;</blockquote>
+<p>
+
+Мы же будем использовать сервис не столько как “Дразнилку”, сколько как средство защиты от воришек контента. Указываем в поле <b>Maximum length</b>количество символов (200 – значение по умолчанию), которое будет использоваться для создания анонса статьи. В поле <b>Teaser</b> (“Дразнилка”) вписываем сообщение, например такое:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>Это только начало статьи. На моем вебсайте Вы найдете продолжение …</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+&nbsp;</p>
+<hr />
+<p>
+
+&nbsp;</p>
+<p>
+
+&nbsp;</p>
+<h3>Настройка Перенаправления на RSS Ленту FeedBurner</h3>
+</p>
+<div></div>
+<p>
+
+Теперь необходимо настроить перенарпавление с оригинальной ленты <strong>RSS WordPress</strong> на созданную ленту FeedBurner. Это перенаправление можно сделать несколькими способами: посредством плагина, с помощью 301-редиректа в файле .htaccess, или отредактировав шаблон текущей темы HEADER.</p>
+<p>
+
+&nbsp;</p>
+<h4>Первый способ – использование плагина FeedBurner FeedSmith</h4>
+<p>
+
+Качаем плагин FeedBurner FeedSmith 2.3.1, распаковываем скачанный архив в папку “feedburner_feedsmith_plugin_2.3″, содержимое которой должно быть:</p>
+<ul>
+<li>FeedBurner FeedSmith Plugin Instructions.pdf</li>
+<li>FeedBurner_FeedSmith_Plugin.php</li>
+</ul>
+<p>
+
+Копируем эту папку (“feedburner_feedsmith_plugin_2.3″) в директорию WP с плагинами:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>wp-content/plugins/</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+<b>Совет:</b> Можно сэкономить дисковое пространство, выделенное Вам на хостинге, удалив не нужные инструкции по использованию плагина “FeedBurner FeedSmith Plugin Instructions.pdf”, которые занимают 76301 байт места, поскольку сейчас я итак расскажу, как пользоваться плагином <img loading="lazy" alt=";-)" src="https://petrukmax.github.io/guideto/media/posts/111/icon_wink3.gif" > .</p>
+<p>
+
+Активация плагина. Заходим в админку, тыкаем пункт меню “Плагины”, находим плагин “FeedBurner FeedSmith” и кликаем “Активировать” прямо под его названием.</p>
+<p>
+
+Настройка плагина. Опять же в админке щелкаем пункт меню “Настройки” и находим подпункт “FeedBurner”. Тыкаем по этому подпункту, откроется форма настроек плагина с кратким описанием назначения плагина и возможностей сервиса FeedBurner:</p>
+<p>
+
+&nbsp;</p>
+<h5>Настройки Потока (Ленты) FeedBurner</h5>
+<p>
+
+Этот плагин упрощает перенаправление всех ваших RSS-потоков в созданный вами поток FeedBurner для вашего сайта. Сервис FeedBurner может следить за вашими RSS подписчиками, а также Вы получите множество полезных возможностей для улучшения исходного вида WordPress ленты.</p>
+<ol>
+<li>Чтобы начать, создайте поток FeedBurner для вашего сайта.. Этот поток будет обрабатывать весь трафик для ваших постов.</li>
+<li>Как только Вы создали ваш поток FeedBurner, введите его адрес в поле ввода ниже (http://feeds.feedburner.com/ваш_фид):</p>
+<p>
+
+<input type="text" name="feedburner_url" size="45" value="" /></li>
+<li>Опционально: Если Вы также хотите обрабатывать поток комментариев для вашего WordPress блога посредством FeedBurner, создайте поток комментариев FeedBurner и затем введите его адрес ниже:</p>
+<p>
+
+<input type="text" name="feedburner_comments_url" size="45" value="" /></li>
+</ol>
+<p>
+
+&nbsp;</p>
+<p>
+
+Собственно осталось только сделать описанные выше действия (прописать адрес ленты FeedBurner и, по желанию, адрес ленты комментариев FeedBurner), а затем нажать кнопку “Save”.</p>
+<p>
+
+&nbsp;</p>
+<h4>Второй способ – использование редиректа в .htaccess</h4>
+<p>
+
+Вместо плагина можно настроить перенаправление с исходного RSS потока WP на ленту FeedBurner в файле .htaccess, дописав строки</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><p>Redirect 301 /feed/ http://feeds.feedburner.com/ваш_фид</p>
+<p>Redirect 301 /feed http://feeds.feedburner.com/ваш_фид</p>
+<p>Redirect 301 /feed/atom/ http://feeds.feedburner.com/ваш_фид</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+А затем зайти в настройки FeedBurner (на сайте сервиса), выбрать вкладку “Edit Feed Details” и посмотреть, какой указан адрес оригинальной ленты WordPress. Если (наиболее типичная ситуация) указан адрес</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>http://vash_sait.ru/feed</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+то его необходимо поменять на</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>http://vash_sait.ru/index.php?feed=feed</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+&nbsp;</p>
+<p>
+
+&nbsp;</p>
+<h4>Третий способ – редактирование шаблона заголовка темы HEADER</h4>
+<p>
+
+Открываем на редиктирование файл header.php (шаблон заголовка текущей темы WordPress, который лежит в поддиректории движка</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>wp-content\themes\<НАЗВАНИЕ ТЕКУЩЕЙ ТЕМЫ>\</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+), ищем примерно такие строки (привожу несколько вариантов, хотя у Вас может быть несколько отличающийся код):</p>
+<ul>
+<li>либо</li>
+</ul>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><p><link rel=”alternate” type=”application/rss+xml” title=”<?php bloginfo(‘name’); ?> RSS Фид” href=”<?php bloginfo(‘rss2_url’); ?>” /></p>
+<link rel=”alternate” type=”application/rss+xml” title=”<?php bloginfo(‘name’); ?> Лента комментариев” href=”<?php bloginfo (‘comments_ rss2_url’); ?>” /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>либо</li>
+</ul>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><?php wp_head(); ?></td>
+</tr>
+</tbody>
+</table>
+<p>
+
+В первом случае меняем этот кусок кода на</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><link rel=”alternate” type=”application/rss+xml” title=”vash_sait.ru » RSS Лента” href=”http://feeds.feedburner.com/ваш_фид_сервиса_FeedBurner” /></td>
+</tr>
+</tbody>
+</table>
+<p>
+
+(аналогично добавляем ленту комментариев FeedBurner, если настроили таковую в сервисе FeedBurner).</p>
+<p>
+
+Со вторым дело обстоит несколько сложнее и я советую лучше воспользоваться плагином, либо .htaccess-редиректом, хотя и расскажу, какие изменения и в какие файлы движка WordPress следует внести.</p>
+<p>
+
+Для начала, проведем небольшое исследование. Функция wp_head() находится в файле</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>wp-includes/general-template.php</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+и содержит вызов функции do_action:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><p>function wp_head() {</p>
+<p>do_action(‘wp_head’);</p>
+<p>}</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+Функция do_action() находится в файле</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>wp-includes/plugin.php</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+и выполняет (при вызове с параметром ‘wp_head’) вызов всех функций, прицепленных к хуку ‘wp_head’. Эти функции (или действия (actions), как их еще называют) прицепляются к хуку wp_head в файле</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>wp-includes/default-filters.php</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+содержащем добавление фильтров и действий по умолчанию для большинства хуков WordPress (в частности, действия wp_head). Открыв этот файл, находим строку:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>add_action( ‘wp_head’, ‘feed_links’, 2 );</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+Эта строка прицепляет к хуку wp_head функцию feed_links. Теперь осталось найти определение функции feed_links. Находится оно опять же в файле</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>wp-includes/general-template.php</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+Вот участок тела этой функции, отвечающий непосредственно за генерацию html-кода секции head, указывающего, что сайт имеет RSS-ленты:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td><p>echo ‘<link rel=”alternate” type=”‘ . feed_content_type() . ‘” title=”‘ . esc_attr(sprintf( $args['feedtitle'], get_bloginfo(‘name’), $args['separator'] )) . ‘” href=”‘ . get_feed_link() . “\” />\n”;</p>
+<p>echo ‘<link rel=”alternate” type=”‘ . feed_content_type() . ‘” title=”‘ . esc_attr(sprintf( $args['comstitle'], get_bloginfo(‘name’), $args['separator'] )) . ‘” href=”‘ . get_feed_link( ‘comments_’ . get_default_feed() ) . “\” />\n”;</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+Итак, в принципе можно полностью закомментировать содержимое тела функции feed_links, а затем дописать строку:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>echo ‘<link rel=”alternate” type=”application/rss+xml” title=”vash_sait.ru » RSS Лента” href=”http://feeds.feedburner.com/ваш_фид” />’;</td>
+</tr>
+</tbody>
+</table>
+<p>
+
+Этот метод плох тем, что мы вносим изменения в файл cms WordPress, которое может повлиять на последующие обновления движка – непонятно, как это может отразиться в дальнейшем.</p>
+<hr />
+<p>
+
+&nbsp;</p>
+<p>
+
+&nbsp;</p>
+<h3>Проверка Перенаправления на RSS Ленту FeedBurner</h3>
+</p>
+<div></div>
+<p>
+
+Какой бы способ перенаправления Вы не избрали, результат должен быть один – при клике на ярлыке-ссылке на RSS ленты (у браузера Opera эта ссылка, например, находится справа в адресной строке браузера, а вообще советую добавить на сайт картинку со ссылкой на RSS ленту, что обычно делают на всех блогах, размещая данное изображение в самом верху правого сайдбара), Вы переходите на RSS ленту FeedBurner, а не на оригинальную ленту WordPress.</p>
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/seo/">SEO</a>
+                                          </li>
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/wordpress/">WordPress</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+                     <div class="related">
+                        <h2 class="related__title">
+                           Related posts:
+                        </h2>
+                        <ul class="related__items">
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/wordpress-kak-pisat-zapisi-v-budushchem.html">
+                                       Wordpress как писать записи в будущем
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/zashchita-wordpress-ot-bazovyh-ugroz-virusov-i-atak.html">
+                                       Защита WordPress от базовых угроз, вирусов и атак
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/wordpress-meta-robots.html">
+                                       WordPress Meta Robots
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                        </ul>
+                     </div>
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>

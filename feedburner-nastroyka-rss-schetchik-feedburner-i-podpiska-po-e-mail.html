@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Feedburner — настройка RSS, счетчик Feedburner и подписка по E-mail - guideto </title>
+        <meta name="description" content="Это очередная статья из рубрики RSS лента для сайта, Feedburner, где мы продолжим разговор об RSS лентах, каналах и новостях, начатый статье рассказывающей что такое RSS. Сегодня мы поговорим оFeedburner и о том, что с ним связано. Настроим трансляцию нашего feed (RSS ленты) через Feedburner, предложим посетителям сайта подписываться на RSS ленту посредством E-mail, получим код счетчика FeedBurner, который будет считать количество подписчиков на вашу новостную ленту." />
+        
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+
+        <link rel="canonical" href="https://petrukmax.github.io/guideto/feedburner-nastroyka-rss-schetchik-feedburner-i-podpiska-po-e-mail.html">
+        <link rel="alternate" type="application/atom+xml" href="https://petrukmax.github.io/guideto/feed.xml" />
+<link rel="alternate" type="application/json" href="https://petrukmax.github.io/guideto/feed.json" />
+
+        <meta property="og:title" content="Feedburner — настройка RSS, счетчик Feedburner и подписка по E-mail" /><meta property="og:site_name" content="guideto" /><meta property="og:description" content="Это очередная статья из рубрики RSS лента для сайта, Feedburner, где мы продолжим разговор об RSS лентах, каналах и новостях, начатый статье рассказывающей что такое RSS. Сегодня мы поговорим оFeedburner и о том, что с ним связано. Настроим трансляцию нашего feed (RSS ленты) через Feedburner, предложим посетителям сайта подписываться на RSS ленту посредством E-mail, получим код счетчика FeedBurner, который будет считать количество подписчиков на вашу новостную ленту." /><meta property="og:url" content="https://petrukmax.github.io/guideto/feedburner-nastroyka-rss-schetchik-feedburner-i-podpiska-po-e-mail.html" /><meta property="og:type" content="article" />
+        
+        <link rel="stylesheet" href="https://petrukmax.github.io/guideto/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://petrukmax.github.io/guideto/feedburner-nastroyka-rss-schetchik-feedburner-i-podpiska-po-e-mail.html"},"headline":"Feedburner — настройка RSS, счетчик Feedburner и подписка по E-mail","datePublished":"2013-05-22T12:41","dateModified":"2024-08-19T17:47","description":"Это очередная статья из рубрики RSS лента для сайта, Feedburner, где мы продолжим разговор об RSS лентах, каналах и новостях, начатый статье рассказывающей что такое RSS. Сегодня мы поговорим оFeedburner и о том, что с ним связано. Настроим трансляцию нашего feed (RSS ленты) через Feedburner, предложим посетителям сайта подписываться на RSS ленту посредством E-mail, получим код счетчика FeedBurner, который будет считать количество подписчиков на вашу новостную ленту.","author":{"@type":"Person","name":"GUIDETO","url":"https://petrukmax.github.io/guideto/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>      
+        
+    </head>
+    <body class="post-template">
+        
+<div class="container js-container">
+      <nav class="menu">
+          <ul class="navbar__menu">
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/kouching/"
+                          target="_self"
+      >
+                      Коучинг </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/psixologiya/"
+                          target="_self"
+      >
+                      Психология </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/knigi/"
+                          target="_self"
+      >
+                      Книги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/video/"
+                          target="_self"
+      >
+                      Видео </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/biz/"
+                          target="_self"
+      >
+                      Бизнес </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/bez-rubriki/"
+                          target="_self"
+      >
+                      Без рубрики </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/audiobook/"
+                          target="_self"
+      >
+                      Аудиокниги </a>              
+              </li>
+                  <li>
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/anglijskij/"
+                          target="_self"
+      >
+                      Английский </a>              
+              </li>
+                  <li class="has-submenu">
+                      <a 
+                      href="https://petrukmax.github.io/guideto/tags/it/"
+                          target="_self"
+      >
+                      IT </a>              
+                          <ul class="navbar__submenu" >
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/wordpress/"
+                                          target="_self"
+                      >
+                                      WordPress </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/seo/"
+                                          target="_self"
+                      >
+                                      SEO </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/yazyki/"
+                                          target="_self"
+                      >
+                                      Языки </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/html/"
+                                                          target="_self"
+                                      >
+                                                      HTML </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/php/"
+                                                          target="_self"
+                                      >
+                                                      PHP </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/hard/"
+                                          target="_self"
+                      >
+                                      Железо </a>              
+                              </li>
+                                  <li>
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/android/"
+                                          target="_self"
+                      >
+                                      Android </a>              
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/windows/"
+                                          target="_self"
+                      >
+                                      Windows </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/iis/"
+                                                          target="_self"
+                                      >
+                                                      IIS </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                                  <li class="has-submenu">
+                                      <a 
+                                      href="https://petrukmax.github.io/guideto/tags/unix/"
+                                          target="_self"
+                      >
+                                      Unix </a>              
+                                          <ul class="navbar__submenu" >
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/apache/"
+                                                          target="_self"
+                                      >
+                                                      Apache </a>              
+                                              </li>
+                                                  <li>
+                                                      <a 
+                                                      href="https://petrukmax.github.io/guideto/tags/asterisk/"
+                                                          target="_self"
+                                      >
+                                                      Asterisk </a>              
+                                              </li>
+                                          </ul>
+                              </li>
+                          </ul>
+              </li>
+          </ul>
+      </nav>
+   <div class="container__content">
+      <header class="top">
+         <div class="top__item">
+            <a class="logo" href="https://petrukmax.github.io/guideto/">
+                  guideto
+            </a>
+         </div>
+         <div class="top__item top__item--right">
+              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
+						<span class="menu-toggle-box">
+							<span class="menu-toggle-inner"> Menu</span>
+						</span>
+					</button>
+         </div>
+      </header>   <main class="main post">
+         <article class="content">
+            <div class="main__left">
+                        <figure class="hero">
+                           <img
+                              src="https://petrukmax.github.io/guideto/media/website/111222-4.jpg"
+                                  srcset="https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-md.jpg 768w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-lg.jpg 1024w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-xl.jpg 1280w ,https://petrukmax.github.io/guideto/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
+                               loading="eager"
+                               width="3840" height="2160" 
+                              alt="">
+
+                        </figure>
+
+               <header>
+                  <h1>Feedburner — настройка RSS, счетчик Feedburner и подписка по E-mail</h1>
+                     <p>
+                           <time datetime="2013-05-22T12:41">
+                                 май 22, 2013
+                           </time>
+                           by
+                              <a href="https://petrukmax.github.io/guideto/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
+                     </p>
+               </header>
+            </div>
+            <div class="main__right">
+               <div class="content__entry">
+                     <p>Это очередная статья из рубрики RSS лента для сайта, Feedburner, где мы продолжим разговор об RSS лентах, каналах и новостях, начатый статье рассказывающей что такое RSS. Сегодня мы поговорим о<strong>Feedburner</strong> и о том, что с ним связано. Настроим трансляцию нашего feed (RSS ленты) через Feedburner, предложим посетителям сайта подписываться на RSS ленту посредством E-mail, получим код <em>счетчика FeedBurner</em>, который будет считать количество подписчиков на вашу новостную ленту.</p>
+<div><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/feedburner.jpg" alt="" width="500" height="226"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/feedburner-xs.jpg 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/feedburner-sm.jpg 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/feedburner-md.jpg 768w"></div>
+</p>
+
+<p>
+
+Последнее время стало делом в порядке вещей <strong>добавить RSS ленту в FeedBurner</strong>. Сейчас вы практически не найдете сайта или блога, который бы не делал этого. Но зачем это нужно и почему все это делают? Во-первых, добавив RSS ленту в Feedburner, он преобразует ее в стандартный формат RSS, который поддерживается любой программой для чтения RSS ленты (Rss Reader).</p>
+<p>
+
+&nbsp;</p>
+<h3>Почему обязательно нужно использовать возможности, предоставляемые Feedburner</h3>
+</p>
+<div></div>
+</p>
+<div></div>
+<p>
+
+Во-вторых, с помощью Feedburner вы можете настраивать вид вашей RSS ленты в соответствии с вашими пожеланиями. В-третьих, Фидбернер позволяет определить точное количество подписчиков на ваш новостной канал и дает возможность установить на сайте <strong>счетчик подписчиков RSS от Feedburner</strong>, отображающий это самое количество подписчиков в реальном времени (обновляется примерно раз в сутки).</p>
+<p>
+
+Если ваш сайт является блогом, то по этому самому счетчику FeedBurner ведется косвенная оценка успешности вашего проекта. От показателей счетчика FeedBurner будет зависеть занимаемое вашим блогом место в разнообразных рейтингах блогов, а так же цена за размещаемую на вашем блоге рекламу (заработок и монетизация сайта). Следовательно, если вы хотите чтобы ваш блог в дальнейшем приносил вам прибыль, то <em>добавить RSS feed в Feedburner</em> нужно будет в обязательном порядке, не откладывая в долгий ящик.</p>
+<p>
+
+Еще одной замечательной особенностью является возможность настроить <strong>E-mail подписку RSS через FeedBurner</strong>. В этом случае, посетителю вашего сайта для подписки на новостной канал достаточно будет указать лишь свой e-mail адрес. Ни в коем случае не стоит пренебрегать этой возможностью подписки на ленту новостей, т.к. далеко не все посетители вашего ресурса умеют работать с программами для чтение RSS лент, а с почтой работать могут все. Предоставляя такой вариант подписки на новости вашего ресурса вы однозначно увеличиваете потенциальное число ваших подписчиков.</p>
+<p>
+
+Есть еще ряд преимуществ в использовании сервиса от Google под названием <strong>Feedburner для добавления RSS на сайт</strong>, но о них будет лучше поговорить уже на конкретном примере настройки с использованием многофункционального интерфейса управления ваши feed, который нам предоставляет Фидбернер.</p>
+<h3>Как добавить и настроить RSS ленту (feed) в FeedBurner</h3>
+</p>
+<div></div>
+<p>
+
+Сам <strong>онлайн сервис Feedburner принадлежит Google</strong> и, соответственно, для работы с любым сервисом Google, в том числе и с «FeedBurner», необходимо иметь аккаунт в почте Google (почтовый ящик завести). Для того, чтобы создать почтовый ящик заходите на страницу Создать аккаунт Google — Gmail, заполняете все представленные там поля, и в результате получаете логин и пароль не только к почтовому ящику (по-моему мнению, почта от Google одна из самых лучших, если не самая лучшая), но и ко всем сервисам Google:</p>
+<ul>
+<li>Инструменты для веб-мастеров</li>
+<li>FeedBurner</li>
+<li>Gmail</li>
+<li>Веб-альбомы Picasa</li>
+<li>Blogger</li>
+<li>Закладки</li>
+<li>iGoogle</li>
+<li>Analytics</li>
+<li>и кое-что еще</li>
+</ul>
+<p>
+
+Войти в свой Google аккаунт вы может со страницы Аккаунты, введя полученные, при создании почтового ящика, логин и пароль. Итак, вы входите в свой аккаунт на Google и выбираете из списка «Мои продукты» пункт «FeedBurner», либо заходите по этой ссылке, но там опять же нужно будет ввести логин и пароль, полученные при регистрации почтового ящика.</p>
+<p>
+
+Если язык отображения страницы в Фидбернер автоматически не переключился на русский, то щелкните в самом верху страницы справа по ссылке «Languages» и на открывшейся странице выберете русский язык. Все, теперь у вас будет полностью <em>русский FeedBurner</em>.</p>
+<p>
+
+Для начала вам нужно будет вставить в форму, под названием «Зажигай feed прямо сейчас», <strong>адрес RSS ленты сайта</strong> (в моем случае это: <code>http://ktonanovenkogo.ru/feed</code>, если вы не знаете, где посмотреть этот адрес (URL), то вам поможет в этом материал, посвященный созданию и настройке RSS ленты в Joomla,RSS канала в WordPress и RSS новостей в SMF) и нажать кнопку «Next».</p>
+<p><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.11.png" alt="" width="505" height="85"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.11-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.11-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.11-md.png 768w"></p>
+<p>Вы попадаете на страницу, где нужно будет в поле «Название feed» вписать будущее название вашего <em>feed (RSS ленты) в FeedBurner</em>, а в поле «Адрес feed» вписать, используя латинские буквы и цифры, желаемый адрес вашего будущего RSS feed.</p>
+<p><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.111.png" alt="" width="503" height="285"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.111-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.111-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.111-md.png 768w"></p>
+<p>Этот адрес feed будет добавляться к:</p>
+<div>
+<div id="highlighter_896772">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code>http:</code><code>//feeds.feedburner.com/</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Например, для моего feed это будет выглядеть так:</p>
+<div>
+<div id="highlighter_777882">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code>http:</code><code>//feeds.feedburner.com/Ktonanovenkogoru</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Затем жмете кнопку «Next» и попадаете на страницу, где вас поздравляют с <strong>созданием RSS feed в FeedBurner</strong>, приводят ссылку, которую вы будете в дальнейшем использовать для подписки новых читателей на RSS канал вашего ресурса <code>(http://feeds.feedburner.com/Ktonanovenkogoru</code>, в моем случае) и предлагают перейти непосредственно к настройкам только что созданного RSS feed. Что мы и сделаем, нажав кнопку «Next».</p>
+<p>
+
+На следующей странице мастера добавления RSS в FeedBurner вы решаете, нужно ли вам ставить где-то галочки и опять же жмете кнопку «Next». В результате, вы попадаете на финальную страницу мастера настройки трансляции вашего feed (новостной ленты). Вверху этой страницы вы можете видеть панель с вкладками «Анализируй», «Оптимизируй», «Публикуй», «Зарабатывай», «Решай проблемы», «Мои feeds».</p>
+<p><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.112.png" alt="" width="537" height="161"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.112-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.112-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.112-md.png 768w"></p>
+<p>Используя именно эти вкладки мы будем производить дальнейшие <strong>настройки RSS feed в FeedBurner</strong>. К сожалению, пока что еще не все страницы настроек Фидбернер полностью переведены на русский язык, но со временем, я думаю, это исправят. Тем не менее пора приступать к настройкам вашего feed.</p>
+<h3>Счетчик FeedBurner для подсчета количества подписчиков на RSS ленту (feed)</h3>
+</p>
+<div></div>
+</p>
+<div></div>
+<p>
+
+Начну именно со <strong>счетчика RSS подписчиков FeedBurner</strong>, т.к. большинство добавляет свой фид (feed) в Фидбернер именно из-за возможности получить счетчик количества подписчиков на свою RSS ленту. Итак, для этого нам необходимо будет открыть вкладку «Публикуй» и выбрать в левой колонке пункт под названием «FeedCount».</p>
+<p>
+
+<img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.113.png" alt="" width="537" height="421"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.113-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.113-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.113-md.png 768w"></p>
+<p>
+
+Счетчик будет отображать в реальном времени (обычно информация обновляется примерно раз в сутки или где-то около того) <strong>количество подписчиков на RSS feed в FeedBurner</strong>. Для того, чтобы воспользоваться этим сервисом FeedCount, его нужно будет сначала активировать. Для этого нажмите на расположенную внизу страницы кнопку «Активировать».</p>
+<p>
+
+<img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.116.png" alt="" width="501" height="67"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.116-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.116-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.116-md.png 768w"></p>
+<p>
+
+В результате окно FeedCount изменится. В верхней части окна будет приведен <strong>код счетчика RSS подписчиков FeedBurner</strong>, который можно скопировать и вставить к себе на сайт (в любое подходящее место шаблона сайта, форума или блога). Над полем с кодом показан внешний вид счетчика Фидбернер, который вы получите, используя этот код.</p>
+<p>
+
+<img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.115.png" alt="" width="495" height="171"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.115-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.115-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.115-md.png 768w"></p>
+<p>
+
+Для того, чтобы произвести настройку счетчика FeedBurner можно использовать предназначенный для этого инструмент, расположенный под окном с кодом счетчика на странице FeedCount.</p>
+<p>
+
+<img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.114.png" alt="" width="491" height="379"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.114-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.114-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.114-md.png 768w"></p>
+<p>
+
+В этом окне вы, во-первых, можете выбрать, будет ли ваш счетчик FeedBurner «Статический» или «Анимированный». Во-вторых, вы можете настроить цветовую гамму как самого счетчика Фидбернер, так и текста отображаемого на нем. Для этого достаточно будет поставить галочку либо в поле «тело», либо в поле «текст», а затем щелкнуть мышью по нужному цвету на приведенной там цветовой палитре.</p>
+<p>
+
+Код нужного цвета автоматически пропишется в поле «тело», либо в поле «текст». Результат своих действий вы можете наблюдать на прямоугольнике, расположенном ниже этих полей. Подобрав нужную цветовую гамму счетчика FeedBurner вам нужно будет нажать расположенную внизу кнопку «Сохранить».</p>
+<p>
+
+В результате, в верхней части окна изменится внешний вид вставляемого счетчика, т.к. в код будут добавлены все внесенные вами ранее изменения. Если полученный результат вас не удовлетворил, то попробуйте снова настроить цветовую гамму счетчика Фидбернер. По достижению приемлемого результата, скопируйте код счетчика FeedBurner из одноименного поля «Скопируйте этот HTML» и вставьте его в нужное место шаблона вашего сайта (шаблоны Joomla, темы WordPress, темы SMF).</p>
+<p>
+
+Единственное, что я хотел бы вам посоветовать — не спешить с этим, если показатели вашего <strong>счетчика RSS подписчиков</strong> еще не слишком высоки. Это может отрицательно повлиять на желание потенциальных читателей вашего feed (новостного канала) подписаться. Но это лишь мое мнение, вы сами решайте: отображать счетчик с малым количеством подписчиков на сайте или нет. Лично я, вывел счетчик количества RSS подписчиков на главную страницу только после того, как показатель этого счетчика перевалил за 1000 подписчиков.</p>
+<h3>Настройка счетчика FeedBurner</h3>
+</p>
+<div></div>
+<p>
+
+Если вы внимательно посмотрите на код счетчика количества RSS подписчиков:</p>
+<div>
+<div id="highlighter_103624">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code>
+<p><a href=</code><code>"http://feeds.feedburner.com/Ktonanovenkogoru"</code><code>><img loading="lazy" src=</code<code>"http://feeds.feedburner.com/~fc/Ktonanovenkogoru?bg=99CCFF&amp;fg=444444&amp;anim=0"</code><code>height=</code><code>"26"</code> <code>width=</code><code>"88"</code> <code>style=</code><code>"border:0"</code> <code>alt=</code><code>""</code> <code></a></p>
+<p></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+то увидите, что он фактически представляет собой ссылку на сайт FeedBurner, в качестве якоря для которой используется изображение счетчика (Используем изображение в качестве анкора для ссылки), загружаемого с того же сайта.</p>
+<p>
+
+Соответственно, для открытия RSS канала в новом окне при клике на счетчик количества RSS подписчиков нужно всего лишь добавить в Html код ссылки атрибут TARGET с параметром _BLANK (Открываем страницы в новом окне — атрибут TARGET с параметром _blank). В результате код счетчика количества подписчиков будет иметь вид:</p>
+<div>
+<div id="highlighter_524703">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code>
+<p><a target=</code><code>"_blank"</code> <code>href=</code><code>"http://feeds.feedburner.com/Ktonanovenkogoru"</code><code>><img loading="lazy" src=</code><code>"http://feeds.feedburner.com/~fc/Ktonanovenkogoru?bg=99CCFF&amp;fg=444444&amp;anim=0"</code><code>height=</code><code>"26"</code> <code>width=</code><code>"88"</code> <code>style=</code><code>"border:0"</code> <code>alt=</code><code>""</code> <code>/></a></p>
+<p></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Для внутренней оптимизации сайта желательно иметь как можно меньше внешних ссылок на другие сайты, открытых для индексации поисковиками. Закрывать внешние ссылки от индексации поисковиками так же полезно и с точки зрения заработка на своем сайте.</p>
+<p>
+
+Рекламодатели (например, Как заработать на блоге – продажа ссылок с сайта в биржах Блогун, J2J, GoGetLinks, RotaPost) зачастую учитывают количество внешних ссылок со страниц сайта, и чем их будет меньше, тем лучше. Поэтому, нам нужно закрыть от индексации поисковыми машинами все внешние ссылки, расположенные в различных счетчиках (в том числе и FeedBurner) и прочих вещах, которые не обязательно оставлять открытыми.</p>
+<p>
+
+Для запрещения индексации таких ссылок поисковой системой Google используется атрибут REL для тега A с параметром Nofollow. А для запрета индексации данной ссылки поисковиком Яндекс, нужно заключить код счетчика в открывающий и закрывающий теги Noindex. В результате, окончательный код нашего <strong>счетчика количества RSS подписчиков FeedBurner</strong> примет вид:</p>
+<div>
+<div id="highlighter_747681">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><noindex>
+<p><a rel=</code><code>"nofollow"</code> <code>target=</code><code>"_blank"</code><code>href=</code><code>"http://feeds.feedburner.com/Ktonanovenkogoru"</code><code>><img loading="lazy" src=</code><code>"http://feeds.feedburner.com/~fc/Ktonanovenkogoru?bg=99CCFF&amp;fg=444444&amp;anim=0"</code><code>height=</code><code>"26"</code> <code>width=</code><code>"88"</code> <code>style=</code><code>"border:0"</code> <code>alt=</code><code>""</code> <code>/></a></p>
+<p></noindex></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Вносить ли описанные выше изменения в код счетчика, полученный на Фидбернер, решать вам. Кстати, последнее время произошли изменения в восприятии поисковыми системами Яндекс и Joomla таких тегов какNoindex и Nofollow, не примените ознакомиться с этим материалом.</p>
+<h3>FeedBurner — настройка подписки на RSS ленту по электронной почте (feed на E-mail)</h3>
+<p>
+
+Теперь, рассмотрим второй по важности (а может и первый) аспект работы с rss лентой FeedBurner, а именно возможность <strong>подписки в FeedBurner</strong> на RSS feed через E-mail. Еще раз повторюсь, что это очень важно, если вы хотите, чтобы все посетители, которым понравился ваш сайт, имели возможность подписаться на рассылку новостей в удобной для них форме.</p>
+<p>
+
+Далеко не все посетители знакомы с RSS ридерами, а электронная почта — это банально и просто даже для полнейших чайников. Поэтому настраиваем возможность подписки на новостную ленту через E-mail с помощью FeedBurner, ну прям таки в обязательном порядке. Есть еще возможность реализовать такую подписку с помощью сервиса Rss2Email, но ее мы рассмотрим позже.</p>
+<p>
+
+Итак, для настройки <strong>подписки на RSS канал по E-mail через FeedBurner</strong> нам необходимо будет открыть вкладку «Публикуй» и выбрать в левой колонке пункт под названием «Подписки по электронной почте».</p>
+<p><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.117.png" alt="" width="537" height="469" /> sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.117-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.117-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.117-md.png 768w"></p>
+<p>Для того, чтобы воспользоваться сервисом RSS на E-mail в Фидбернер, его нужно будет сначала активировать. Для этого нажмите на расположенную внизу страницы кнопку «Активировать». После чего, в левой колонке окна настроек FeedBurner под полем «Подписки по электронной почте» появятся еще четыре пункта, позволяющие осуществить детальную настройку подписки на новостную ленту сайта посредством E-mail.</p>
+<p><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.118.png" alt="" width="537" height="187"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.118-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.118-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.118-md.png 768w"></p>
+<p>
+
+При выборе пункта «Subscription Management» (Управление подпиской) у вас появляется скопировать код для <strong>формы подписки FeedBurner</strong>, который будет выводить на страницах вашего сайта область, в которую посетителю будет предложено ввести свой E-mail и нажать кнопку «Подписаться». После соответствующей доработки такая форма подписки RSS на E-mail через Фидбернер может выглядеть, например, так:</p>
+<div><p><form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow"><input type="text" name="email" value="Введите Ваш e-mail" /></p>
+<p><input type="image" value="Subscribe" src="http://ktonanovenkogo.ru/wp-content/themes/Organic/images/b_subscribe.png" /></form></div>
+<p>
+
+На этой же странице, ниже формы подписки <strong>RSS feed на E-mail</strong>, приводится код ссылки для подписки. Его можно вставить в шаблон сайта в виде текстовой ссылки. Но в качестве анкора для этой ссылки можно использовать и изображение (Используем изображение в качестве анкора для ссылки). Например, так:</p>
+<p>
+
+<img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/Feedback1.png" alt=""  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/Feedback1-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/Feedback1-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/Feedback1-md.png 768w"></p>
+<p>
+
+Код ссылок подписки на ленту новостей сайта через FeedBurner посредством E-mail можно немного изменить. Во-первых, можно опять же настроить так, чтобы после щелчка по ссылке подписки, окно с подтверждение подписки открывалось в новом окне браузера. Так же можно закрыть от индексации все внешние ссылки в форме подписки и в ссылке для подписки (об этом я уже писал чуть выше, при настойке кода счетчика Фидбернер). Можно немного изменить код формы подписки RSS на E-mail для того, чтобы появилась такая фишка, которую вы можете наблюдать в приведенной чуть выше форме подписки.</p>
+<p>
+
+Изначально в форме подписки FeedBurner в поле для ввода E-mail присутствует надпись «Введите Ваш e-mail», а как только посетитель щелкнет мышью в этом поле для ввода своего почтового адреса — надпись «Введите Ваш e-mail» автоматически исчезнет. Вроде бы пустячок, а приятно и удобно. Посетителю не надо будет стирать эту надпись, прежде чем ввести свой E-mail в форму подписки на RSS через Фидбернер.</p>
+<p>
+
+Достигается это с помощью добавления к тегу INPUT, в форме подписки, атрибута ONFOCUS с соответствующими параметрами. Я еще не рассказывал в рубрике HTML, CSS, PHP, MySql – изучение и применение на практике про работу с формами в HTML, но вы можете проделать все по аналогии с моим случаем. Я приведу оригинальный код формы подписки на RSS по E-mail, который я скопировал на сайте Фидбернер:</p>
+<div>
+<div id="highlighter_39214">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><form style=</code><code>"border:1px solid #ccc;padding:3px;text-align:center;"</code><code>action=</code><code>"http://feedburner.google.com/fb/a/mailverify"</code> <code>method=</code><code>"post"</code> <code>target=</code><code>"popupwindow"</code><code>onsubmit=</code><code>"window.open('http://feedburner.google.com/fb/a/mailverify?uri=Ktonanovenkogoru', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"</code><code>>
+<p>Enter your email address:</p>
+<p><input type=</code><code>"text"</code> <code>style=</code><code>"width:140px"</code> <code>name=</code><code>"email"</code><code>/></p>
+<p><input type=</code><code>"hidden"</code><code>value=</code><code>"Ktonanovenkogoru"</code> <code>name=</code><code>"uri"</code><code>/><input type=</code><code>"hidden"</code> <code>name=</code><code>"loc"</code> <code>value=</code><code>"en_US"</code><code>/><input type=</code><code>"submit"</code> <code>value=</code><code>"Subscribe"</code> <code>/>
+<p>Delivered by <a href=</code><code>"http://feedburner.google.com"</code><code>target=</code><code>"_blank"</code><code>>FeedBurner</a></p>
+<p></form></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+и код, который в результате я использую на своем блоге для <strong>подписки на RSS feed по E-mail</strong>:</p>
+<div>
+<div id="highlighter_949338">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><div </code><code>class</code><code>=</code><code>"subscribetextbgpost"</code><code>></code></div>
+</p>
+<div></div>
+</p>
+<div><code>      </code><code><form   action=</code><code>"http://feedburner.google.com/fb/a/mailverify"</code> <code>method=</code><code>"post"</code><code>target=</code><code>"popupwindow"</code> <code>onsubmit=</code><code>"window.open('http://feedburner.google.com/fb/a/mailverify?uri=Ktonanovenkogoru', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"</code><code>></code></div>
+</p>
+<div><code>        </code><code><input name=</code><code>"email"</code> <code>type=</code><code>"text"</code> <code>value=</code><code>"Введите Ваш e-mail"</code> <code>class</code><code>=</code><code>"subscribe_textieldpost"</code><code>onfocus=</code><code>"if (this.value == 'Введите Ваш e-mail') {this.value = '';}"</code> <code>onblur=</code><code>"if (this.value == '') {this.value = 'Введите Ваш e-mail';}"</code> <code>/></code></div>
+</p>
+<div><code>        </code><code><input type=</code><code>"hidden"</code> <code>value=</code><code>"Ktonanovenkogoru"</code> <code>name=</code><code>"uri"</code><code>/></code></div>
+</p>
+<div><code>        </code><code><input type=</code><code>"hidden"</code> <code>value=</code><code>"<?php bloginfo('name'); ?>"</code> <code>name=</code><code>"title"</code><code>/></code></div>
+</p>
+<div><code>        </code><code><input type=</code><code>"hidden"</code> <code>name=</code><code>"loc"</code> <code>value=</code><code>"ru_RU"</code><code>/></code></div>
+</p>
+<div><code>        </code><code><input type=</code><code>"image"</code> <code>src=</code><code>"http://ktonanovenkogo.ru/wp-content/themes/Organic/images/b_subscribe.png"</code>   <code>value=</code><code>"Subscribe"</code> <code>class</code><code>=</code><code>"subscribepost"</code> <code>/></code></div>
+</p>
+<div><code>      </code><code></form></code></div>
+</p>
+<div><code>    </code><code></div>
+<p></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Думаю, что проанализировав оригинальный и измененный код подписки RSS на E-mail от сервиса FeedBurner, вы сможете внести соответствующие изменения и в код своей формы подписки. Фактически вам достаточно заменить строку в оригинале:</p>
+<div>
+<div id="highlighter_589854">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><input type=</code><code>"text"</code> <code>style=</code><code>"width:140px"</code> <code>name=</code><code>"email"</code><code>/></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+на</p>
+<div>
+<div id="highlighter_840118">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code><input name=</code><code>"email"</code> <code>type=</code><code>"text"</code> <code>value=</code><code>"Введите Ваш e-mail"</code> <code>class</code><code>=</code><code>"subscribe_textieldpost"</code><code>onfocus=</code><code>"if (this.value == 'Введите Ваш e-mail') {this.value = '';}"</code> <code>onblur=</code><code>"if (this.value == '') {this.value = 'Введите Ваш e-mail';}"</code> <code>/></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+Я еще изменил способ задания кнопки «Подписаться», но вам, я думаю, это не понадобится.</p>
+<h3>Настройка внешнего вида письма подтверждения подписки от FeedBurner</h3>
+</p>
+<div></div>
+<p>
+
+Переходим к следующему пункту настройки FeedBurner для подписки RSS на E-mail: «Подписки по электронной почте» под названием «Communication Preferences».</p>
+<p><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.119.png" alt="" width="537" height="481"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.119-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.119-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.119-md.png 768w"></p>
+<p>На этой странице настройки Фидбернер можно настроить три вещи. Во-первых, ввести тот E-mail, который будет видеть подписчик в поле «От» в полученном письме подтверждения. По умолчанию, там будет прописан адрес почты вашего аккаунта на Google. Соответственно, при необходимости здесь вы можете его изменить.</p>
+<p>
+
+Во-вторых, на этой странице вы можете отредактировать заголовок и текст письма, которое получит пользователь после подписки на <strong>RSS feed сайта на E-mail через FeedBurner</strong>. По умолчанию, текст, прописанный в этих полях, будет на английском, поэтому, если вы хотите чтобы у ваших подписчиков не возникало лишних вопросов при подтверждении подписки на вашу ленту новостей, обязательно впишите в поля «Тема письма-подтверждения» и «Тело письма-подтверждения» пояснительный текст на русском (можно воспользоваться для этой цели переводчиком с английского на русский от гугл). Я прописал следующее:</p>
+<div>
+<div id="highlighter_689032">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code>Активация Вашей e-mail подписки на : KtoNaNovenkogo.ru - блог для начинающих вебмастеров</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+и</p>
+<div>
+<div id="highlighter_955645">
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td>
+<div>
+<div><code>Здравствуйте!</code></div>
+</p>
+<div></div>
+</p>
+<div><code>Вы подписались на e-mail рассылку новостей блога KtoNaNovenkogo.ru - все для начинающих вебмастеров. Для подтверждения подписки Вам необходимо перейти по следующей ссылке:</code></div>
+</p>
+<div></div>
+</p>
+<div><code>${confirmlink}</code></div>
+</p>
+<div><code>Примечания:</code></div>
+</p>
+<div><code>Если при переходе по ссылке страница с подтверждением не откроется, то скопируйте ссылку в адресную строку Вашего браузера и нажмите <<Перейти>> или <<Enter>> на клавиатуре.</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+
+После внесения изменений не забудьте нажать на кнопку «Сохранить» внизу страницы. Советую проверить вид письма от FeedBurner, подписавшись на свою же рассылку RSS и посмотрев, полученное письмо подтверждения рассылки.</p>
+<p>
+
+Переходим к следующему пункту настройки: «Подписки по электронной почте» под названием «Email Branding».</p>
+<div><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/27.1110.png" alt="" width="221" height="193"  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/27.1110-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.1110-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/27.1110-md.png 768w"></div>
+<p>
+
+На открывшейся странице вы можете настроить заголовок отсылаемого письма в поле «Тема/Название письма», так же можете прописать адрес логотипа в поле «URL логотипа», чтобы письмо с вашей RSS рассылкой было визуально узнаваемо. В последующих полях вы можете настроить тип, размер и цвет шрифта отдельно для заголовка и текста сообщения. Все вносимые изменения тут же отражаются в тестовом примере письма внизу окна настроек. Когда вы добьетесь приемлемого результата, то не забудьте нажать на кнопку «Сохранить» внизу окна.</p>
+<p>
+
+Нам осталось рассмотреть еще один пункт меню настройки «Подписки по электронной почте» под названием «Delivery Options». Здесь вы можете выбрать ваш часовой пояс, а так же, в поле «Настроить доставку электронных писем», выбрать интервал времени, в который будет осуществляться доставка электронных писем с новыми материалами вашего сайта. Про остальные <strong>настройки FeedBurner</strong>, которые можно сделать для улучшения вашего feed мы поговорим в следующей статье этого цикла.</p>
+<p>
+
+Для того, чтобы каждый из посетителей вашего сайта мог выбрать удобный для себя способ подписки на ленту новостей, нужно предусмотреть эту возможность после того, как вам удалось <strong>добавить RSS в Feedburner</strong>. Для этого нужно зайти в свой аккаунт на сервисе Фидбернер и выбрать из списка «Мои фиды» (в случае, если у вас несколько RSS лент разных сайтов на одном аккаунте) нужный RSS канал.</p>
+<p><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/06.011.png" alt=""  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/06.011-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/06.011-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/06.011-md.png 768w"></p>
+<p>На странице настроек в Фидбернер вашего фида вы должны открыть вкладку «Оптимизируй» и выбрать из левого меню открывшегося окна пункт «BrowserFriendly». На открывшейся станице в области «Опции внешнего вида» в поле «Тема» можно выбрать язык для темы оформления вашего канала новостей, в поле с изображениями кнопок подписки на RSS можно поставить галочки только у тех, которые вы хотите видеть в области «Подписка» вашей <strong>RSS ленты, добавленной в Feedburner</strong>:</p>
+<div><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/06.01.png" alt=""  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/06.01-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/06.01-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/06.01-md.png 768w"></div>
+<p>
+
+Обратите внимание, что если вы настроили в Фидбернер возможность подписки на вашу ленту новостей по почте (E-mail), то в области «Подписка» будет так же отображаться приглашение<strong>подписаться на RSS ленту по почте через Feedburner</strong>.</p>
+<p>
+
+Вернемся к настройкам нашего фида в Фидбернер(вкладка «Оптимизируй» — пункт «BrowserFriendly»). В области «Опции контента» в поле «Контент фида» вы можете выбрать, что именно будет выводиться в вашей ленте новостей: список заголовков статей с их содержанием, список только заголовков статей или же вообще списка статей выводиться не будет. В поле «Персональное сообщение» вы можете ввести текст своего сообщения, которое будет отображаться на странице вашей RSS ленты добавленной и улучшенной в Feedburner:</p>
+<p><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/06.012.png" alt=""  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/06.012-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/06.012-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/06.012-md.png 768w"></p>
+<p>Не забудьте после внесения всех изменений на этой вкладке Фидбернер нажать на кнопку «Сохранить».</p>
+<h3>Feedburner — Дополнительные настройки RSS</h3>
+</p>
+<div></div>
+<p>
+
+Для того, чтобы быть уверенным в том, что ваша лента новостей добавленная в Feedburner будет корректно отображаться во всех существующих программах для чтения RSS (ридерах), вам нужно активировать соответствующую опцию в настройках сервиса Фидбернер.</p>
+<p>
+
+Для этого на странице <strong>настроек вашего фида в Feedburner</strong> вы должны открыть вкладку «Оптимизируй» и выбрать из левого меню открывшегося окна пункт <em>«SmartFeed»</em>. Нажмите кнопку «Активировать» и теперь, в зависимости от используемого посетителем вашего сайта ридера, будет происходить преобразование на ленту потока в формат RSS или в Atom.</p>
+<p>
+
+В сервисе Фидбернер предусмотрена возможность включения опции <em>Awareness API</em>, которая позволит сторонним приложениям получать информацию о подписчиках вашего фида. После активации Awareness API онлайн сервисы (например, Яндекс.Блоги) смогут получать информацию о количестве подписчиков Вашего RSS фида. Но изначально доступ к Awareness API в Feedburner отключён, поэтому для его включения вам нужно будет на странице настроек вашего фида в Фидбернер открыть вкладку «Публикуй», выбрать из левого меню открывшегося окна пункт <em>«Awareness API»</em> и нажать кнопку «Активировать».</p>
+<p>
+
+Сервис Фидбернер позволяет добавить на страницу вашей RSS ленты любое изображение, например, логотип вашего сайта. Причем, на это <strong>`изображение в ленте новостей добавленной вами в Feedburner</strong>можно будет повесить ссылку, например, на ваш сайт. Выглядеть это будет примерно так:</p>
+<p><img loading="lazy" src="https://petrukmax.github.io/guideto/media/posts/92/06.013.png" alt=""  sizes="(min-width: 1500px) calc(7.87vw + 610px), (min-width: 900px) calc(44.48vw + 68px), (min-width: 780px) calc(8vw + 604px), calc(84.35vw + 23px)" srcset="https://petrukmax.github.io/guideto/media/posts/92/responsive/06.013-xs.png 300w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/06.013-sm.png 480w ,https://petrukmax.github.io/guideto/media/posts/92/responsive/06.013-md.png 768w"></p>
+<p>Для этого, на странице настроек вашего фида в Фидбернер, вы должны открыть вкладку «Оптимизируй» и выбрать из левого меню открывшегося окна пункт «Feed Image Burner». В поле «Image Source» выберите из выпадающего списка вариант «Specify custom image URL».</p>
+<p>
+
+В поле <em>настроек RSS в Feedburner</em> «Specify custom image URL» пропишите полный путь до вашего изображения логотипа (в моем случае — <code>http://ktonanovenkogo.ru/image/webcamxp.png</code>). В следующих двух полях настроек Фидбернер вы можете указать содержимое Html тега TITLE для этого изображения (включите в него ключевые слова, т.к. содержимое этого Html тега будет выполнять роль анкора для ссылки с этого изображения) и адрес ссылки (на ваш сайт).</p>
+
+                     
+                     <footer>
+
+                           <div class="content__tag-share">
+
+                                    <ul class="content__tag">
+                                          <li>
+                                             <a href="https://petrukmax.github.io/guideto/tags/wordpress/">WordPress</a>
+                                          </li>
+                                    </ul>
+
+                                    <div class="content__share">
+                                       
+                                       
+                                       
+                                       
+                                       
+                                       
+                                    </div>
+
+                           </div>
+
+                              <div class="content__bio">
+                                    <h3>
+                                       <a href="https://petrukmax.github.io/guideto/authors/admin/" title="GUIDETO">GUIDETO</a>
+                                    </h3>
+                              </div>
+                     </footer>
+               </div>
+            </div>
+         </article>
+
+            <div class="main__right main__right--bottom">
+                     <div class="related">
+                        <h2 class="related__title">
+                           Related posts:
+                        </h2>
+                        <ul class="related__items">
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/kak-nastroit-feedburner.html">
+                                       КАК НАСТРОИТЬ FEEDBURNER
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/perenapravlyaem-rss-fidy-wordpress-na-feedburner.html">
+                                       Перенаправляем Rss фиды WordPress на FeedBurner
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                              <li class="related__item">
+                                 <h3 class="h5">
+                                    <a href="https://petrukmax.github.io/guideto/kak-pochinit-feedburner.html">
+                                       Как починить Feedburner
+                                    </a>
+                                 </h3>
+                                 
+                              </li>
+                        </ul>
+                     </div>
+
+            </div>
+
+   </main>
+   <footer class="footer">
+         <div class="footer__copyright">
+            Powered by Publii
+         </div>
+   </footer>
+   </div>
+   </div>
+   <script defer src="https://petrukmax.github.io/guideto/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
+       <script>        
+           var images = document.querySelectorAll('img[loading]');
+   
+           for (var i = 0; i < images.length; i++) {
+               if (images[i].complete) {
+                   images[i].classList.add('is-loaded');
+               } else {
+                   images[i].addEventListener('load', function () {
+                       this.classList.add('is-loaded');
+                   }, false);
+               }
+           }
+       </script>
+   
+   
+   
+   
+   
+   </body>
+   </html>
