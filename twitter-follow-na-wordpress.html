@@ -3,232 +3,268 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
             <title>Twitter Follow на WordPress - Blog </title>
         <meta name="description" content="Twitter — один из сервисов во Всемирной Паутине, способный существенно расширить функциональность вашего сайта. Все началось с официальной кнопки Твиттера, потом появилась платформа Twitter Anywhere, и сравнительно недавно — новая кнопка для фолловеров.Вам наверняка интересно, чем кнопка для фолловеров отличается от обычной кнопки для ретвитов. В этой статье попробуем разобраться, в чем заключается эта разница, узнать, что такое кнопка Твиттера под названием «Follow», и как ее добавить в ваш сайт на основе WordPress." />
-        
+         
         <meta name="generator" content="Publii Open-Source CMS for Static Site" />
 
-        <link rel="canonical" href="https://blog.tvojdrug.ru/twitter-follow-na-wordpress.html">
-        <link rel="alternate" type="application/atom+xml" href="https://blog.tvojdrug.ru/feed.xml" />
-<link rel="alternate" type="application/json" href="https://blog.tvojdrug.ru/feed.json" />
+        <link rel="canonical" href="https://4o1.ru/twitter-follow-na-wordpress.html">
+        <link rel="alternate" type="application/atom+xml" href="https://4o1.ru/feed.xml" />
+<link rel="alternate" type="application/json" href="https://4o1.ru/feed.json" />
 
-        <meta property="og:title" content="Twitter Follow на WordPress" /><meta property="og:site_name" content="Blog" /><meta property="og:description" content="Twitter — один из сервисов во Всемирной Паутине, способный существенно расширить функциональность вашего сайта. Все началось с официальной кнопки Твиттера, потом появилась платформа Twitter Anywhere, и сравнительно недавно — новая кнопка для фолловеров.Вам наверняка интересно, чем кнопка для фолловеров отличается от обычной кнопки для ретвитов. В этой статье попробуем разобраться, в чем заключается эта разница, узнать, что такое кнопка Твиттера под названием «Follow», и как ее добавить в ваш сайт на основе WordPress." /><meta property="og:url" content="https://blog.tvojdrug.ru/twitter-follow-na-wordpress.html" /><meta property="og:type" content="article" />
+        <meta property="og:title" content="Twitter Follow на WordPress" /><meta property="og:site_name" content="Blog" /><meta property="og:description" content="Twitter — один из сервисов во Всемирной Паутине, способный существенно расширить функциональность вашего сайта. Все началось с официальной кнопки Твиттера, потом появилась платформа Twitter Anywhere, и сравнительно недавно — новая кнопка для фолловеров.Вам наверняка интересно, чем кнопка для фолловеров отличается от обычной кнопки для ретвитов. В этой статье попробуем разобраться, в чем заключается эта разница, узнать, что такое кнопка Твиттера под названием «Follow», и как ее добавить в ваш сайт на основе WordPress." /><meta property="og:url" content="https://4o1.ru/twitter-follow-na-wordpress.html" /><meta property="og:type" content="article" />
         
-        <link rel="stylesheet" href="https://blog.tvojdrug.ru/assets/css/style.css?v=984cc9f9fa9fd7a0b9529b5c6d9033e9">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.tvojdrug.ru/twitter-follow-na-wordpress.html"},"headline":"Twitter Follow на WordPress","datePublished":"2013-03-09T06:25","dateModified":"2024-08-19T17:47","description":"Twitter — один из сервисов во Всемирной Паутине, способный существенно расширить функциональность вашего сайта. Все началось с официальной кнопки Твиттера, потом появилась платформа Twitter Anywhere, и сравнительно недавно — новая кнопка для фолловеров.Вам наверняка интересно, чем кнопка для фолловеров отличается от обычной кнопки для ретвитов. В этой статье попробуем разобраться, в чем заключается эта разница, узнать, что такое кнопка Твиттера под названием «Follow», и как ее добавить в ваш сайт на основе WordPress.","author":{"@type":"Person","name":"GUIDETO","url":"https://blog.tvojdrug.ru/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>      
+        
+        <link rel="stylesheet" href="https://4o1.ru/assets/css/fontawesome-all.min.css?v=85514f933f9e0b82460af63f1a403fa5">
+        <link rel="stylesheet" href="https://4o1.ru/assets/css/style.css?v=9274fb62a8095432057114afc1a7f7fc">
+        <noscript><link rel="stylesheet" href="https://4o1.ru/assets/css/noscript.css?v=efa867a99f5064d6729e4dc2008ad50b"></noscript>
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://4o1.ru/twitter-follow-na-wordpress.html"},"headline":"Twitter Follow на WordPress","datePublished":"2013-03-09T06:25+04:00","dateModified":"2024-08-19T17:47+03:00","description":"Twitter — один из сервисов во Всемирной Паутине, способный существенно расширить функциональность вашего сайта. Все началось с официальной кнопки Твиттера, потом появилась платформа Twitter Anywhere, и сравнительно недавно — новая кнопка для фолловеров.Вам наверняка интересно, чем кнопка для фолловеров отличается от обычной кнопки для ретвитов. В этой статье попробуем разобраться, в чем заключается эта разница, узнать, что такое кнопка Твиттера под названием «Follow», и как ее добавить в ваш сайт на основе WordPress.","author":{"@type":"Person","name":"GUIDETO","url":"https://4o1.ru/authors/admin/"},"publisher":{"@type":"Organization","name":"GUIDETO"}}</script>
+        <style>
+           #wrapper > .bg {
+               background-image: url(https://4o1.ru/assets/images/overlay.png), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url();
+           }
+        </style>
         <noscript>
             <style>
                 img[loading] {
                     opacity: 1;
                 }
             </style>
-        </noscript>      
+        </noscript>			
         
     </head>
-    <body class="post-template">
-        
-<div class="container js-container">
-      <nav class="menu">
-          <ul class="navbar__menu">
-                  <li>
-                      <a 
-                      href="https://blog.tvojdrug.ru/tags/kouching/"
-                          target="_self"
-      >
-                      Коучинг </a>              
-              </li>
-                  <li>
-                      <a 
-                      href="https://blog.tvojdrug.ru/tags/psixologiya/"
-                          target="_self"
-      >
-                      Психология </a>              
-              </li>
-                  <li>
-                      <a 
-                      href="https://blog.tvojdrug.ru/tags/knigi/"
-                          target="_self"
-      >
-                      Книги </a>              
-              </li>
-                  <li>
-                      <a 
-                      href="https://blog.tvojdrug.ru/tags/video/"
-                          target="_self"
-      >
-                      Видео </a>              
-              </li>
-                  <li>
-                      <a 
-                      href="https://blog.tvojdrug.ru/tags/biz/"
-                          target="_self"
-      >
-                      Бизнес </a>              
-              </li>
-                  <li>
-                      <a 
-                      href="https://blog.tvojdrug.ru/tags/bez-rubriki/"
-                          target="_self"
-      >
-                      Без рубрики </a>              
-              </li>
-                  <li>
-                      <a 
-                      href="https://blog.tvojdrug.ru/tags/audiobook/"
-                          target="_self"
-      >
-                      Аудиокниги </a>              
-              </li>
-                  <li>
-                      <a 
-                      href="https://blog.tvojdrug.ru/tags/anglijskij/"
-                          target="_self"
-      >
-                      Английский </a>              
-              </li>
-                  <li class="has-submenu">
-                      <a 
-                      href="https://blog.tvojdrug.ru/tags/it/"
-                          target="_self"
-      >
-                      IT </a>              
-                          <ul class="navbar__submenu" >
-                                  <li>
-                                      <a 
-                                      href="https://blog.tvojdrug.ru/tags/wordpress/"
-                                          target="_self"
-                      >
-                                      WordPress </a>              
-                              </li>
-                                  <li>
-                                      <a 
-                                      href="https://blog.tvojdrug.ru/tags/seo/"
-                                          target="_self"
-                      >
-                                      SEO </a>              
-                              </li>
-                                  <li class="has-submenu">
-                                      <a 
-                                      href="https://blog.tvojdrug.ru/tags/yazyki/"
-                                          target="_self"
-                      >
-                                      Языки </a>              
-                                          <ul class="navbar__submenu" >
-                                                  <li>
-                                                      <a 
-                                                      href="https://blog.tvojdrug.ru/tags/html/"
-                                                          target="_self"
-                                      >
-                                                      HTML </a>              
-                                              </li>
-                                                  <li>
-                                                      <a 
-                                                      href="https://blog.tvojdrug.ru/tags/php/"
-                                                          target="_self"
-                                      >
-                                                      PHP </a>              
-                                              </li>
-                                          </ul>
-                              </li>
-                                  <li>
-                                      <a 
-                                      href="https://blog.tvojdrug.ru/tags/hard/"
-                                          target="_self"
-                      >
-                                      Железо </a>              
-                              </li>
-                                  <li>
-                                      <a 
-                                      href="https://blog.tvojdrug.ru/tags/android/"
-                                          target="_self"
-                      >
-                                      Android </a>              
-                              </li>
-                                  <li class="has-submenu">
-                                      <a 
-                                      href="https://blog.tvojdrug.ru/tags/windows/"
-                                          target="_self"
-                      >
-                                      Windows </a>              
-                                          <ul class="navbar__submenu" >
-                                                  <li>
-                                                      <a 
-                                                      href="https://blog.tvojdrug.ru/tags/iis/"
-                                                          target="_self"
-                                      >
-                                                      IIS </a>              
-                                              </li>
-                                          </ul>
-                              </li>
-                                  <li class="has-submenu">
-                                      <a 
-                                      href="https://blog.tvojdrug.ru/tags/unix/"
-                                          target="_self"
-                      >
-                                      Unix </a>              
-                                          <ul class="navbar__submenu" >
-                                                  <li>
-                                                      <a 
-                                                      href="https://blog.tvojdrug.ru/tags/apache/"
-                                                          target="_self"
-                                      >
-                                                      Apache </a>              
-                                              </li>
-                                                  <li>
-                                                      <a 
-                                                      href="https://blog.tvojdrug.ru/tags/asterisk/"
-                                                          target="_self"
-                                      >
-                                                      Asterisk </a>              
-                                              </li>
-                                          </ul>
-                              </li>
-                          </ul>
-              </li>
-          </ul>
-      </nav>
-   <div class="container__content">
-      <header class="top">
-         <div class="top__item">
-            <a class="logo" href="https://blog.tvojdrug.ru/">
-                  Blog
-            </a>
-         </div>
-         <div class="top__item top__item--right">
-              <button class="menu-toggle js-menu-toggle" aria-label="Menu" aria-expanded="false">
-						<span class="menu-toggle-box">
-							<span class="menu-toggle-inner"> Menu</span>
-						</span>
-					</button>
-         </div>
-      </header>   <main class="main post">
-         <article class="content">
-            <div class="main__left">
-                        <figure class="hero">
-                           <img
-                              src="https://blog.tvojdrug.ru/media/website/111222-4.jpg"
-                                  srcset="https://blog.tvojdrug.ru/media/website/responsive/111222-4-xs.jpg 300w ,https://blog.tvojdrug.ru/media/website/responsive/111222-4-sm.jpg 480w ,https://blog.tvojdrug.ru/media/website/responsive/111222-4-md.jpg 768w ,https://blog.tvojdrug.ru/media/website/responsive/111222-4-lg.jpg 1024w ,https://blog.tvojdrug.ru/media/website/responsive/111222-4-xl.jpg 1280w ,https://blog.tvojdrug.ru/media/website/responsive/111222-4-2xl.jpg 1600w"   sizes="(min-width: 1800px) 50vw, (min-width: 900px) 40vw, 100vw" 
-                               loading="eager"
-                               width="3840" height="2160" 
-                              alt="">
+    <body class="is-preload post-template">
+    <div id="wrapper" >
 
-                        </figure>
 
-               <header>
-                  <h1>Twitter Follow на WordPress</h1>
-                     <p>
-                           <time datetime="2013-03-09T06:25">
-                                 март 9, 2013
-                           </time>
-                           by
-                              <a href="https://blog.tvojdrug.ru/authors/admin/" rel="author" title="GUIDETO">GUIDETO</a>
-                     </p>
-               </header>
-            </div>
-            <div class="main__right">
-               <div class="content__entry">
-                     <p><strong>Twitter</strong> — один из сервисов во Всемирной Паутине, способный существенно расширить функциональность вашего сайта. Все началось с официальной кнопки Твиттера, потом появилась платформа Twitter Anywhere, и сравнительно недавно — новая <strong>кнопка для фолловеров</strong>.</p>
+   <header id="header">
+      <a class="logo" href="https://4o1.ru/">
+            Blog
+      </a>
+   </header>
+
+      <nav id="nav">
+            <ul class="links">
+                     <li>
+                     <a
+                        href="https://4o1.ru/tags/kouching/"
+                           target="_self"
+            >
+                        Коучинг
+                     </a>
+            
+               </li>
+                     <li>
+                     <a
+                        href="https://4o1.ru/tags/psixologiya/"
+                           target="_self"
+            >
+                        Психология
+                     </a>
+            
+               </li>
+                     <li>
+                     <a
+                        href="https://4o1.ru/tags/knigi/"
+                           target="_self"
+            >
+                        Книги
+                     </a>
+            
+               </li>
+                     <li>
+                     <a
+                        href="https://4o1.ru/tags/video/"
+                           target="_self"
+            >
+                        Видео
+                     </a>
+            
+               </li>
+                     <li>
+                     <a
+                        href="https://4o1.ru/tags/biz/"
+                           target="_self"
+            >
+                        Бизнес
+                     </a>
+            
+               </li>
+                     <li>
+                     <a
+                        href="https://4o1.ru/tags/bez-rubriki/"
+                           target="_self"
+            >
+                        Без рубрики
+                     </a>
+            
+               </li>
+                     <li>
+                     <a
+                        href="https://4o1.ru/tags/audiobook/"
+                           target="_self"
+            >
+                        Аудиокниги
+                     </a>
+            
+               </li>
+                     <li>
+                     <a
+                        href="https://4o1.ru/tags/anglijskij/"
+                           target="_self"
+            >
+                        Английский
+                     </a>
+            
+               </li>
+                     <li class="has-submenu">
+                     <a
+                        href="https://4o1.ru/tags/it/"
+                           target="_self"
+                           aria-haspopup="true"
+                        >
+                        IT
+                     </a>
+            
+                     <ul class="nav__submenu level-2" aria-hidden="true" >
+                              <li>
+                              <a
+                                 href="https://4o1.ru/tags/wordpress/"
+                                    target="_self"
+                     >
+                                 WordPress
+                              </a>
+                     
+                        </li>
+                              <li>
+                              <a
+                                 href="https://4o1.ru/tags/seo/"
+                                    target="_self"
+                     >
+                                 SEO
+                              </a>
+                     
+                        </li>
+                              <li class="has-submenu">
+                              <a
+                                 href="https://4o1.ru/tags/yazyki/"
+                                    target="_self"
+                                    aria-haspopup="true"
+                                 >
+                                 Языки
+                              </a>
+                     
+                              <ul class="nav__submenu level-3" aria-hidden="true" >
+                                       <li>
+                                       <a
+                                          href="https://4o1.ru/tags/html/"
+                                             target="_self"
+                              >
+                                          HTML
+                                       </a>
+                              
+                                 </li>
+                                       <li>
+                                       <a
+                                          href="https://4o1.ru/tags/php/"
+                                             target="_self"
+                              >
+                                          PHP
+                                       </a>
+                              
+                                 </li>
+                              </ul>
+                                    </li>
+                              <li>
+                              <a
+                                 href="https://4o1.ru/tags/hard/"
+                                    target="_self"
+                     >
+                                 Железо
+                              </a>
+                     
+                        </li>
+                              <li>
+                              <a
+                                 href="https://4o1.ru/tags/android/"
+                                    target="_self"
+                     >
+                                 Android
+                              </a>
+                     
+                        </li>
+                              <li class="has-submenu">
+                              <a
+                                 href="https://4o1.ru/tags/windows/"
+                                    target="_self"
+                                    aria-haspopup="true"
+                                 >
+                                 Windows
+                              </a>
+                     
+                              <ul class="nav__submenu level-3" aria-hidden="true" >
+                                       <li>
+                                       <a
+                                          href="https://4o1.ru/tags/iis/"
+                                             target="_self"
+                              >
+                                          IIS
+                                       </a>
+                              
+                                 </li>
+                              </ul>
+                                    </li>
+                              <li class="has-submenu">
+                              <a
+                                 href="https://4o1.ru/tags/unix/"
+                                    target="_self"
+                                    aria-haspopup="true"
+                                 >
+                                 Unix
+                              </a>
+                     
+                              <ul class="nav__submenu level-3" aria-hidden="true" >
+                                       <li>
+                                       <a
+                                          href="https://4o1.ru/tags/apache/"
+                                             target="_self"
+                              >
+                                          Apache
+                                       </a>
+                              
+                                 </li>
+                                       <li>
+                                       <a
+                                          href="https://4o1.ru/tags/asterisk/"
+                                             target="_self"
+                              >
+                                          Asterisk
+                                       </a>
+                              
+                                 </li>
+                              </ul>
+                                    </li>
+                     </ul>
+                           </li>
+            </ul>
+                     </nav>
+
+<main id="main">
+      <article class="post">
+            <header class="major">
+                  <time datetime="2013-03-09T06:25" class="date">
+                        март 9, 2013
+                  </time>
+               <h1>
+                  Twitter Follow на WordPress
+               </h1>
+               <p class="post__inner"></p>
+            </header>
+
+
+         <div class="post__inner post__entry">           
+            <p><strong>Twitter</strong> — один из сервисов во Всемирной Паутине, способный существенно расширить функциональность вашего сайта. Все началось с официальной кнопки Твиттера, потом появилась платформа Twitter Anywhere, и сравнительно недавно — новая <strong>кнопка для фолловеров</strong>.</p>
 <p>
 
 Вам наверняка интересно, чем кнопка для фолловеров отличается от обычной кнопки для ретвитов. В этой статье попробуем разобраться, в чем заключается эта разница, узнать, что такое кнопка Твиттера под названием <strong>«Follow»</strong>, и как ее добавить в ваш сайт на основе WordPress.</p>
@@ -239,7 +275,7 @@
 Кнопка для фолловеров от Twitter представляет собой маленький <strong>виджет</strong>, при помощи которого пользователи микроблогов могут легко <strong>зафолловить</strong> ваш аккаунт с любого сайта. Кнопка Follow использует ту же модель встраивания виджетов, что и кнопка Tweet, и ее легко интегрировать в любой существующий сайт. Демо-версию того, как это будет выглядеть, вы можете видеть на скриншоте ниже (кнопка в левом верхнем углу скриншота). Когда вы кликните по этой кнопке, откроется всплывающее окно с дополнительной информацией о данном пользователе.</p>
 <p>
 
-<img loading="lazy" title="Twitter Follow Button" src="https://blog.tvojdrug.ru/media/posts/76/twitterfollow2.gif" alt="twitterfollow Как добавить кнопку Twitter Follow на ваш WordPress сайт" width="520" height="488" ></p>
+<img loading="lazy" title="Twitter Follow Button" src="https://4o1.ru/media/posts/76/twitterfollow2.gif" alt="twitterfollow Как добавить кнопку Twitter Follow на ваш WordPress сайт" width="520" height="488" ></p>
 <p>
 
 Кнопка <strong>«Twitter Follow»</strong> не только показывает количество фолловеров, но и очень просто и легко добавляется на сайт (см. пример далее):</p>
@@ -305,7 +341,7 @@
 Перейдите в меню <strong>Внешний вид → Виджеты</strong>. Добавьте название виджета и вставьте код. Это будет выглядеть примерно вот так:</p>
 <p>
 
-<img loading="lazy" title="Twitter Follow Button" src="https://blog.tvojdrug.ru/media/posts/76/twitterfollowwidget2.gif" alt="twitterfollowwidget Как добавить кнопку Twitter Follow на ваш WordPress сайт" width="520" height="455" ></p>
+<img loading="lazy" title="Twitter Follow Button" src="https://4o1.ru/media/posts/76/twitterfollowwidget2.gif" alt="twitterfollowwidget Как добавить кнопку Twitter Follow на ваш WordPress сайт" width="520" height="455" ></p>
 <p>
 
 Для того, чтобы провести такую настройку, никакой плагин вам не понадобится.</p>
@@ -347,101 +383,170 @@ Twitter позволяет вам настроить цвет кнопки, цв
 </div>
 
 
-
-                     
-                     <footer>
-
-                           <div class="content__tag-share">
-
-                                    <ul class="content__tag">
-                                          <li>
-                                             <a href="https://blog.tvojdrug.ru/tags/wordpress/">WordPress</a>
-                                          </li>
-                                    </ul>
-
-                                    <div class="content__share">
-                                       
-                                       
-                                       
-                                       
-                                       
-                                       
-                                    </div>
-
-                           </div>
-
-                              <div class="content__bio">
-                                    <h3>
-                                       <a href="https://blog.tvojdrug.ru/authors/admin/" title="GUIDETO">GUIDETO</a>
-                                    </h3>
-                              </div>
-                     </footer>
-               </div>
-            </div>
-         </article>
-
-            <div class="main__right main__right--bottom">
-                     <div class="related">
-                        <h2 class="related__title">
-                           Related posts:
-                        </h2>
-                        <ul class="related__items">
-                              <li class="related__item">
-                                 <h3 class="h5">
-                                    <a href="https://blog.tvojdrug.ru/kak-vstavit-video-s-youtube-na-sayt-v-wordpress.html">
-                                       Как вставить видео с youtube на сайт в wordpress
-                                    </a>
-                                 </h3>
-                                 
-                              </li>
-                              <li class="related__item">
-                                 <h3 class="h5">
-                                    <a href="https://blog.tvojdrug.ru/twitter-uvelichenie-chitateley-nakrutka-podpischikov.html">
-                                       Twitter увеличение читателей, накрутка подписчиков
-                                    </a>
-                                 </h3>
-                                 
-                              </li>
-                              <li class="related__item">
-                                 <h3 class="h5">
-                                    <a href="https://blog.tvojdrug.ru/kak-uskorit-indeksaciyu-novogo-sayta-na-wordpress-v-yandekse-i-drugih-poiskovyh-sistemah.html">
-                                       Как ускорить индексацию нового сайта на WordPress в Яндексе и других поисковых системах
-                                    </a>
-                                 </h3>
-                                 
-                              </li>
-                        </ul>
-                     </div>
-
-                 
-            </div>
-
-   </main>
-   <footer class="footer">
-         <div class="footer__copyright">
-            <span class="sub">© Все права защищены <a href="http://blog.TvojDrug.ru/">Блог про всё</a> 2013-2024</span></div>
+            
          </div>
-   </footer>
-   </div>
-   </div>
-   <script defer src="https://blog.tvojdrug.ru/assets/js/scripts.min.js?v=1ea8317abae2e05fa2a65ed7bbff7ba7"></script>
-       <script>        
-           var images = document.querySelectorAll('img[loading]');
-   
-           for (var i = 0; i < images.length; i++) {
-               if (images[i].complete) {
-                   images[i].classList.add('is-loaded');
-               } else {
-                   images[i].addEventListener('load', function () {
-                       this.classList.add('is-loaded');
-                   }, false);
-               }
-           }
-       </script>
-   
-   
-   
-   
-   
-   </body>
-   </html>
+
+            <footer class="post__inner post__footer">
+
+                     <p class="post__last-updated">
+                        This article was updated on
+                           август 19, 2024
+                     </p>
+               
+                  <div class="post__share-tag-container">
+                           <div class="post__tag">
+                              <h3>Tagged in:</h3>
+                                 <ul>
+                                       <li>
+                                          <a href="https://4o1.ru/tags/wordpress/">WordPress</a>
+                                       </li>
+                                 </ul>
+                           </div>
+                
+                        <div class="post__share">
+                           <button
+                              class="post__share-button js-post__share-button icon"
+                              aria-label="Share button">
+                              <i class="fas fa-share-alt"></i>
+                           </button>
+
+                           <div class="post__share-popup js-post__share-popup">
+                                 
+                           </div>
+                        </div>        
+                  </div>
+
+                  <div class="post__bio">
+                        <div>
+                           <h3>
+                              <a href="https://4o1.ru/authors/admin/" class="invert" rel="author">GUIDETO</a>
+                           </h3>
+                           
+                        </div>
+                  </div>
+            </footer>
+      </article>
+
+
+            <div>
+               <strong>You should also read:</strong>
+            </div>
+            <div class="posts">                 
+                     <article>
+                        <header>
+                              <time datetime="2013-02-21T12:27" class="date">
+                                    февраль 21, 2013
+                              </time>
+                           <h2>
+                              <a href="https://4o1.ru/obzor-seo-plagina-wordpress-seo-by-yoast.html">Обзор SEO-плагина WordPress SEO by Yoast</a>
+                           </h2>
+                        </header>
+
+
+                        <p><p>В данном обзоре будет рассмотрен и протестирован бесплатный плагин для Вордпресса <a href="http://wordpress.org/extend/plugins/wordpress-seo/">WordPress SEO by Yoast</a>. В сентябре 2012 года была выпущена новая версия этого плагина с номером 1.2.8.4, совместимая с версией WordPress 3.4.2. WordPress SEO by Yoast имеет много положительных отзывов, и на сайте wordpress.org он оценён 4,7 балами из 5. Тестирование его функций для этого обзора было выполнено на WordPress 3.4.2.</p>
+</p>
+
+                           <ul class="actions special">
+                              <li>
+                                 <a href="https://4o1.ru/obzor-seo-plagina-wordpress-seo-by-yoast.html" class="button">Full Story</a>
+                              </li>
+                           </ul>
+
+                     </article>
+                     <article>
+                        <header>
+                              <time datetime="2013-02-21T08:00" class="date">
+                                    февраль 21, 2013
+                              </time>
+                           <h2>
+                              <a href="https://4o1.ru/kak-perevesti-temu-ili-plagin-wordpress-poshagovaya-instrukciya.html">Как перевести тему или плагин WordPress — пошаговая инструкция</a>
+                           </h2>
+                        </header>
+
+
+                        <p><p>Известно что хороший дизайн и верстка сайта очень сильно влияют на отношение посетителей к сайту и его владельцу. Не забываем также что хороший шаблон существенно влияет на поисковую оптимизацию и юзабилити сайта.</p>
+<p>
+
+Шаблонизация WordPress довольно несложная, и можно недорого найти хорошего дизайнера и верстальщика WordPress тем. В среднем цена на хороший дизайн темы WordPress стоит от $30-40, и гдето столько же стоит отверстать шаблон под ваш движок.</p>
+</p>
+
+                           <ul class="actions special">
+                              <li>
+                                 <a href="https://4o1.ru/kak-perevesti-temu-ili-plagin-wordpress-poshagovaya-instrukciya.html" class="button">Full Story</a>
+                              </li>
+                           </ul>
+
+                     </article>
+                     <article>
+                        <header>
+                              <time datetime="2013-02-19T11:37" class="date">
+                                    февраль 19, 2013
+                              </time>
+                           <h2>
+                              <a href="https://4o1.ru/kak-vstavit-video-s-youtube-na-sayt-v-wordpress.html">Как вставить видео с youtube на сайт в wordpress</a>
+                           </h2>
+                        </header>
+
+
+                        <p><p>На сайте Youtube откройте нужный вам видео ролик. Для надёжности , что вы правильно возьмёте ссылку, запустите его. Скопируйте адрес из адресной строки браузера. Вставьте его на нужную строчку в записи на вашем сайте . На строчке больше ничего не должно быть. Разорвите ссылку, если она образовалась. Просто текст в Визуальном редакторе. Например,</p>
+<p>http://www.youtube.com/watch?v=EyiO2dFym0c</p>
+</p>
+
+                           <ul class="actions special">
+                              <li>
+                                 <a href="https://4o1.ru/kak-vstavit-video-s-youtube-na-sayt-v-wordpress.html" class="button">Full Story</a>
+                              </li>
+                           </ul>
+
+                     </article>
+                     <article>
+                        <header>
+                              <time datetime="2013-02-15T09:47" class="date">
+                                    февраль 15, 2013
+                              </time>
+                           <h2>
+                              <a href="https://4o1.ru/twitter-uvelichenie-chitateley-nakrutka-podpischikov.html">Twitter увеличение читателей, накрутка подписчиков</a>
+                           </h2>
+                        </header>
+
+
+                        <p><div>      Как я и обещал я Вам поведую о том как можно своими силами <strong>накрутить подписчиков Твиттер</strong>. <strong>Накрутка </strong><strong>Twitter</strong><strong> последователей </strong>своими силами займет определенное время, но оно будет расти каждый день, главное дать ей старт.</div>
+<div>             Для начала создаем новый аккаунт Твиттер, придумываем имя и логин, который будет больше похож на реального человека.</div>
+<div>             Далее в описании прописываем следующее:</div>
+<div> Взаимный фолловинг #followback #rufollowback, Followback, Follow, Following
+</p>
+
+                           <ul class="actions special">
+                              <li>
+                                 <a href="https://4o1.ru/twitter-uvelichenie-chitateley-nakrutka-podpischikov.html" class="button">Full Story</a>
+                              </li>
+                           </ul>
+
+                     </article>
+               </div>
+           
+
+
+</main>
+
+   <footer id="copyright">
+       <ul><li>&copy; Massively</li><li>Design: <a href="https://html5up.net" target="_blank" rel="nofollow noopener">HTML5 UP</a></li><li>Powered by Publii</li></ul>
+    </footer>
+</div>
+
+<script  src="https://4o1.ru/assets/js/jquery.min.js?v=c9771cc3e90e18f5336eedbd0fffb2cf"></script>
+<script  src="https://4o1.ru/assets/js/jquery.scrollex.min.js?v=f89065e3d988006af9791b44561d7c90"></script>
+<script  src="https://4o1.ru/assets/js/jquery.scrolly.min.js?v=1ed5a78bde1476875a40f6b9ff44fc14"></script>
+<script  src="https://4o1.ru/assets/js/browser.min.js?v=c07298dd19048a8a69ad97e754dfe8d0"></script>
+<script  src="https://4o1.ru/assets/js/breakpoints.min.js?v=81a479eb099e3b187613943b085923b8"></script>
+<script  src="https://4o1.ru/assets/js/util.min.js?v=4201a626f8c9b614a663b3a1d7d82615"></script>
+<script  src="https://4o1.ru/assets/js/main.min.js?v=56233c354bd814758be8bff42f7e13a5"></script>
+
+   <script>/*<![CDATA[*/var images=document.querySelectorAll("img[loading]");for(var i=0;i<images.length;i++){if(images[i].complete){images[i].classList.add("is-loaded")}else{images[i].addEventListener("load",function(){this.classList.add("is-loaded")},false)}};/*]]>*/</script>
+
+
+
+
+
+</body>
+</html>
